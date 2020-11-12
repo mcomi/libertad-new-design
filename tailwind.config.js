@@ -26,12 +26,14 @@ module.exports = {
         "black-three": "#313131",
         "light-navy-blue-four": "#2f5495",
         "piss-yellow": "#d2b41a",
+        silver: "#dfe2e3",
       },
       fontFamily: {
         body: ["Work Sans"],
       },
       height: {
         "bg-slide": "70vh",
+        "md-slide": "26rem",
         "sm-slide": "40vh",
       },
     },
