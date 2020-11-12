@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Work+Sans:wght@100;200;300;400;500;600;700&display=swap");
+@import url("https://unpkg.com/swiper/swiper-bundle.min.css");
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -15,4 +16,8 @@
 
 .card-intro {
   @apply rounded-lg shadow-lg bg-light-navy-blue flex flex-col items-center text-center py-4 px-8 mb-4;
+}
+
+.swiper-pagination-bullet {
+  margin: 0 2px;
 }
