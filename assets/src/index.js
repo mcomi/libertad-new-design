@@ -1,3 +1,2 @@
-import './main.css';
-
-alert('howdy partner! :) ');
+import "./main.css";
+import $ from "jquery";

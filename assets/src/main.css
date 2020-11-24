@@ -21,3 +21,31 @@
 .swiper-pagination-bullet {
   margin: 0 2px;
 }
+
+.step h6::after {
+  display: block;
+  border: 1px solid #fbb902;
+}
+
+.rangeslider--horizontal {
+  height: 8px;
+}
+
+.rangeslider--horizontal .rangeslider__handle {
+  top: -4px;
+}
+
+.rangeslider__fill {
+  @apply bg-dark-grey-blue;
+}
+
+.rangeslider__handle {
+  width: 18px;
+  height: 18px;
+}
+
+.rangeslider__handle:after {
+  width: 2px;
+  height: 2px;
+  background-color: #2c315f;
+}

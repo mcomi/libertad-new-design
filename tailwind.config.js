@@ -27,6 +27,7 @@ module.exports = {
         "light-navy-blue-four": "#2f5495",
         "piss-yellow": "#d2b41a",
         silver: "#dfe2e3",
+        "grey-section": "#e9e9e9",
       },
       fontFamily: {
         body: ["Work Sans"],
