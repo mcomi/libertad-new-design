@@ -15,7 +15,17 @@
 }
 
 .card-intro {
-  @apply rounded-lg shadow-lg bg-light-navy-blue flex flex-col items-center text-center py-4 px-8 mb-4;
+  min-height: 172px;
+  @apply rounded-lg;
+  @apply shadow-xl;
+  @apply bg-light-navy-blue;
+  @apply flex;
+  @apply flex-col;
+  @apply items-center;
+  @apply text-center;
+  @apply py-4;
+  @apply px-8;
+  @apply mb-4;
 }
 
 .swiper-pagination-bullet {
