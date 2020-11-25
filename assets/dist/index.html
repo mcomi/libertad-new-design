@@ -247,7 +247,7 @@
             </p>
 
             <div
-              class="swiper-container rounded-3xl bg-white shadow-md pb-10 pt-5 px-4"
+              class="swiper-container rounded-3xl bg-white shadow-md pb-10 pt-5 px-2 lg:px-4"
             >
               <div class="swiper-wrapper">
                 <div class="swiper-slide" id="testimonial-1">
@@ -333,7 +333,7 @@
                       </svg>
                     </div>
                     <p class="font-bold">cumplen con su palabra</p>
-                    <p class="text-xs p-3 font-italic">
+                    <p class="text-xs p-2 lg:p-3 font-italic">
                       “ Solicite mi prestamo, subir mis documentos en línea,
                       recibí mi dinero en 24h. Así de fácil. “ Solicite mi
                       prestamo, subir mis documentos en línea, recibí mi dinero
@@ -634,25 +634,37 @@
       </div>
     </section>
     <section class="w-full bg-light-navy-blue-two">
-      <div class="container mx-auto w-8/12 py-16 text-white">
-        <h3 class="text-xl pb-5 font-bold">
+      <div
+        class="container mx-auto w-full px-5 lg:px-0 lg:w-8/12 py-16 text-white"
+      >
+        <h3 class="text-base lg:text-xl pb-5 font-bold">
           Tu préstamo en 4 sencillos pasos <br />
           con Libertad
         </h3>
-        <div class="w-full flex flex-col md:flex-row justify-between">
-          <div class="step mb-10">
-            <img class="h-12 mb-5" src="images/money@3x.png" alt="" />
+        <div
+          class="w-full flex flex-col items-center text-center md:text-left md:flex-row justify-between"
+        >
+          <div class="step mb-3 lg:mb-10">
+            <img
+              class="h-12 mb-5 mx-auto md:mx-0"
+              src="images/money@3x.png"
+              alt=""
+            />
             <h6 class="hover:text-marigold">
               Dino cuánto <br />dinero necesitas.
             </h6>
           </div>
-          <div class="step mb-10">
-            <img class="h-12 mb-5" src="images/research@3x.png" alt="" />
+          <div class="step mb-3 lg:mb-10">
+            <img
+              class="h-12 mb-5 mx-auto md:mx-0"
+              src="images/research@3x.png"
+              alt=""
+            />
             <h6 class="hover:text-marigold">Cuéntanos <br />sobre ti.</h6>
           </div>
-          <div class="step mb-10">
+          <div class="step mb-3 lg:mb-10">
             <img
-              class="h-12 mb-5"
+              class="h-12 mb-5 mx-auto md:mx-0"
               src="images/cooperation-copia-2@3x.png"
               alt=""
             />
@@ -660,8 +672,12 @@
               Obtén préstamos <br />personales
             </h6>
           </div>
-          <div class="step mb-10">
-            <img class="h-12 mb-5" src="images/stopwatch@3x.png" alt="" />
+          <div class="step mb-3 lg:mb-10">
+            <img
+              class="h-12 mb-5 mx-auto md:mx-0"
+              src="images/stopwatch@3x.png"
+              alt=""
+            />
             <h6 class="hover:text-marigold">Recibe tu dinero <br />en 48h</h6>
           </div>
         </div>
@@ -682,16 +698,16 @@
       </div>
     </section>
     <section
-      class="w-full bg-grey-section px-8 py-16 lg:py-40 bg-cover md:bg-contain"
+      class="w-full bg-grey-section px-8 py-16 lg:py-40 bg-left-bottom md:bg-contain"
       style="
         background-image: url('images/writing-person.png');
         background-repeat: no-repeat;
       "
     >
-      <div class="flex flex-col lg:flex-row w-full justify-center">
-        <div class="text-dark-grey-blue relative">
+      <div class="flex flex-col lg:flex-row w-full justify-evenly">
+        <div class="text-dark-grey-blue relative lg:w-1/5 items-end">
           <h1
-            class="bg-macaroni-and-cheese text-xl uppercase font-bold p-3 transform -rotate-6"
+            class="bg-macaroni-and-cheese text-xl uppercase font-bold p-3 transform -rotate-3"
           >
             simula tu crédito
           </h1>
@@ -713,9 +729,9 @@
                   <input
                     id="slider-loan-amount"
                     min="1000"
-                    value="17000"
+                    value="10000"
                     max="50000"
-                    default_amount="17000"
+                    default_amount="10000"
                     step="1000"
                     type="range"
                   />
@@ -728,21 +744,21 @@
               <p class="pt-5">Mensualidades</p>
               <small>(desde 12 hasta 72 meses)</small>
               <div class="flex justify-center items-center pb-3">
-                <select class="form-select block w-1/3 mt-1">
-                  <option>12</option>
-                  <option>24</option>
-                  <option>48</option>
-                  <option>72</option>
+                <select class="form-select block w-1/3 mt-1" name="periodos">
+                  <option value="12" selected>12</option>
+                  <option value="24">24</option>
+                  <option value="48">48</option>
+                  <option value="72">72</option>
                 </select>
                 <p class="text-sm ml-3">meses</p>
               </div>
             </div>
           </div>
         </div>
-        <div class="text-dark-grey-blue relative">
-          <h2 class="font-bold">
+        <div class="text-dark-grey-blue relative max-w-md">
+          <h2 class="text-lg md:text-xl font-bold pb-3">
             Obtén tu préstamo en línea
-            <span class="block text-xs font-light"
+            <span class="block text-sm font-light"
               >a través de nuestro simulador de crédito</span
             >
           </h2>
@@ -761,9 +777,11 @@
               5 minutos
             </h5>
             <p class="mb-6">
-              Te prestamos <span class="font-bold">$10,000 pesos</span> que
-              puedes pagar a <span class="font-bold">48 meses</span> con
-              mensualidades de <span class="font-bold">$1,545.00 pesos</span>
+              Te prestamos
+              <span class="font-bold" id="monto">$10,000 pesos</span> que puedes
+              pagar a <span class="font-bold" id="meses">12 meses</span> con
+              mensualidades de
+              <span class="font-bold" id="descuento">$1,545.00 pesos</span>
             </p>
             <button
               href=""
@@ -772,6 +790,157 @@
               Solicitar mi préstamo
             </button>
           </div>
+        </div>
+      </div>
+    </section>
+    <section id="faq">
+      <div class="container my-10 px-3">
+        <h2
+          class="text-center text-dark-grey-blue text-xl md:text-3xl mb-3 font-bold"
+        >
+          Libertad contesta tus preguntas
+        </h2>
+        <div
+          class="mx-auto lg:w-10/12 border border-dark-grey-blue p-3 lg:p-10"
+        >
+          <div class="tab w-full overflow-hidden border-b-2">
+            <input
+              class="absolute opacity-0"
+              id="tab-one"
+              type="radio"
+              name="tabs"
+            />
+            <label
+              class="block p-5 text-sm md:text-base leading-normal cursor-pointer"
+              for="tab-one"
+              >¿De cuánto son los préstamos que otorgamos?</label
+            >
+            <div
+              class="tab-content overflow-hidden text-sm md:text-base leading-normal"
+            >
+              <p class="p-5">
+                Libertad otorga desde $5,000 MXN hasta $100,000 MXN para lo que
+                necesites, desde impulsar tu negocio, cubrir cuentas médicas,
+                hasta mejoras para tu casa.
+              </p>
+            </div>
+          </div>
+          <div class="tab w-full overflow-hidden border-b-2">
+            <input
+              class="absolute opacity-0"
+              id="tab-two"
+              type="radio"
+              name="tabs"
+            />
+            <label
+              class="block p-5 text-sm md:text-base leading-normal cursor-pointer"
+              for="tab-two"
+              >¿Cuáles son las formas de pago?</label
+            >
+            <div
+              class="tab-content overflow-hidden text-sm md:text-base leading-normal"
+            >
+              <p class="p-5">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                Tenetur, architecto, explicabo perferendis nostrum, maxime
+                impedit atque odit sunt pariatur illo obcaecati soluta molestias
+                iure facere dolorum adipisci eum? Saepe, itaque.
+              </p>
+            </div>
+          </div>
+          <div class="tab w-full overflow-hidden border-b-2">
+            <input
+              class="absolute opacity-0"
+              id="tab-three"
+              type="radio"
+              name="tabs"
+            />
+            <label
+              class="block p-5 text-sm md:text-base leading-normal cursor-pointer"
+              for="tab-three"
+              >Caracteristicas de nuestros préstamos en línea
+            </label>
+            <div
+              class="tab-content overflow-hidden text-sm md:text-base leading-normal"
+            >
+              <p class="p-5">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                Tenetur, architecto, explicabo perferendis nostrum, maxime
+                impedit atque odit sunt pariatur illo obcaecati soluta molestias
+                iure facere dolorum adipisci eum? Saepe, itaque.
+              </p>
+            </div>
+          </div>
+          <div class="tab w-full overflow-hidden border-b-2">
+            <input
+              class="absolute opacity-0"
+              id="tab-four"
+              type="radio"
+              name="tabs"
+            />
+            <label
+              class="block p-5 text-sm md:text-base leading-normal cursor-pointer"
+              for="tab-four"
+              >Caracteristicas de nuestros préstamos en línea
+            </label>
+            <div
+              class="tab-content overflow-hidden text-sm md:text-base leading-normal"
+            >
+              <p class="p-5">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                Tenetur, architecto, explicabo perferendis nostrum, maxime
+                impedit atque odit sunt pariatur illo obcaecati soluta molestias
+                iure facere dolorum adipisci eum? Saepe, itaque.
+              </p>
+            </div>
+          </div>
+          <div class="tab w-full overflow-hidden">
+            <input
+              class="absolute opacity-0"
+              id="tab-five"
+              type="radio"
+              name="tabs"
+            />
+            <label
+              class="block p-5 text-sm md:text-base leading-normal cursor-pointer"
+              for="tab-five"
+              >Caracteristicas de nuestros préstamos en línea
+            </label>
+            <div
+              class="tab-content overflow-hidden text-sm md:text-base leading-normal"
+            >
+              <p class="p-5">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                Tenetur, architecto, explicabo perferendis nostrum, maxime
+                impedit atque odit sunt pariatur illo obcaecati soluta molestias
+                iure facere dolorum adipisci eum? Saepe, itaque.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div
+          class="w-full mx-auto lg:w-10/12 border border-dark-grey-blue border-t-0 p-5 lg:p-10 bg-white-two flex flex-col items-center"
+        >
+          <p class="font-bold">¿ Tienes otra pregunta ?</p>
+          <a
+            class="w-full md:w-auto bg-macaroni-and-cheese rounded-xl py-2 px-4"
+          >
+            <svg
+              class="w-6 h-6 inline-block"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"
+              ></path>
+            </svg>
+            Consulta nuestos FAQ
+          </a>
         </div>
       </div>
     </section>
