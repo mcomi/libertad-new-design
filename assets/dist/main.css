@@ -25106,6 +25106,184 @@ video {
           animation: bounce 1s infinite;
 }
 
+.animate__animated{
+  -webkit-animation-duration: 1000ms;
+          animation-duration: 1000ms;
+  -webkit-animation-fill-mode: both;
+          animation-fill-mode: both;
+}
+
+.animate__fadeIn{
+  -webkit-animation-name: fadeIn;
+          animation-name: fadeIn;
+}
+
+.animate__shakeX{
+  -webkit-animation-name: shakeX;
+          animation-name: shakeX;
+}
+
+.animate__swing{
+  transform-origin: top center;
+  -webkit-animation-name: swing;
+          animation-name: swing;
+}
+
+.animate__slow{
+  -webkit-animation-duration: 2000ms;
+          animation-duration: 2000ms;
+}
+
+.hover\:animate__animated:hover{
+  -webkit-animation-duration: 1000ms;
+          animation-duration: 1000ms;
+  -webkit-animation-fill-mode: both;
+          animation-fill-mode: both;
+}
+
+.hover\:animate__fadeIn:hover{
+  -webkit-animation-name: fadeIn;
+          animation-name: fadeIn;
+}
+
+.hover\:animate__shakeX:hover{
+  -webkit-animation-name: shakeX;
+          animation-name: shakeX;
+}
+
+.hover\:animate__swing:hover{
+  transform-origin: top center;
+  -webkit-animation-name: swing;
+          animation-name: swing;
+}
+
+.hover\:animate__slow:hover{
+  -webkit-animation-duration: 2000ms;
+          animation-duration: 2000ms;
+}
+
+@media (prefers-reduced-motion: reduce){
+  .reduced-motion\:animate__animated{
+    -webkit-animation-duration: 1000ms;
+            animation-duration: 1000ms;
+    -webkit-animation-fill-mode: both;
+            animation-fill-mode: both;
+  }
+
+  .reduced-motion\:animate__fadeIn{
+    -webkit-animation-name: fadeIn;
+            animation-name: fadeIn;
+  }
+
+  .reduced-motion\:animate__shakeX{
+    -webkit-animation-name: shakeX;
+            animation-name: shakeX;
+  }
+
+  .reduced-motion\:animate__swing{
+    transform-origin: top center;
+    -webkit-animation-name: swing;
+            animation-name: swing;
+  }
+
+  .reduced-motion\:animate__slow{
+    -webkit-animation-duration: 2000ms;
+            animation-duration: 2000ms;
+  }
+}
+
+@-webkit-keyframes fadeIn{
+  from{
+    opacity: 0;
+  }
+
+  to{
+    opacity: 1;
+  }
+}
+
+@keyframes fadeIn{
+  from{
+    opacity: 0;
+  }
+
+  to{
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes shakeX{
+  from, to{
+    transform: translate3d(0, 0, 0);
+  }
+
+  10%, 30%, 50%, 70%, 90%{
+    transform: translate3d(-10px, 0, 0);
+  }
+
+  20%, 40%, 60%, 80%{
+    transform: translate3d(10px, 0, 0);
+  }
+}
+
+@keyframes shakeX{
+  from, to{
+    transform: translate3d(0, 0, 0);
+  }
+
+  10%, 30%, 50%, 70%, 90%{
+    transform: translate3d(-10px, 0, 0);
+  }
+
+  20%, 40%, 60%, 80%{
+    transform: translate3d(10px, 0, 0);
+  }
+}
+
+@-webkit-keyframes swing{
+  20%{
+    transform: rotate3d(0, 0, 1, 15deg);
+  }
+
+  40%{
+    transform: rotate3d(0, 0, 1, -10deg);
+  }
+
+  60%{
+    transform: rotate3d(0, 0, 1, 5deg);
+  }
+
+  80%{
+    transform: rotate3d(0, 0, 1, -5deg);
+  }
+
+  to{
+    transform: rotate3d(0, 0, 1, 0deg);
+  }
+}
+
+@keyframes swing{
+  20%{
+    transform: rotate3d(0, 0, 1, 15deg);
+  }
+
+  40%{
+    transform: rotate3d(0, 0, 1, -10deg);
+  }
+
+  60%{
+    transform: rotate3d(0, 0, 1, 5deg);
+  }
+
+  80%{
+    transform: rotate3d(0, 0, 1, -5deg);
+  }
+
+  to{
+    transform: rotate3d(0, 0, 1, 0deg);
+  }
+}
+
 .snap-x {
   -ms-scroll-snap-type: x mandatory;
       scroll-snap-type: x mandatory;
@@ -25120,7 +25298,7 @@ video {
 .card-intro {
   min-height: 172px;
   border-radius: 0.5rem;
-  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
   --bg-opacity: 1;
   background-color: #325699;
   background-color: rgba(50, 86, 153, var(--bg-opacity));
@@ -25139,9 +25317,30 @@ video {
   margin: 0 2px;
 }
 
+.step:hover img {
+  -webkit-animation-duration: 1000ms;
+          animation-duration: 1000ms;
+  -webkit-animation-fill-mode: both;
+          animation-fill-mode: both;
+  transform-origin: top center;
+  -webkit-animation-name: swing;
+          animation-name: swing;
+}
+
 .step h6::after {
-  display: block;
-  border: 1px solid #fbb902;
+  content: "";
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+  border-bottom: 0px solid #fbb902;
+}
+
+.step:hover h6::after {
+  content: "";
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+  border-bottom: 1px solid #fbb902;
 }
 
 .rangeslider--horizontal {
@@ -49690,6 +49889,92 @@ video {
     -webkit-animation: bounce 1s infinite;
             animation: bounce 1s infinite;
   }
+
+  .sm\:animate__animated{
+    -webkit-animation-duration: 1000ms;
+            animation-duration: 1000ms;
+    -webkit-animation-fill-mode: both;
+            animation-fill-mode: both;
+  }
+
+  .sm\:animate__fadeIn{
+    -webkit-animation-name: fadeIn;
+            animation-name: fadeIn;
+  }
+
+  .sm\:animate__shakeX{
+    -webkit-animation-name: shakeX;
+            animation-name: shakeX;
+  }
+
+  .sm\:animate__swing{
+    transform-origin: top center;
+    -webkit-animation-name: swing;
+            animation-name: swing;
+  }
+
+  .sm\:animate__slow{
+    -webkit-animation-duration: 2000ms;
+            animation-duration: 2000ms;
+  }
+
+  .sm\:hover\:animate__animated:hover{
+    -webkit-animation-duration: 1000ms;
+            animation-duration: 1000ms;
+    -webkit-animation-fill-mode: both;
+            animation-fill-mode: both;
+  }
+
+  .sm\:hover\:animate__fadeIn:hover{
+    -webkit-animation-name: fadeIn;
+            animation-name: fadeIn;
+  }
+
+  .sm\:hover\:animate__shakeX:hover{
+    -webkit-animation-name: shakeX;
+            animation-name: shakeX;
+  }
+
+  .sm\:hover\:animate__swing:hover{
+    transform-origin: top center;
+    -webkit-animation-name: swing;
+            animation-name: swing;
+  }
+
+  .sm\:hover\:animate__slow:hover{
+    -webkit-animation-duration: 2000ms;
+            animation-duration: 2000ms;
+  }
+
+  @media (prefers-reduced-motion: reduce){
+    .sm\:reduced-motion\:animate__animated{
+      -webkit-animation-duration: 1000ms;
+              animation-duration: 1000ms;
+      -webkit-animation-fill-mode: both;
+              animation-fill-mode: both;
+    }
+
+    .sm\:reduced-motion\:animate__fadeIn{
+      -webkit-animation-name: fadeIn;
+              animation-name: fadeIn;
+    }
+
+    .sm\:reduced-motion\:animate__shakeX{
+      -webkit-animation-name: shakeX;
+              animation-name: shakeX;
+    }
+
+    .sm\:reduced-motion\:animate__swing{
+      transform-origin: top center;
+      -webkit-animation-name: swing;
+              animation-name: swing;
+    }
+
+    .sm\:reduced-motion\:animate__slow{
+      -webkit-animation-duration: 2000ms;
+              animation-duration: 2000ms;
+    }
+  }
 }
 
 @media (min-width: 768px){
@@ -74143,6 +74428,92 @@ video {
   .md\:animate-bounce{
     -webkit-animation: bounce 1s infinite;
             animation: bounce 1s infinite;
+  }
+
+  .md\:animate__animated{
+    -webkit-animation-duration: 1000ms;
+            animation-duration: 1000ms;
+    -webkit-animation-fill-mode: both;
+            animation-fill-mode: both;
+  }
+
+  .md\:animate__fadeIn{
+    -webkit-animation-name: fadeIn;
+            animation-name: fadeIn;
+  }
+
+  .md\:animate__shakeX{
+    -webkit-animation-name: shakeX;
+            animation-name: shakeX;
+  }
+
+  .md\:animate__swing{
+    transform-origin: top center;
+    -webkit-animation-name: swing;
+            animation-name: swing;
+  }
+
+  .md\:animate__slow{
+    -webkit-animation-duration: 2000ms;
+            animation-duration: 2000ms;
+  }
+
+  .md\:hover\:animate__animated:hover{
+    -webkit-animation-duration: 1000ms;
+            animation-duration: 1000ms;
+    -webkit-animation-fill-mode: both;
+            animation-fill-mode: both;
+  }
+
+  .md\:hover\:animate__fadeIn:hover{
+    -webkit-animation-name: fadeIn;
+            animation-name: fadeIn;
+  }
+
+  .md\:hover\:animate__shakeX:hover{
+    -webkit-animation-name: shakeX;
+            animation-name: shakeX;
+  }
+
+  .md\:hover\:animate__swing:hover{
+    transform-origin: top center;
+    -webkit-animation-name: swing;
+            animation-name: swing;
+  }
+
+  .md\:hover\:animate__slow:hover{
+    -webkit-animation-duration: 2000ms;
+            animation-duration: 2000ms;
+  }
+
+  @media (prefers-reduced-motion: reduce){
+    .md\:reduced-motion\:animate__animated{
+      -webkit-animation-duration: 1000ms;
+              animation-duration: 1000ms;
+      -webkit-animation-fill-mode: both;
+              animation-fill-mode: both;
+    }
+
+    .md\:reduced-motion\:animate__fadeIn{
+      -webkit-animation-name: fadeIn;
+              animation-name: fadeIn;
+    }
+
+    .md\:reduced-motion\:animate__shakeX{
+      -webkit-animation-name: shakeX;
+              animation-name: shakeX;
+    }
+
+    .md\:reduced-motion\:animate__swing{
+      transform-origin: top center;
+      -webkit-animation-name: swing;
+              animation-name: swing;
+    }
+
+    .md\:reduced-motion\:animate__slow{
+      -webkit-animation-duration: 2000ms;
+              animation-duration: 2000ms;
+    }
   }
 }
 
@@ -98598,6 +98969,92 @@ video {
     -webkit-animation: bounce 1s infinite;
             animation: bounce 1s infinite;
   }
+
+  .lg\:animate__animated{
+    -webkit-animation-duration: 1000ms;
+            animation-duration: 1000ms;
+    -webkit-animation-fill-mode: both;
+            animation-fill-mode: both;
+  }
+
+  .lg\:animate__fadeIn{
+    -webkit-animation-name: fadeIn;
+            animation-name: fadeIn;
+  }
+
+  .lg\:animate__shakeX{
+    -webkit-animation-name: shakeX;
+            animation-name: shakeX;
+  }
+
+  .lg\:animate__swing{
+    transform-origin: top center;
+    -webkit-animation-name: swing;
+            animation-name: swing;
+  }
+
+  .lg\:animate__slow{
+    -webkit-animation-duration: 2000ms;
+            animation-duration: 2000ms;
+  }
+
+  .lg\:hover\:animate__animated:hover{
+    -webkit-animation-duration: 1000ms;
+            animation-duration: 1000ms;
+    -webkit-animation-fill-mode: both;
+            animation-fill-mode: both;
+  }
+
+  .lg\:hover\:animate__fadeIn:hover{
+    -webkit-animation-name: fadeIn;
+            animation-name: fadeIn;
+  }
+
+  .lg\:hover\:animate__shakeX:hover{
+    -webkit-animation-name: shakeX;
+            animation-name: shakeX;
+  }
+
+  .lg\:hover\:animate__swing:hover{
+    transform-origin: top center;
+    -webkit-animation-name: swing;
+            animation-name: swing;
+  }
+
+  .lg\:hover\:animate__slow:hover{
+    -webkit-animation-duration: 2000ms;
+            animation-duration: 2000ms;
+  }
+
+  @media (prefers-reduced-motion: reduce){
+    .lg\:reduced-motion\:animate__animated{
+      -webkit-animation-duration: 1000ms;
+              animation-duration: 1000ms;
+      -webkit-animation-fill-mode: both;
+              animation-fill-mode: both;
+    }
+
+    .lg\:reduced-motion\:animate__fadeIn{
+      -webkit-animation-name: fadeIn;
+              animation-name: fadeIn;
+    }
+
+    .lg\:reduced-motion\:animate__shakeX{
+      -webkit-animation-name: shakeX;
+              animation-name: shakeX;
+    }
+
+    .lg\:reduced-motion\:animate__swing{
+      transform-origin: top center;
+      -webkit-animation-name: swing;
+              animation-name: swing;
+    }
+
+    .lg\:reduced-motion\:animate__slow{
+      -webkit-animation-duration: 2000ms;
+              animation-duration: 2000ms;
+    }
+  }
 }
 
 @media (min-width: 1280px){
@@ -123051,6 +123508,92 @@ video {
   .xl\:animate-bounce{
     -webkit-animation: bounce 1s infinite;
             animation: bounce 1s infinite;
+  }
+
+  .xl\:animate__animated{
+    -webkit-animation-duration: 1000ms;
+            animation-duration: 1000ms;
+    -webkit-animation-fill-mode: both;
+            animation-fill-mode: both;
+  }
+
+  .xl\:animate__fadeIn{
+    -webkit-animation-name: fadeIn;
+            animation-name: fadeIn;
+  }
+
+  .xl\:animate__shakeX{
+    -webkit-animation-name: shakeX;
+            animation-name: shakeX;
+  }
+
+  .xl\:animate__swing{
+    transform-origin: top center;
+    -webkit-animation-name: swing;
+            animation-name: swing;
+  }
+
+  .xl\:animate__slow{
+    -webkit-animation-duration: 2000ms;
+            animation-duration: 2000ms;
+  }
+
+  .xl\:hover\:animate__animated:hover{
+    -webkit-animation-duration: 1000ms;
+            animation-duration: 1000ms;
+    -webkit-animation-fill-mode: both;
+            animation-fill-mode: both;
+  }
+
+  .xl\:hover\:animate__fadeIn:hover{
+    -webkit-animation-name: fadeIn;
+            animation-name: fadeIn;
+  }
+
+  .xl\:hover\:animate__shakeX:hover{
+    -webkit-animation-name: shakeX;
+            animation-name: shakeX;
+  }
+
+  .xl\:hover\:animate__swing:hover{
+    transform-origin: top center;
+    -webkit-animation-name: swing;
+            animation-name: swing;
+  }
+
+  .xl\:hover\:animate__slow:hover{
+    -webkit-animation-duration: 2000ms;
+            animation-duration: 2000ms;
+  }
+
+  @media (prefers-reduced-motion: reduce){
+    .xl\:reduced-motion\:animate__animated{
+      -webkit-animation-duration: 1000ms;
+              animation-duration: 1000ms;
+      -webkit-animation-fill-mode: both;
+              animation-fill-mode: both;
+    }
+
+    .xl\:reduced-motion\:animate__fadeIn{
+      -webkit-animation-name: fadeIn;
+              animation-name: fadeIn;
+    }
+
+    .xl\:reduced-motion\:animate__shakeX{
+      -webkit-animation-name: shakeX;
+              animation-name: shakeX;
+    }
+
+    .xl\:reduced-motion\:animate__swing{
+      transform-origin: top center;
+      -webkit-animation-name: swing;
+              animation-name: swing;
+    }
+
+    .xl\:reduced-motion\:animate__slow{
+      -webkit-animation-duration: 2000ms;
+              animation-duration: 2000ms;
+    }
   }
 }
 

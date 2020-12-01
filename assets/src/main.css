@@ -31,10 +31,25 @@
 .swiper-pagination-bullet {
   margin: 0 2px;
 }
+.step:hover img {
+  @apply animate__animated;
+  @apply animate__swing;
+}
 
 .step h6::after {
-  display: block;
-  border: 1px solid #fbb902;
+  content: "";
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+  border-bottom: 0px solid #fbb902;
+}
+
+.step:hover h6::after {
+  content: "";
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+  border-bottom: 1px solid #fbb902;
 }
 
 .rangeslider--horizontal {

@@ -1,3 +1,17 @@
+const linkLogin = document.getElementById("login-btn");
+const linkContainer = document.getElementById("login-container");
+linkLogin.addEventListener("click", function () {
+  linkContainer.classList.contains("hidden")
+    ? linkContainer.classList.remove("hidden")
+    : linkContainer.classList.add("hidden");
+});
+
+var typed = new Typed("#typed", {
+  stringsElement: "#typed-strings",
+  loop: true,
+  backDelay: 8000,
+});
+
 // objeto constructor para formateo dinero
 var formatter = new Intl.NumberFormat("es-MX", {
   style: "currency",

@@ -8,86 +8,130 @@
     <title>Libertad</title>
   </head>
   <body class="font-body">
-    <header
-      class="bg-light-navy-blue-two md:flex md:items-center md:justify-between p-3 pb-0 md:pb-3"
-    >
-      <!-- Logo text or image -->
-      <div class="flex items-center justify-center mb-4 md:mb-0">
-        <h1 class="leading-none text-2xl text-grey-darkest">
-          <a class="no-underline text-grey-darkest hover:text-black" href="#">
-            <img src="images/logo.png" class="h-8 lg:h-12" alt="" />
-          </a>
-        </h1>
-      </div>
-      <!-- END Logo text or image -->
-
-      <!-- Search field -->
+    <header class="bg-light-navy-blue-two">
       <div
-        class="flex justify-center items-center mb-0 lg:mb-4 lg:pt-1 w-full md:mb-0 md:w-1/4"
+        class="container mx-auto md:flex md:items-center md:justify-between p-3 pb-0 md:pb-3"
       >
-        <div>
-          <img src="images/phone.png" class="h-8" alt="" />
-        </div>
-        <div class="ml-3">
-          <span class="block text-white text-xs lg:text-sm"
-            >Atención al cliente</span
-          >
-          <a type="tel:800-714-0274" class="text-piss-yellow">800-714-0274</a>
-        </div>
-      </div>
-      <!-- END Search field -->
-
-      <!-- Global navigation -->
-      <nav>
-        <ul class="list-reset md:flex md:items-center">
-          <li class="md:ml-4">
-            <a
-              class="block no-underline hover:underline py-2 text-white hover:text-piss-yellow md:border-none md:p-0"
-              href="#"
-            >
-              <div class="flex items-center justify-center">
-                <span class="inline-block mr-2">
-                  <svg
-                    class="w-3 h-3 lg:w-6 lg:h-6 fill-current text-white"
-                    fill="none"
-                    stroke="currentColor"
-                    viewBox="0 0 24 24"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      stroke-width="2"
-                      d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"
-                    ></path>
-                  </svg>
-                </span>
-                <span class="text-xs lg:text-base"> Iniciar sesión </span>
-                <span class="inline-block ml-2">
-                  <svg
-                    class="w-3 h-3 lg:w-6 lg:h-6"
-                    fill="none"
-                    stroke="currentColor"
-                    viewBox="0 0 24 24"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      stroke-width="2"
-                      d="M19 9l-7 7-7-7"
-                    ></path>
-                  </svg>
-                </span>
-              </div>
+        <!-- Logo text or image -->
+        <div class="flex items-center justify-center mb-4 md:mb-0">
+          <h1 class="leading-none text-2xl text-grey-darkest">
+            <a class="no-underline text-grey-darkest hover:text-black" href="#">
+              <img src="images/logo.png" class="h-8 lg:h-12" alt="" />
             </a>
-          </li>
-        </ul>
-      </nav>
-      <!-- END Global navigation -->
+          </h1>
+        </div>
+        <!-- END Logo text or image -->
+
+        <!-- Search field -->
+        <div
+          class="flex justify-center items-center mb-0 lg:mb-4 lg:pt-1 w-full md:mb-0 md:w-1/4"
+        >
+          <div>
+            <img src="images/phone.png" class="h-8" alt="" />
+          </div>
+          <div class="ml-3">
+            <span class="block text-white text-xs lg:text-sm"
+              >Atención al cliente</span
+            >
+            <a type="tel:800-714-0274" class="text-piss-yellow">800-714-0274</a>
+          </div>
+        </div>
+        <!-- END Search field -->
+
+        <!-- Global navigation -->
+        <nav>
+          <ul class="list-reset md:flex md:items-center">
+            <li class="md:ml-4">
+              <a
+                class="block no-underline hover:underline py-2 text-white hover:text-piss-yellow md:border-none md:p-0"
+                href="#"
+                id="login-btn"
+              >
+                <div class="flex items-center justify-center">
+                  <span class="inline-block mr-2 cursor-pointer">
+                    <svg
+                      class="w-3 h-3 lg:w-6 lg:h-6 fill-current text-white"
+                      fill="none"
+                      stroke="currentColor"
+                      viewBox="0 0 24 24"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                        d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"
+                      ></path>
+                    </svg>
+                  </span>
+                  <span class="text-xs lg:text-base"> Iniciar sesión </span>
+                  <span class="inline-block ml-2">
+                    <svg
+                      class="w-3 h-3 lg:w-6 lg:h-6"
+                      fill="none"
+                      stroke="currentColor"
+                      viewBox="0 0 24 24"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                        d="M19 9l-7 7-7-7"
+                      ></path>
+                    </svg>
+                  </span>
+                </div>
+              </a>
+            </li>
+          </ul>
+        </nav>
+        <!-- END Global navigation -->
+      </div>
     </header>
 
-    <section class="flex flex-col items-center">
+    <section class="flex flex-col items-center relative">
+      <div
+        class="z-40 absolute inset-0 bg-gray-200 h-screen lg:h-56 text-light-navy-blue-two hidden"
+        id="login-container"
+      >
+        <div
+          class="flex flex-col lg:flex-row items-center justify-between lg:justify-end px-5 pt-3 divide-y-2 lg:divide-y-0 lg:divide-x-2 divide-gray-600"
+        >
+          <div class="text-right p-2 lg:pr-10">
+            <h2 class="font-bold text-base">Nuevos usuarios</h2>
+            <p class="text-sm">¿Nuevos en Libertad?</p>
+            <p class="text-sm pb-4">
+              Registrate para tramitar tu <br class="hidden lg:block" />primera
+              solicitud hoy mismo
+            </p>
+            <button
+              class="bg-light-navy-blue-two text-white text-sm px-5 py-2 rounded-xl mb-3"
+            >
+              Registrarme
+            </button>
+          </div>
+          <div class="p-2 lg:px-10">
+            <div class="step-1 text-right">
+              <h2 class="font-bold text-base">
+                ¿Ya cuentas con <br class="hidden lg:block" />
+                una solicitud registrada <br class="hidden lg:block" />
+                en línea o sucursal?
+              </h2>
+              <p class="text-xs pb-3">consultala aquí</p>
+              <input
+                class="ml-auto block w-40 border border-gray-800 px-3 py-2 text-sm placeholder-gray-900 rounded-md"
+                type="text"
+                placeholder="Número de folio"
+              />
+              <button class="text-xs text-right">
+                ¿No recuerdas tu folio? <br />
+                Da click aquí te lo enviaremos pos sms
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
       <div
         class="w-full bg-white overflow-x-hidden flex snap-x h-sm-slide md:h-bg-slide"
       >
@@ -598,12 +642,17 @@
         </div>
       </div>
     </section>
-    <section class="w-full bg-macaroni-and-cheese">
+    <section class="w-full bg-macaroni-and-cheese h-32 lg:h-24">
+      <div id="typed-strings">
+        <p>
+          Pedir un préstamo en línea <br />
+          <span class="font-bold">es mucho más fácil de lo que imaginaste</span>
+        </p>
+      </div>
       <div
         class="container mx-auto text-center text-dark-grey-blue text-lg py-6"
       >
-        <p>Pedir un préstamo en línea</p>
-        <p class="font-bold">es mucho más fácil de lo que imaginaste</p>
+        <span id="typed"></span>
       </div>
     </section>
     <section class="w-full bg-light-navy-blue-two">
@@ -617,41 +666,37 @@
         <div
           class="w-full flex flex-col items-center text-center md:text-left md:flex-row justify-between"
         >
-          <div class="step mb-3 lg:mb-10">
+          <div class="step mb-3 lg:mb-10 hover:text-marigold">
             <img
               class="h-12 mb-5 mx-auto md:mx-0"
               src="images/money@3x.png"
               alt=""
             />
-            <h6 class="hover:text-marigold">
-              Dino cuánto <br />dinero necesitas.
-            </h6>
+            <h6>Dino cuánto <br />dinero necesitas.</h6>
           </div>
-          <div class="step mb-3 lg:mb-10">
+          <div class="step mb-3 lg:mb-10 hover:text-marigold">
             <img
               class="h-12 mb-5 mx-auto md:mx-0"
               src="images/research@3x.png"
               alt=""
             />
-            <h6 class="hover:text-marigold">Cuéntanos <br />sobre ti.</h6>
+            <h6>Cuéntanos <br />sobre ti.</h6>
           </div>
-          <div class="step mb-3 lg:mb-10">
+          <div class="step mb-3 lg:mb-10 hover:text-marigold">
             <img
               class="h-12 mb-5 mx-auto md:mx-0"
               src="images/cooperation-copia-2@3x.png"
               alt=""
             />
-            <h6 class="hover:text-marigold">
-              Obtén préstamos <br />personales
-            </h6>
+            <h6>Obtén préstamos <br />personales</h6>
           </div>
-          <div class="step mb-3 lg:mb-10">
+          <div class="step mb-3 lg:mb-10 hover:text-marigold">
             <img
               class="h-12 mb-5 mx-auto md:mx-0"
               src="images/stopwatch@3x.png"
               alt=""
             />
-            <h6 class="hover:text-marigold">Recibe tu dinero <br />en 48h</h6>
+            <h6>Recibe tu dinero <br />en 48h</h6>
           </div>
         </div>
         <div class="w-full lg:w-1/2">
@@ -767,7 +812,7 @@
       </div>
     </section>
     <section id="faq">
-      <div class="container my-10 px-3">
+      <div class="container mx-auto my-10 px-3">
         <h2
           class="text-center text-dark-grey-blue text-xl md:text-3xl mb-3 font-bold"
         >
@@ -995,12 +1040,15 @@
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
     <script src="main.bundle.js"></script>
     <script src="vendor/rangeslider.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.11"></script>
     <script src="js/app.js"></script>
     <script>
       var mySwiper = new Swiper(".swiper-container", {
         // Optional parameters
         loop: true,
-
+        autoplay: {
+          delay: 5000,
+        },
         // If we need pagination
         pagination: {
           el: ".swiper-pagination",
