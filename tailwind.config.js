@@ -40,6 +40,9 @@ module.exports = {
       width: {
         "abs-card": "35%",
       },
+      minHeight: {
+        "card-offer": "300px",
+      },
       inset: {
         40: "40%",
         10: "10%",

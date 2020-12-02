@@ -75,40 +75,42 @@ const btnStepRegister = document.getElementById("step-register-btn");
 const registerStepOne = document.getElementById("step-1-register");
 const registerStepTwo = document.getElementById("step-2-register");
 
-btnStepRegister.addEventListener("click", function () {
-  registerStepOne.classList.add("hidden");
-  registerStepTwo.classList.remove("hidden");
-});
+// btnStepRegister.addEventListener("click", function () {
+//   console.log("click");
+//   registerStepOne.classList.add("hidden");
+//   registerStepTwo.classList.remove("hidden");
+// });
 
 // evento para que pase en automatico los numeros del codigo sms
 var indexCodeInput = 0;
-$(".toast-input").bind("keyup", function () {
+$(".code-input").bind("keyup", function () {
   var value = $(this).val();
   var regex = /^\d+$/;
   if (regex.test(value)) {
     if (indexCodeInput < 5) {
       $(this).next().focus();
       if (indexCodeInput === 4) {
-        $("#small-spinner").removeClass("hidden");
+        $("#spinner-sms").removeClass("hidden");
         if (value === "1") {
           setTimeout(function () {
-            const verificacionHtml = `<div class="text-danger">Código inválido <br />
+            const verificacionHtml = `<div class="text-red-700">Código inválido <br />
               <span class="btn-link text-white text-underline"> recibe otro código por SMS</span></div>`;
-            $("#toast-label").html(verificacionHtml);
-            $(".toast-input").addClass("invalid");
-            $("#small-spinner").addClass("hidden");
-            $(".toast-input").val("");
+            $("#sms-response").html(verificacionHtml);
+            $(".code-input").addClass("border-red-700");
+            $("#spinner-sms").addClass("hidden");
+            $(".code-input").val("");
             indexCodeInput = 0;
+            document.querySelectorAll(".code-input")[0].focus();
           }, 1500);
         } else {
           setTimeout(function () {
-            if ($(".toast-input").hasClass("invalid")) {
-              $(".toast-input").removeClass("invalid");
-              $("#toast-label").find("div").removeClass("text-danger");
+            if ($(".code-input").hasClass("border-red-700")) {
+              $(".code-input").removeClass("border-red-700");
+              $("#sms-response").find("div").removeClass("text-danger");
             }
-            const toastHtml = `Código válido`;
-            $("#toast-label").html(toastHtml);
-            $(".toast-input").addClass("valid");
+            const toastHtml = `Código válido, espere ...`;
+            $("#sms-response").html(toastHtml);
+            $(".code-input").addClass("border-green-500");
             setTimeout(function () {
               window.location.href =
                 window.location.origin + "/formulario.html?oferta=" + true;
@@ -121,18 +123,17 @@ $(".toast-input").bind("keyup", function () {
   }
 });
 
-$("#celular-check-solicitud").keyup(function () {
+const celularInput = document.getElementById("phone-input");
+
+celularInput.addEventListener("keyup", function () {
   let regex = /^\(?([0-9]{2})\)?[-. ]?([0-9]{4})[-. ]?([0-9]{4})$/;
   if (regex.test($(this).val())) {
-    $("#btn-cel-icon").addClass("hidden");
-    $("#small-spinner-btn").removeClass("hidden");
+    document.getElementById("spinner-register").classList.remove("hidden");
+    //validar si existe en registros
     setTimeout(function () {
-      $("#small-spinner-btn").addClass("hidden");
-      $(".fa-commenting-o").removeClass("hidden");
-      $(".btn-toast-input").removeClass("hidden");
-      !isMobile && $(".sms-legend").removeClass("hidden");
-      $("#celular-check-solicitud").addClass("hidden");
-      $(".btn-toast-input:first").focus();
+      document.getElementById("spinner-register").classList.add("hidden");
+      document.getElementById("sms-input-container").classList.remove("hidden");
+      document.querySelectorAll(".code-input")[0].focus();
     }, 2000);
   }
 });
@@ -142,6 +143,9 @@ $(function () {
   // Initialize form validation on the registration form.
   // It has the name attribute "registration"
   $("#step-1-register").validate({
+    groups: {
+      requeridosGroup: "nombre materno paterno email",
+    },
     // Specify validation rules
     rules: {
       // The key name on the left side is the name attribute
@@ -174,6 +178,7 @@ $(function () {
     },
     validClass: "valid",
     errorClass: "invalid",
+    errorLabelContainer: "#messageBox",
     success: function (label, element) {
       $(element).parent().addClass("border-green-500");
     },
@@ -184,13 +189,23 @@ $(function () {
     // Make sure the form is submitted to the destination defined
     // in the "action" attribute of the form when valid
     submitHandler: function (form) {
-      $("#mandar-codigo-cel").removeClass("hidden");
-      $("#loader-phone-message").removeClass("hidden");
-      $("html, body").animate({ scrollTop: 0 }, "slow");
-      setTimeout(function () {
-        $("#loader-phone-message").addClass("hidden");
-        $("#sms-input-container").removeClass("hidden");
-      }, 3000);
+      registerStepOne.classList.add("hidden");
+      registerStepTwo.classList.remove("hidden");
+      // btnStepRegister.classList.remove("opacity-50", "cursor-not-allowed");
+      // $("#mandar-codigo-cel").removeClass("hidden");
+      // $("#loader-phone-message").removeClass("hidden");
+      // $("html, body").animate({ scrollTop: 0 }, "slow");
+      // setTimeout(function () {
+      //   $("#loader-phone-message").addClass("hidden");
+      //   $("#sms-input-container").removeClass("hidden");
+      // }, 3000);
     },
   });
+});
+
+const offerBtn = document.getElementById("offer-btn");
+const offerRegisterPanel = document.getElementById("register-offer");
+offerBtn.addEventListener("click", function (e) {
+  e.preventDefault();
+  offerRegisterPanel.classList.remove("hidden");
 });
