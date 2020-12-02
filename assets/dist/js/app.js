@@ -70,3 +70,127 @@ for (x = 0; x < myRadios.length; x++) {
     }
   };
 }
+
+const btnStepRegister = document.getElementById("step-register-btn");
+const registerStepOne = document.getElementById("step-1-register");
+const registerStepTwo = document.getElementById("step-2-register");
+
+btnStepRegister.addEventListener("click", function () {
+  registerStepOne.classList.add("hidden");
+  registerStepTwo.classList.remove("hidden");
+});
+
+// evento para que pase en automatico los numeros del codigo sms
+var indexCodeInput = 0;
+$(".toast-input").bind("keyup", function () {
+  var value = $(this).val();
+  var regex = /^\d+$/;
+  if (regex.test(value)) {
+    if (indexCodeInput < 5) {
+      $(this).next().focus();
+      if (indexCodeInput === 4) {
+        $("#small-spinner").removeClass("hidden");
+        if (value === "1") {
+          setTimeout(function () {
+            const verificacionHtml = `<div class="text-danger">Código inválido <br />
+              <span class="btn-link text-white text-underline"> recibe otro código por SMS</span></div>`;
+            $("#toast-label").html(verificacionHtml);
+            $(".toast-input").addClass("invalid");
+            $("#small-spinner").addClass("hidden");
+            $(".toast-input").val("");
+            indexCodeInput = 0;
+          }, 1500);
+        } else {
+          setTimeout(function () {
+            if ($(".toast-input").hasClass("invalid")) {
+              $(".toast-input").removeClass("invalid");
+              $("#toast-label").find("div").removeClass("text-danger");
+            }
+            const toastHtml = `Código válido`;
+            $("#toast-label").html(toastHtml);
+            $(".toast-input").addClass("valid");
+            setTimeout(function () {
+              window.location.href =
+                window.location.origin + "/formulario.html?oferta=" + true;
+            }, 2500);
+          }, 1500);
+        }
+      }
+    }
+    indexCodeInput++;
+  }
+});
+
+$("#celular-check-solicitud").keyup(function () {
+  let regex = /^\(?([0-9]{2})\)?[-. ]?([0-9]{4})[-. ]?([0-9]{4})$/;
+  if (regex.test($(this).val())) {
+    $("#btn-cel-icon").addClass("hidden");
+    $("#small-spinner-btn").removeClass("hidden");
+    setTimeout(function () {
+      $("#small-spinner-btn").addClass("hidden");
+      $(".fa-commenting-o").removeClass("hidden");
+      $(".btn-toast-input").removeClass("hidden");
+      !isMobile && $(".sms-legend").removeClass("hidden");
+      $("#celular-check-solicitud").addClass("hidden");
+      $(".btn-toast-input:first").focus();
+    }, 2000);
+  }
+});
+
+// validacion forma
+$(function () {
+  // Initialize form validation on the registration form.
+  // It has the name attribute "registration"
+  $("#step-1-register").validate({
+    // Specify validation rules
+    rules: {
+      // The key name on the left side is the name attribute
+      // of an input field. Validation rules are defined
+      // on the right side
+      nombre: "required",
+      materno: "required",
+      paterno: "required",
+      email: {
+        required: true,
+        // Specify that email should be validated
+        // by the built-in "email" rule
+        email: true,
+      },
+    },
+    // Specify validation error messages
+    messages: {
+      nombre:
+        "<i class='fa fa-exclamation-circle'></i> Todos los campos son requeridos",
+      paterno:
+        "<i class='fa fa-exclamation-circle'></i> Todos los campos son requeridos",
+      materno:
+        "<i class='fa fa-exclamation-circle'></i> Todos los campos son requeridos",
+      email: {
+        required:
+          "<i class='fa fa-exclamation-circle'></i> Todos los campos son requeridos",
+        email: "Introduzca un correo válido",
+      },
+      // celular: { required: "<i class='fa fa-exclamation-circle'></i> Todos los campos son requeridos", number: "Introduzca un celular válido" }
+    },
+    validClass: "valid",
+    errorClass: "invalid",
+    success: function (label, element) {
+      $(element).parent().addClass("border-green-500");
+    },
+    errorPlacement: function (error, element) {
+      $(element).parent().addClass("border-red-700");
+    },
+
+    // Make sure the form is submitted to the destination defined
+    // in the "action" attribute of the form when valid
+    submitHandler: function (form) {
+      $("#mandar-codigo-cel").removeClass("hidden");
+      $("#loader-phone-message").removeClass("hidden");
+      $("html, body").animate({ scrollTop: 0 }, "slow");
+      setTimeout(function () {
+        $("#loader-phone-message").addClass("hidden");
+        $("#sms-input-container").removeClass("hidden");
+      }, 3000);
+    },
+  });
+});

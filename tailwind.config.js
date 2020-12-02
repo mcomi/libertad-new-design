@@ -37,8 +37,23 @@ module.exports = {
         "md-slide": "26rem",
         "sm-slide": "40vh",
       },
+      width: {
+        "abs-card": "35%",
+      },
+      inset: {
+        40: "40%",
+        10: "10%",
+        1: "1rem",
+      },
+      transformOrigin: {
+        0: "0%",
+      },
+      zIndex: {
+        "-1": "-1",
+      },
     },
   },
+  variants: { borderColor: ["responsive", "hover", "focus", "focus-within"] },
   plugins: [
     // Other plugins
     require("tailwindcss-animatecss")({
