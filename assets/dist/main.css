@@ -26262,7 +26262,7 @@ video {
   transform: rotateX(180deg);
 }
 
-input:not(:-moz-placeholder-shown) ~ label {
+input[type="text"]:not(:-moz-placeholder-shown) ~ label {
   --transform-translate-x: 0;
   --transform-translate-y: 0;
   --transform-rotate: 0;
@@ -26276,7 +26276,7 @@ input:not(:-moz-placeholder-shown) ~ label {
   --transform-translate-y: -1.25rem;
 }
 
-input:not(:-ms-input-placeholder) ~ label {
+input[type="text"]:not(:-ms-input-placeholder) ~ label {
   --transform-translate-x: 0;
   --transform-translate-y: 0;
   --transform-rotate: 0;
@@ -26290,8 +26290,8 @@ input:not(:-ms-input-placeholder) ~ label {
   --transform-translate-y: -1.25rem;
 }
 
-input:focus-within ~ label,
-input:not(:placeholder-shown) ~ label {
+input[type="text"]:focus-within ~ label,
+input[type="text"]:not(:placeholder-shown) ~ label {
   --transform-translate-x: 0;
   --transform-translate-y: 0;
   --transform-rotate: 0;
@@ -26305,25 +26305,25 @@ input:not(:placeholder-shown) ~ label {
   --transform-translate-y: -1.25rem;
 }
 
-input:focus-within ~ label {
+input[type="text"]:focus-within ~ label {
   --text-opacity: 1;
   color: #4299e1;
   color: rgba(66, 153, 225, var(--text-opacity));
 }
 
-input.valid ~ label {
+input[type="text"].valid ~ label {
   --text-opacity: 1;
   color: #48bb78;
   color: rgba(72, 187, 120, var(--text-opacity));
 }
 
-input.invalid ~ label {
+input[type="text"].invalid ~ label {
   --text-opacity: 1;
   color: #c53030;
   color: rgba(197, 48, 48, var(--text-opacity));
 }
 
-.outline input:not(:-moz-placeholder-shown) ~ label {
+.outline input[type="text"]:not(:-moz-placeholder-shown) ~ label {
   --transform-translate-x: 0;
   --transform-translate-y: 0;
   --transform-rotate: 0;
@@ -26343,7 +26343,7 @@ input.invalid ~ label {
   padding-bottom: 0;
 }
 
-.outline input:not(:-ms-input-placeholder) ~ label {
+.outline input[type="text"]:not(:-ms-input-placeholder) ~ label {
   --transform-translate-x: 0;
   --transform-translate-y: 0;
   --transform-rotate: 0;
@@ -26363,8 +26363,8 @@ input.invalid ~ label {
   padding-bottom: 0;
 }
 
-.outline input:focus-within ~ label,
-.outline input:not(:placeholder-shown) ~ label {
+.outline input[type="text"]:focus-within ~ label,
+.outline input[type="text"]:not(:placeholder-shown) ~ label {
   --transform-translate-x: 0;
   --transform-translate-y: 0;
   --transform-rotate: 0;
