@@ -140,24 +140,38 @@
 }
 
 input[type="text"]:focus-within ~ label,
-input[type="text"]:not(:placeholder-shown) ~ label {
+input[type="text"]:not(:placeholder-shown) ~ label,
+input[type="email"]:focus-within ~ label,
+input[type="email"]:not(:placeholder-shown) ~ label,
+input[type="tel"]:focus-within ~ label,
+input[type="tel"]:not(:placeholder-shown) ~ label {
   @apply transform scale-75 -translate-y-5;
 }
 
-input[type="text"]:focus-within ~ label {
+input[type="text"]:focus-within ~ label,
+input[type="email"]:focus-within ~ label,
+input[type="tel"]:focus-within ~ label {
   @apply text-blue-500;
 }
 
-input[type="text"].valid ~ label {
+input[type="text"].valid ~ label,
+input[type="email"].valid ~ label,
+input[type="tel"].valid ~ label {
   @apply text-green-500;
 }
 
-input[type="text"].invalid ~ label {
+input[type="text"].invalid ~ label,
+input[type="email"].invalid ~ label,
+input[type="tel"].invalid ~ label {
   @apply text-red-700;
 }
 
 .outline input[type="text"]:focus-within ~ label,
-.outline input[type="text"]:not(:placeholder-shown) ~ label {
+.outline input[type="text"]:not(:placeholder-shown) ~ label,
+.outline input[type="email"]:focus-within ~ label,
+.outline input[type="email"]:not(:placeholder-shown) ~ label,
+.outline input[type="tel"]:focus-within ~ label,
+.outline input[type="tel"]:not(:placeholder-shown) ~ label {
   @apply transform scale-75 -translate-y-3 z-0 ml-4 px-1 py-0;
 }
 
@@ -174,4 +188,18 @@ input.valid ~ svg.text-green-500 {
 
 input.invalid ~ svg.text-red-700 {
   opacity: 1;
+}
+
+.menu-form {
+  @apply border-t-2;
+  @apply text-light-navy-blue-two;
+}
+
+.menu-form.active {
+  @apply border-t-0;
+  @apply border-b-2;
+}
+
+.menu-form.active span {
+  @apply text-xl;
 }

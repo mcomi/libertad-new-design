@@ -26262,7 +26262,7 @@ video {
   transform: rotateX(180deg);
 }
 
-input[type="text"]:not(:-moz-placeholder-shown) ~ label {
+input[type="text"]:not(:-moz-placeholder-shown) ~ label, input[type="email"]:not(:-moz-placeholder-shown) ~ label, input[type="tel"]:not(:-moz-placeholder-shown) ~ label {
   --transform-translate-x: 0;
   --transform-translate-y: 0;
   --transform-rotate: 0;
@@ -26276,7 +26276,7 @@ input[type="text"]:not(:-moz-placeholder-shown) ~ label {
   --transform-translate-y: -1.25rem;
 }
 
-input[type="text"]:not(:-ms-input-placeholder) ~ label {
+input[type="text"]:not(:-ms-input-placeholder) ~ label, input[type="email"]:not(:-ms-input-placeholder) ~ label, input[type="tel"]:not(:-ms-input-placeholder) ~ label {
   --transform-translate-x: 0;
   --transform-translate-y: 0;
   --transform-rotate: 0;
@@ -26291,7 +26291,11 @@ input[type="text"]:not(:-ms-input-placeholder) ~ label {
 }
 
 input[type="text"]:focus-within ~ label,
-input[type="text"]:not(:placeholder-shown) ~ label {
+input[type="text"]:not(:placeholder-shown) ~ label,
+input[type="email"]:focus-within ~ label,
+input[type="email"]:not(:placeholder-shown) ~ label,
+input[type="tel"]:focus-within ~ label,
+input[type="tel"]:not(:placeholder-shown) ~ label {
   --transform-translate-x: 0;
   --transform-translate-y: 0;
   --transform-rotate: 0;
@@ -26305,25 +26309,31 @@ input[type="text"]:not(:placeholder-shown) ~ label {
   --transform-translate-y: -1.25rem;
 }
 
-input[type="text"]:focus-within ~ label {
+input[type="text"]:focus-within ~ label,
+input[type="email"]:focus-within ~ label,
+input[type="tel"]:focus-within ~ label {
   --text-opacity: 1;
   color: #4299e1;
   color: rgba(66, 153, 225, var(--text-opacity));
 }
 
-input[type="text"].valid ~ label {
+input[type="text"].valid ~ label,
+input[type="email"].valid ~ label,
+input[type="tel"].valid ~ label {
   --text-opacity: 1;
   color: #48bb78;
   color: rgba(72, 187, 120, var(--text-opacity));
 }
 
-input[type="text"].invalid ~ label {
+input[type="text"].invalid ~ label,
+input[type="email"].invalid ~ label,
+input[type="tel"].invalid ~ label {
   --text-opacity: 1;
   color: #c53030;
   color: rgba(197, 48, 48, var(--text-opacity));
 }
 
-.outline input[type="text"]:not(:-moz-placeholder-shown) ~ label {
+.outline input[type="text"]:not(:-moz-placeholder-shown) ~ label, .outline input[type="email"]:not(:-moz-placeholder-shown) ~ label, .outline input[type="tel"]:not(:-moz-placeholder-shown) ~ label {
   --transform-translate-x: 0;
   --transform-translate-y: 0;
   --transform-rotate: 0;
@@ -26343,7 +26353,7 @@ input[type="text"].invalid ~ label {
   padding-bottom: 0;
 }
 
-.outline input[type="text"]:not(:-ms-input-placeholder) ~ label {
+.outline input[type="text"]:not(:-ms-input-placeholder) ~ label, .outline input[type="email"]:not(:-ms-input-placeholder) ~ label, .outline input[type="tel"]:not(:-ms-input-placeholder) ~ label {
   --transform-translate-x: 0;
   --transform-translate-y: 0;
   --transform-rotate: 0;
@@ -26364,7 +26374,11 @@ input[type="text"].invalid ~ label {
 }
 
 .outline input[type="text"]:focus-within ~ label,
-.outline input[type="text"]:not(:placeholder-shown) ~ label {
+.outline input[type="text"]:not(:placeholder-shown) ~ label,
+.outline input[type="email"]:focus-within ~ label,
+.outline input[type="email"]:not(:placeholder-shown) ~ label,
+.outline input[type="tel"]:focus-within ~ label,
+.outline input[type="tel"]:not(:placeholder-shown) ~ label {
   --transform-translate-x: 0;
   --transform-translate-y: 0;
   --transform-rotate: 0;
@@ -26397,6 +26411,22 @@ input.valid ~ svg.text-green-500 {
 
 input.invalid ~ svg.text-red-700 {
   opacity: 1;
+}
+
+.menu-form {
+  border-top-width: 2px;
+  --text-opacity: 1;
+  color: #305395;
+  color: rgba(48, 83, 149, var(--text-opacity));
+}
+
+.menu-form.active {
+  border-top-width: 0;
+  border-bottom-width: 2px;
+}
+
+.menu-form.active span {
+  font-size: 1.25rem;
 }
 
 @media (min-width: 640px){

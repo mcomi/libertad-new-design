@@ -1,0 +1,931 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="vendor/rangeslider.css" />
+    <link rel="stylesheet" href="main.css" />
+    <title>Libertad</title>
+  </head>
+  <body class="font-body">
+    <header class="bg-light-navy-blue-two">
+      <div
+        class="container mx-auto md:flex md:items-center md:justify-between p-3 pb-0 md:pb-3"
+      >
+        <!-- Logo text or image -->
+        <div class="flex items-center justify-center mb-4 md:mb-0">
+          <h1 class="leading-none text-2xl text-grey-darkest">
+            <a class="no-underline text-grey-darkest hover:text-black" href="#">
+              <img src="images/logo.png" class="h-8 lg:h-12" alt="" />
+            </a>
+          </h1>
+        </div>
+        <!-- END Logo text or image -->
+
+        <!-- Search field -->
+        <div
+          class="flex justify-center items-center mb-0 lg:mb-4 lg:pt-1 w-full md:mb-0 md:w-1/4"
+        >
+          <div>
+            <img src="images/phone.png" class="h-8" alt="" />
+          </div>
+          <div class="ml-3">
+            <span class="block text-white text-xs lg:text-sm"
+              >Atención al cliente</span
+            >
+            <a type="tel:800-714-0274" class="text-piss-yellow">800-714-0274</a>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <section class="bg-white">
+      <div class="container mx-auto w-10/12">
+        <div class="flex justify-between py-4">
+          <div
+            class="hidden md:block w-full mx-2 border-light-navy-blue-two menu-form"
+          >
+            <span class="text-xs">Datos personales</span>
+          </div>
+          <div
+            class="md:block w-full mx-2 border-light-navy-blue-two menu-form active"
+          >
+            <span class="text-xs">Empleo</span>
+          </div>
+          <div
+            class="hidden md:block w-full mx-2 border-light-navy-blue-two menu-form"
+          >
+            <span class="text-xs">Autorización</span>
+          </div>
+          <div
+            class="hidden md:block w-full mx-2 border-light-navy-blue-two menu-form"
+          >
+            <span class="text-xs">Ofertas</span>
+          </div>
+          <div
+            class="hidden md:block w-full mx-2 border-light-navy-blue-two menu-form"
+          >
+            <span class="text-xs">Documentos</span>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="min-h-screen pb-6 bg-silver">
+      <div class="container pt-4 hidden" id="datos-personales">
+        <div
+          class="w-full mx-auto md:w-1/2 bg-white rounded-sm shadow-lg py-4 px-16 text-center text-light-navy-blue-two"
+        >
+          <h3 class="my-2 text-2xl font-semibold">Datos personales</h3>
+          <p class="text-xs mb-4">
+            Al registrar tus datos y comenzar la solicitud aceptas los Términos
+            y condiciones
+          </p>
+          <form id="step-1-register">
+            <div class="flex flex-wrap">
+              <div class="w-full">
+                <div
+                  class="outline relative border border-gray-800 rounded-lg mb-2 focus-within:border-blue-500"
+                >
+                  <input
+                    class="block px-4 py-2 w-full text-lg appearance-none focus:outline-none bg-transparent"
+                    placeholder=" "
+                    type="text"
+                    id="nombre"
+                    name="nombre"
+                  />
+                  <svg
+                    class="w-6 h-6 text-green-500"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M5 13l4 4L19 7"
+                    ></path>
+                  </svg>
+                  <svg
+                    class="w-6 h-6 text-red-700"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M6 18L18 6M6 6l12 12"
+                    ></path>
+                  </svg>
+                  <label
+                    class="absolute left-1 top-0 bg-white px-4 py-2 transition duration-300 origin-0"
+                    for="nombre"
+                    >Nombre</label
+                  >
+                </div>
+              </div>
+            </div>
+            <div class="flex flex-wrap -mx-2 md:space-y-0">
+              <div class="w-full px-2 md:w-1/2">
+                <div
+                  class="outline relative border border-gray-800 rounded-lg mb-2 focus-within:border-blue-500"
+                >
+                  <input
+                    class="block px-4 py-2 w-full text-lg appearance-none focus:outline-none bg-transparent"
+                    placeholder=" "
+                    type="text"
+                    id="paterno"
+                    name="paterno"
+                  />
+                  <svg
+                    class="w-6 h-6 text-green-500"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M5 13l4 4L19 7"
+                    ></path>
+                  </svg>
+                  <svg
+                    class="w-6 h-6 text-red-700"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M6 18L18 6M6 6l12 12"
+                    ></path>
+                  </svg>
+                  <label
+                    class="absolute left-1 top-0 bg-white px-4 py-2 transition duration-300 origin-0"
+                    for="day"
+                    >Apellido paterno</label
+                  >
+                </div>
+              </div>
+              <div class="w-full px-2 md:w-1/2">
+                <div
+                  class="outline relative border border-gray-800 rounded-lg mb-2 focus-within:border-blue-500"
+                >
+                  <input
+                    class="block px-4 py-2 w-full text-lg appearance-none focus:outline-none bg-transparent"
+                    placeholder=" "
+                    type="text"
+                    id="materno"
+                    name="materno"
+                  />
+                  <svg
+                    class="w-6 h-6 text-green-500"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M5 13l4 4L19 7"
+                    ></path>
+                  </svg>
+                  <svg
+                    class="w-6 h-6 text-red-700"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M6 18L18 6M6 6l12 12"
+                    ></path>
+                  </svg>
+                  <label
+                    class="absolute left-1 top-0 bg-white px-4 py-2 transition duration-300 origin-0"
+                    for="materno"
+                    >Apellido materno</label
+                  >
+                </div>
+              </div>
+            </div>
+            <div class="md:flex md:items-center my-3">
+              <div class="md:w-1/4">
+                <p>Género:</p>
+              </div>
+              <label class="md:w-1/4 block">
+                <input class="mr-2 leading-tight" type="radio" />
+                <span class="text-sm"> Hombre </span>
+              </label>
+              <label class="md:w-1/4 block">
+                <input class="mr-2 leading-tight" type="radio" />
+                <span class="text-sm"> Mujer </span>
+              </label>
+            </div>
+            <div class="flex flex-wrap -mx-2 md:space-y-0">
+              <div class="w-full px-2 md:w-1/3">
+                <div
+                  class="outline relative border border-gray-800 rounded-lg mb-2 focus-within:border-blue-500"
+                >
+                  <input
+                    class="block px-4 py-2 w-full text-lg appearance-none focus:outline-none bg-transparent"
+                    placeholder=" "
+                    type="text"
+                    id="day"
+                    name="day"
+                  />
+                  <svg
+                    class="w-6 h-6 text-green-500"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M5 13l4 4L19 7"
+                    ></path>
+                  </svg>
+                  <svg
+                    class="w-6 h-6 text-red-700"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M6 18L18 6M6 6l12 12"
+                    ></path>
+                  </svg>
+                  <label
+                    class="absolute left-1 top-0 bg-white px-4 py-2 transition duration-300 origin-0"
+                    for="paterno"
+                    >DD</label
+                  >
+                </div>
+              </div>
+              <div class="w-full px-2 md:w-1/3">
+                <div
+                  class="outline relative border border-gray-800 rounded-lg mb-2 focus-within:border-blue-500"
+                >
+                  <input
+                    class="block px-4 py-2 w-full text-lg appearance-none focus:outline-none bg-transparent"
+                    placeholder=" "
+                    type="text"
+                    id="month"
+                    name="month"
+                  />
+                  <svg
+                    class="w-6 h-6 text-green-500"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M5 13l4 4L19 7"
+                    ></path>
+                  </svg>
+                  <svg
+                    class="w-6 h-6 text-red-700"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M6 18L18 6M6 6l12 12"
+                    ></path>
+                  </svg>
+                  <label
+                    class="absolute left-1 top-0 bg-white px-4 py-2 transition duration-300 origin-0"
+                    for="month"
+                    >MM</label
+                  >
+                </div>
+              </div>
+              <div class="w-full px-2 md:w-1/3">
+                <div
+                  class="outline relative border border-gray-800 rounded-lg mb-2 focus-within:border-blue-500"
+                >
+                  <input
+                    class="block px-4 py-2 w-full text-lg appearance-none focus:outline-none bg-transparent"
+                    placeholder=" "
+                    type="text"
+                    id="year"
+                    name="year"
+                  />
+                  <svg
+                    class="w-6 h-6 text-green-500"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M5 13l4 4L19 7"
+                    ></path>
+                  </svg>
+                  <svg
+                    class="w-6 h-6 text-red-700"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M6 18L18 6M6 6l12 12"
+                    ></path>
+                  </svg>
+                  <label
+                    class="absolute left-1 top-0 bg-white px-4 py-2 transition duration-300 origin-0"
+                    for="anio"
+                    >AAAA</label
+                  >
+                </div>
+              </div>
+            </div>
+            <div class="flex flex-wrap">
+              <div class="w-full">
+                <div
+                  class="outline relative border border-gray-800 rounded-lg mb-2 focus-within:border-blue-500"
+                >
+                  <input
+                    class="block px-4 py-2 w-full text-lg appearance-none focus:outline-none bg-transparent"
+                    placeholder=" "
+                    type="text"
+                    id="nacionalidad"
+                    name="nacionalidad"
+                  />
+                  <svg
+                    class="w-6 h-6 text-green-500"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M5 13l4 4L19 7"
+                    ></path>
+                  </svg>
+                  <svg
+                    class="w-6 h-6 text-red-700"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M6 18L18 6M6 6l12 12"
+                    ></path>
+                  </svg>
+                  <label
+                    class="absolute left-1 top-0 bg-white px-4 py-2 transition duration-300 origin-0"
+                    for="nacionalidad"
+                    >Nacionalidad</label
+                  >
+                </div>
+              </div>
+            </div>
+            <div class="flex flex-wrap">
+              <div class="w-full">
+                <div
+                  class="outline relative border border-gray-800 rounded-lg mb-2 focus-within:border-blue-500"
+                >
+                  <input
+                    class="block px-4 py-2 w-full text-lg appearance-none focus:outline-none bg-transparent"
+                    placeholder=" "
+                    type="text"
+                    id="estado"
+                    name="estado"
+                  />
+                  <svg
+                    class="w-6 h-6 text-green-500"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M5 13l4 4L19 7"
+                    ></path>
+                  </svg>
+                  <svg
+                    class="w-6 h-6 text-red-700"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M6 18L18 6M6 6l12 12"
+                    ></path>
+                  </svg>
+                  <label
+                    class="absolute left-1 top-0 bg-white px-4 py-2 transition duration-300 origin-0"
+                    for="estado"
+                    >Estado de nacimiento</label
+                  >
+                </div>
+              </div>
+            </div>
+            <div class="flex flex-wrap">
+              <div class="w-full">
+                <div
+                  class="outline relative border border-gray-800 rounded-lg mb-2 focus-within:border-blue-500"
+                >
+                  <input
+                    class="block px-4 py-2 w-full text-lg appearance-none focus:outline-none bg-transparent"
+                    placeholder=" "
+                    type="text"
+                    id="ciudad"
+                    name="ciudad"
+                  />
+                  <svg
+                    class="w-6 h-6 text-green-500"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M5 13l4 4L19 7"
+                    ></path>
+                  </svg>
+                  <svg
+                    class="w-6 h-6 text-red-700"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M6 18L18 6M6 6l12 12"
+                    ></path>
+                  </svg>
+                  <label
+                    class="absolute left-1 top-0 bg-white px-4 py-2 transition duration-300 origin-0"
+                    for="ciudad"
+                    >Ciudad</label
+                  >
+                </div>
+              </div>
+            </div>
+            <div class="flex flex-wrap">
+              <div class="w-full">
+                <div
+                  class="outline relative border border-gray-800 rounded-lg mb-2 focus-within:border-blue-500"
+                >
+                  <input
+                    class="block px-4 py-2 w-full text-lg appearance-none focus:outline-none bg-transparent"
+                    placeholder=" "
+                    type="email"
+                    name="email"
+                    id="email"
+                  />
+                  <svg
+                    class="w-6 h-6 text-green-500"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M5 13l4 4L19 7"
+                    ></path>
+                  </svg>
+                  <svg
+                    class="w-6 h-6 text-red-700"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M6 18L18 6M6 6l12 12"
+                    ></path>
+                  </svg>
+                  <label
+                    class="absolute left-1 top-0 bg-white px-4 py-2 transition duration-300 origin-0"
+                    for="email"
+                    >Correo electrónico</label
+                  >
+                </div>
+              </div>
+            </div>
+            <div class="flex flex-wrap">
+              <div class="w-full">
+                <div
+                  class="outline relative border border-gray-800 rounded-lg mb-2 focus-within:border-blue-500"
+                >
+                  <input
+                    class="block px-4 py-2 w-full text-lg appearance-none focus:outline-none bg-transparent"
+                    placeholder=" "
+                    type="text"
+                    id="telefono"
+                    name="telefono"
+                  />
+                  <svg
+                    class="w-6 h-6 text-green-500"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M5 13l4 4L19 7"
+                    ></path>
+                  </svg>
+                  <svg
+                    class="w-6 h-6 text-red-700"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M6 18L18 6M6 6l12 12"
+                    ></path>
+                  </svg>
+                  <label
+                    class="absolute left-1 top-0 bg-white px-4 py-2 transition duration-300 origin-0"
+                    for="telefono"
+                    >Celular/Whatsapp</label
+                  >
+                </div>
+              </div>
+            </div>
+            <button
+              type="submit"
+              class="my-2 px-10 py-2 text-sm bg-dark-grey-blue text-macaroni-and-cheese rounded-3xl font-light"
+              id="step-register-btn"
+            >
+              Siguiente
+            </button>
+            <div class="w-full text-center">
+              <div id="messageBox"></div>
+            </div>
+          </form>
+        </div>
+      </div>
+
+      <!-- Ofertas -->
+      <div class="container mx-auto text-center text-light-navy-blue-two">
+        <h3 class="text-green-700 text-2xl pt-6 font-semibold">Felicidades</h3>
+        <h2 class="text-3xl font-semibold">Tenemos la mejor oferta para ti</h2>
+        <p>
+          Puedes también elegir una de las ofertas que mas corresponda a tus
+          necesidades
+        </p>
+        <div class="flex flex-col lg:flex-row lg:w-8/12 mx-auto">
+          <div class="w-full lg:w-3/12 bg-green-800 text-white p-5 h-16">
+            Mi primer crédito
+          </div>
+          <div class="w-full lg:w-9/12">
+            <div class="border border-green-800"></div>
+            <div class="bg-white text-center mb-12 shadow-lg">
+              <p class="pt-4 mb-">Monto del crédito</p>
+              <small class="text-xs pt-0">(desde $2000 hasta $50000)</small>
+              <div class="credit-calc">
+                <p id="monto-requerido" class="font-semibold mb-4 text-3xl">
+                  $10,000
+                </p>
+                <div class="sliderWrap mx-3">
+                  <div class="slider-inner-wrapper">
+                    <input
+                      id="slider-loan-amount"
+                      min="1000"
+                      value="10000"
+                      max="50000"
+                      default_amount="10000"
+                      step="1000"
+                      type="range"
+                    />
+                    <!-- <div class="range">
+                    <small class="min float-left">$0</small>
+                    <small class="max float-right">$50,000</small>
+                  </div> -->
+                  </div>
+                </div>
+                <p class="pt-5">Mensualidades</p>
+                <small>(desde 12 hasta 72 meses)</small>
+                <div class="flex flex-wrap justify-center items-center">
+                  <div
+                    class="border border-gray-900 rounded-md w-24 lg:w-32 mx-3 my-1 lg:mx-2"
+                  >
+                    <p class="text-lg">Pago</p>
+                    <span class="font-semibold text-lg">$1350</span>
+                  </div>
+                  <div
+                    class="border border-gray-900 rounded-md w-24 lg:w-32 mx-3 my-1 lg:mx-2"
+                  >
+                    <p class="text-lg">Quincenas</p>
+                    <select class="mt-1 font-semibold text-lg" name="periodos">
+                      <option value="12" selected>12</option>
+                      <option value="24">24</option>
+                      <option value="48">48</option>
+                      <option value="72">72</option>
+                    </select>
+                  </div>
+                  <div
+                    class="border border-gray-900 rounded-md w-24 lg:w-32 mx-3 my-1 lg:mx-2"
+                  >
+                    <p class="text-lg">Tantos</p>
+                    <select class="mt-1 font-semibold text-lg" name="periodos">
+                      <option value="12" selected>144</option>
+                      <option value="24">24</option>
+                      <option value="48">48</option>
+                      <option value="72">72</option>
+                    </select>
+                  </div>
+                  <div
+                    class="border border-gray-900 rounded-md w-24 lg:w-32 mx-3 my-1 lg:mx-2"
+                  >
+                    <p class="text-lg">Garantía</p>
+                    <select class="mt-1 font-semibold text-lg" name="periodos">
+                      <option value="12" selected>Sin aval</option>
+                    </select>
+                  </div>
+                </div>
+                <div
+                  class="flex flex-col lg:flex-row justify-center py-3 mx-auto"
+                >
+                  <div class="w-full lg:w-1/2 px-3 lg:mx-3 p-2">
+                    <div class="bg-green-800 mb-3 text-white uppercase py-2">
+                      Cálculos
+                    </div>
+                    <div class="flex text-sm">
+                      <div class="text-right">
+                        <p class="uppercase">monto a pagar bc:</p>
+                        <p class="uppercase">probabilidad de mora:</p>
+                        <p class="uppercase">tasa de interes:</p>
+                        <p class="uppercase">seguro:</p>
+                        <p class="uppercase">liberasistencia:</p>
+                        <p class="uppercase">cat:</p>
+                      </div>
+                      <div class="text-left ml-2">
+                        <p class="uppercase font-semibold">$1,146.13</p>
+                        <p class="uppercase font-semibold">0.543531</p>
+                        <p class="uppercase font-semibold">60%</p>
+                        <p class="uppercase font-semibold">$2,436.43</p>
+                        <p class="uppercase font-semibold">$3,146.21</p>
+                        <p class="uppercase font-semibold">84.5%</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="w-full lg:w-1/2 px-3 lg:mx-3 p-2">
+                    <div class="bg-green-800 mb-3 text-white uppercase py-2">
+                      Requisitos
+                    </div>
+                    <div class="text-center text-sm">
+                      <p class="">
+                        <svg
+                          class="w-4 h-4 mr-1 inline-block"
+                          fill="none"
+                          stroke="currentColor"
+                          viewBox="0 0 24 24"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="1"
+                            d="M5 13l4 4L19 7"
+                          ></path>
+                        </svg>
+                        1 Identificación oficial
+                      </p>
+                      <p class="">
+                        <svg
+                          class="w-4 h-4 mr-1 inline-block"
+                          fill="none"
+                          stroke="currentColor"
+                          viewBox="0 0 24 24"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="1"
+                            d="M5 13l4 4L19 7"
+                          ></path>
+                        </svg>
+                        1 Comprobante de domicilio
+                      </p>
+                      <p class="">
+                        <svg
+                          class="w-4 h-4 mr-1 inline-block"
+                          fill="none"
+                          stroke="currentColor"
+                          viewBox="0 0 24 24"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="1"
+                            d="M5 13l4 4L19 7"
+                          ></path>
+                        </svg>
+                        1 Comprobante de ingresos
+                      </p>
+                      <p class="">
+                        <svg
+                          class="w-4 h-4 mr-1 inline-block"
+                          fill="none"
+                          stroke="currentColor"
+                          viewBox="0 0 24 24"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="1"
+                            d="M5 13l4 4L19 7"
+                          ></path>
+                        </svg>
+                        4 Garantias
+                      </p>
+                      <p class="">
+                        <svg
+                          class="w-4 h-4 mr-1 inline-block"
+                          fill="none"
+                          stroke="currentColor"
+                          viewBox="0 0 24 24"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="1"
+                            d="M5 13l4 4L19 7"
+                          ></path>
+                        </svg>
+                        1 Automóvil
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <footer id="footer" class="bg-light-navy-blue-two">
+      <!-- start container -->
+      <div class="container mx-auto lg:w-10/12 pt-8 pb-4 px-4">
+        <div
+          class="flex flex-wrap overflow-hidden sm:-mx-1 md:-mx-px lg:-mx-2 xl:-mx-2"
+        >
+          <div
+            class="w-full overflow-hidden sm:my-1 sm:px-1 sm:w-1/2 md:my-px md:px-px md:w-1/2 lg:my-2 lg:px-2 lg:w-1/3 pb-6"
+          >
+            <!-- Column 2 Content -->
+            <img class="h-12" src="images/logo.png" alt="Logo" />
+            <p class="text-sm font-light pt-3 text-white">
+              Cumplimos 60 años de historia y experiencia en el Mercado.
+              Ofrecemos una amplia gama de soluciones en servicios financieros a
+              las personas en los rubros de crédito, ahorro e inversión. En
+              Libertad creemos en las personas y concretar verdaderas soluciones
+              de vida es nuestra vocación y pasión.
+            </p>
+          </div>
+
+          <div
+            class="w-full overflow-hidden sm:my-1 sm:px-1 sm:w-1/2 md:my-px md:px-px md:w-1/2 lg:my-2 lg:px-8 lg:px-2 lg:w-1/3 pb-6"
+          >
+            <!-- Column 3 Content -->
+            <h4 class="text-white font-bold uppercase">Contacto</h4>
+            <p class="text-sm font-light pt-3 text-white pb-3">
+              Blvd. Bernardo Quintana No. 9791, Centro Sur, C.P. 76090,
+              Querétaro,Qro. asistencia@libertad.com.mx
+            </p>
+            <p class="text-sm font-light pt-3 text-white">
+              Libertad Servicios Financieros, S.A. de C.V:, S.F.P. Teléfono: 800
+              714 0274
+            </p>
+          </div>
+
+          <div
+            class="w-full overflow-hidden sm:my-1 sm:px-1 sm:w-1/2 md:my-px md:px-px md:w-1/2 lg:my-2 lg:pl-8 lg:px-2 lg:w-1/3 pb-6"
+          >
+            <!-- Column 4 Content -->
+
+            <h4 class="text-white font-bold uppercase">Información</h4>
+            <ul class="">
+              <li id="navi-2" class="leading-7 text-sm">
+                <a class="text-white text-small" href="/">
+                  Aviso de privacidad
+                </a>
+              </li>
+              <li id="navi-1" class="leading-7 text-sm">
+                <a class="text-white text-small" href="/">Aviso Legal</a>
+              </li>
+              <li id="navi-1" class="leading-7 text-sm">
+                <a class="text-white text-small" href="/"
+                  >Costos y comisiones</a
+                >
+              </li>
+            </ul>
+            <p class="text-xs lg:text-sm font-light pt-3 text-white uppercase">
+              DERECHOS RESERVADOS (D.R.) © Agosto 2016. LIBERTAD SERVICIOS
+              FINANCIEROS, S.A. DE C.V. S.F.P.
+            </p>
+          </div>
+        </div>
+
+        <!-- end container -->
+      </div>
+      <!-- Start footer bottom -->
+
+      <div class="py-2 md:flex md:items-center md:justify-center bg-black">
+        <p
+          class="py-3 text-white text-xs lg:text-sm font-light text-center px-3"
+        >
+          Copyright © 2019 Libertad Servicios Financieros S.A. de C.V.S.F.P.
+        </p>
+      </div>
+    </footer>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script src="main.bundle.js"></script>
+    <script src="vendor/rangeslider.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.11"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.2/jquery.validate.min.js"></script>
+    <script src="js/app.js"></script>
+    <script>
+      var mySwiper = new Swiper(".swiper-container", {
+        // Optional parameters
+        loop: true,
+        autoplay: {
+          delay: 5000,
+        },
+        // If we need pagination
+        pagination: {
+          el: ".swiper-pagination",
+        },
+      });
+    </script>
+  </body>
+</html>
