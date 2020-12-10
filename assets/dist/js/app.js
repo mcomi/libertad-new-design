@@ -273,3 +273,21 @@ var stepOne = new Waypoint({
   },
   offset: "30%",
 });
+
+const stepsContainers = document.querySelectorAll(".step");
+const stepDescription = document.getElementById("step-description");
+
+stepsContainers.forEach((step) => {
+  step.addEventListener("mouseover", function () {
+    let textStep;
+    if (step.classList.contains("step-1"))
+      textStep = `No necesitas papeleo, ni perder tiempo en filas que parecen interminables para pedir préstamos rápidos, ¡gracias a nuestro servicio 100% en línea! Desliza la barra azul para seleccionar el monto que necesitas (hasta $2,000 pesos). Una vez seleccionado la cantidad podrás comenzar tu solicitud de préstamo.`;
+    if (step.classList.contains("step-2"))
+      textStep = `Paso 2 Lorem, ipsum dolor sit amet consectetur adipisicing elit. Neque dignissimos vitae perspiciatis fugit eum dolor maiores deserunt rerum at. Aliquid, est. Adipisci itaque repudiandae voluptatum, tenetur pariatur impedit architecto laudantium.`;
+    if (step.classList.contains("step-3"))
+      textStep = `Paso 3 Lorem, ipsum dolor sit amet consectetur adipisicing elit. Neque dignissimos vitae perspiciatis fugit eum dolor maiores deserunt rerum at. Aliquid, est. Adipisci itaque repudiandae voluptatum, tenetur pariatur impedit architecto laudantium.`;
+    if (step.classList.contains("step-4"))
+      textStep = `Paso 4 Lorem, ipsum dolor sit amet consectetur adipisicing elit. Neque dignissimos vitae perspiciatis fugit eum dolor maiores deserunt rerum at. Aliquid, est. Adipisci itaque repudiandae voluptatum, tenetur pariatur impedit architecto laudantium.`;
+    stepDescription.innerHTML = textStep;
+  });
+});

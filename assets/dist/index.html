@@ -7,8 +7,8 @@
     <link rel="stylesheet" href="main.css" />
     <title>Libertad</title>
   </head>
-  <body class="font-body">
-    <header class="bg-light-navy-blue-two">
+  <body class="font-body mt-16">
+    <header class="fixed -mt-16 w-full z-50 bg-light-navy-blue-two">
       <div
         class="container mx-auto md:flex md:items-center md:justify-between p-3 pb-0 md:pb-3"
       >
@@ -92,7 +92,7 @@
 
     <section class="flex flex-col items-center relative">
       <div
-        class="z-40 absolute inset-0 bg-gray-light h-screen lg:h-56  text-light-navy-blue-two hidden"
+        class="z-40 absolute mt-5 inset-0 bg-gray-light h-screen lg:h-56  text-light-navy-blue-two hidden"
         id="login-container"
       >
         <div
@@ -1088,7 +1088,7 @@
               src="images/money@3x.png"
               alt=""
             />
-            <h6>Dino cuánto <br />dinero necesitas.</h6>
+            <h6>Dinos cuánto <br />dinero necesitas.</h6> 
           </div>
           <div class="invisible step step-2 mb-3 lg:mb-10 hover:text-marigold">
             <img
@@ -1116,7 +1116,7 @@
           </div>
         </div>
         <div class="w-full lg:w-1/2">
-          <p class="text-sm font-light mb-10">
+          <p class="text-sm font-light mb-10" id="step-description">
             No necesitas papeleo, ni perder tiempo en filas que parecen
             interminables para pedir préstamos rápidos, ¡gracias a nuestro
             servicio 100% en línea! Desliza la barra azul para seleccionar el
@@ -1152,7 +1152,7 @@
             alt=""
           />
           <div class="bg-white text-center mb-12 shadow-lg">
-            <p class="pt-4 mb-">Monto del crédito</p>
+            <p class="pt-4 text-lg font-semibold">Monto del crédito</p>
             <small class="text-xs pt-0">(desde $2000 hasta $50000)</small>
             <div class="credit-calc">
               <p id="monto-requerido" class="font-semibold mb-4 text-3xl">
@@ -1190,7 +1190,7 @@
           </div>
         </div>
         <div class="text-dark-grey-blue relative max-w-md">
-          <h2 class="text-lg md:text-xl font-bold pb-3">
+          <h2 class="text-lg md:text-2xl font-bold pb-3">
             Obtén tu préstamo en línea
             <span class="block text-sm font-light"
               >a través de nuestro simulador de crédito</span
@@ -1206,11 +1206,11 @@
           </div>
           <div class="bg-white p-4 text-center shadow-lg">
             <img src="images/simulador.png" class="h-10 mx-auto" alt="" />
-            <h5 class="text-lg font-semibold mb-4">
+            <h5 class="text-xl font-semibold mb-4">
               Tu <span class="text-macaroni-and-cheese">pre-aprobación</span> en
               5 minutos
             </h5>
-            <p class="mb-6">
+            <p class="mb-6 text-lg">
               Te prestamos
               <span class="font-bold" id="monto">$10,000 pesos</span> que puedes
               pagar a <span class="font-bold" id="meses">12 meses</span> con
