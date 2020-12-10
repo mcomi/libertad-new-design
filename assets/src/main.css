@@ -145,6 +145,7 @@ input[type="email"] ~ label,
 input[type="tel"] ~ label,
 input[type="tel"] ~ label {
   @apply bg-transparent;
+  @apply text-sm;
 }
 
 input[type="text"]:focus-within ~ label,

@@ -28,6 +28,7 @@ module.exports = {
         "piss-yellow": "#d2b41a",
         silver: "#dfe2e3",
         "grey-section": "#e9e9e9",
+        "gray-light": "#f5f7f8",
       },
       fontFamily: {
         body: ["Work Sans"],
@@ -38,7 +39,7 @@ module.exports = {
         "sm-slide": "40vh",
       },
       width: {
-        "abs-card": "35%",
+        "abs-card": "450px",
       },
       minHeight: {
         "card-offer": "300px",
@@ -47,7 +48,7 @@ module.exports = {
         "table-cell": "150px",
       },
       inset: {
-        40: "40%",
+        50: "50%",
         10: "10%",
         1: "1rem",
       },

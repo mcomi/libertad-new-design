@@ -1,3 +1,19 @@
+const btnUserCode = document.getElementById("btn-user-code");
+const btnGetCode = document.getElementById("btn-get-code");
+const userCodeStepOne = document.getElementById("step-1-register-users");
+const userCodeStepTwo = document.getElementById("step-2-register-users");
+const userCodeStepThree = document.getElementById("sms-input-user");
+
+btnUserCode.addEventListener("click", function () {
+  userCodeStepOne.classList.add("hidden");
+  userCodeStepTwo.classList.remove("hidden");
+});
+
+btnGetCode.addEventListener("click", function () {
+  userCodeStepTwo.classList.add("hidden");
+  userCodeStepThree.classList.remove("hidden");
+});
+
 const linkLogin = document.getElementById("login-btn");
 const linkContainer = document.getElementById("login-container");
 linkLogin.addEventListener("click", function () {
