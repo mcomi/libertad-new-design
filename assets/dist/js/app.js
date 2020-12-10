@@ -203,9 +203,57 @@ $(function () {
   });
 });
 
-const offerBtn = document.getElementById("offer-btn");
+const offerBtns = document.querySelectorAll(".offer-btn");
+const mainText = document.getElementById("main-text");
 const offerRegisterPanel = document.getElementById("register-offer");
-offerBtn.addEventListener("click", function (e) {
-  e.preventDefault();
-  offerRegisterPanel.classList.remove("hidden");
+
+offerBtns.forEach((btn) => {
+  btn.addEventListener("click", function (e) {
+    e.preventDefault();
+    offerRegisterPanel.classList.remove("hidden");
+    mainText.classList.add("hidden");
+    $("html, body").animate({ scrollTop: 0 }, "slow");
+    document.getElementById("nombre").focus();
+  });
+});
+
+var stepOne = new Waypoint({
+  element: document.getElementById("steps"),
+  handler: function (direction) {
+    $(".step-1").removeClass("invisible");
+    $(".step-1").addClass(
+      "animate__animated animate__bounceInRight animate__slow"
+    );
+  },
+  offset: "60%",
+});
+var stepOne = new Waypoint({
+  element: document.getElementById("steps"),
+  handler: function (direction) {
+    $(".step-2").removeClass("invisible");
+    $(".step-2").addClass(
+      "animate__animated animate__bounceInRight animate__slow"
+    );
+  },
+  offset: "50%",
+});
+var stepOne = new Waypoint({
+  element: document.getElementById("steps"),
+  handler: function (direction) {
+    $(".step-3").removeClass("invisible");
+    $(".step-3").addClass(
+      "animate__animated animate__bounceInRight animate__slow"
+    );
+  },
+  offset: "40%",
+});
+var stepOne = new Waypoint({
+  element: document.getElementById("steps"),
+  handler: function (direction) {
+    $(".step-4").removeClass("invisible");
+    $(".step-4").addClass(
+      "animate__animated animate__bounceInRight animate__slow"
+    );
+  },
+  offset: "30%",
 });

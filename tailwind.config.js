@@ -43,6 +43,9 @@ module.exports = {
       minHeight: {
         "card-offer": "300px",
       },
+      minWidth: {
+        "table-cell": "150px",
+      },
       inset: {
         40: "40%",
         10: "10%",
@@ -56,12 +59,19 @@ module.exports = {
       },
     },
   },
-  variants: { borderColor: ["responsive", "hover", "focus", "focus-within"] },
+  variants: {
+    borderColor: ["responsive", "hover", "focus", "focus-within"],
+    textColor: ["responsive", "hover", "focus", "group-hover"],
+    transitionProperty: ["hover", "focus", "group-hover"],
+    translate: ["active", "group-hover"],
+    scale: ["active", "group-hover"],
+  },
   plugins: [
     // Other plugins
     require("tailwindcss-animatecss")({
       classes: [
         "animate__animated",
+        "animate__bounceInRight",
         "animate__fadeIn",
         "animate__shakeX",
         "animate__swing",
@@ -71,7 +81,7 @@ module.exports = {
         animatedSpeed: 1000,
         heartBeatSpeed: 1000,
         hingeSpeed: 2000,
-        bounceInSpeed: 750,
+        bounceInSpeed: 1500,
         bounceOutSpeed: 750,
         animationDelaySpeed: 1000,
       },
