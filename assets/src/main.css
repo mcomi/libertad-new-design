@@ -205,6 +205,7 @@ input.invalid ~ svg.text-red-700 {
 }
 
 .menu-form.active {
+  display: block;
   @apply border-t-0;
   @apply border-b-2;
 }
