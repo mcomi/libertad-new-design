@@ -71,7 +71,7 @@
       </div>
     </section>
     <section class="min-h-screen pb-6 bg-silver">
-      <div class="container pt-4" id="datos-personales">
+      <div class="container pt-4 step-container" data-step="1">
         <div
           class="w-full mx-auto md:w-1/2 bg-white rounded-sm shadow-lg py-4 px-4 md:px-16 text-center text-light-navy-blue-two"
         >
@@ -228,11 +228,21 @@
                 <p>Género:</p>
               </div>
               <label class="w-1/4 block">
-                <input class="mr-2 leading-tight" type="radio" name="genero" value="h"/>
+                <input
+                  class="mr-2 leading-tight"
+                  type="radio"
+                  name="genero"
+                  value="h"
+                />
                 <span class="text-sm"> Hombre </span>
               </label>
               <label class="w-1/4 block">
-                <input class="mr-2 leading-tight" type="radio" name="genero" value="m"/>
+                <input
+                  class="mr-2 leading-tight"
+                  type="radio"
+                  name="genero"
+                  value="m"
+                />
                 <span class="text-sm"> Mujer </span>
               </label>
             </div>
@@ -630,12 +640,12 @@
         </div>
       </div>
 
-      <div class="container pt-4 hidden" id="datos-empleo">
+      <div class="container pt-4 step-container hidden" data-step="2">
         <div
           class="w-full mx-auto md:w-1/2 bg-white rounded-sm shadow-lg py-4 px-4 md:px-16 text-center text-light-navy-blue-two"
         >
           <h3 class="my-2 text-2xl font-semibold">Datos sobre Empleo</h3>
-          <form id="step-2-empleo">
+          <form id="step-2-form">
             <div class="flex flex-wrap">
               <div class="w-full">
                 <div
@@ -949,19 +959,154 @@
         </div>
       </div>
 
+      <div class="container pt-4 step-container hidden" data-step="3">
+        <div
+          class="w-full mx-auto md:w-1/2 bg-white rounded-sm shadow-lg py-4 px-4 md:px-16 text-center text-light-navy-blue-two"
+        >
+          <h3 class="my-2 text-2xl font-semibold">Historial Crediticio</h3>
+          <form id="step-3-form">
+            <div class="flex flex-wrap items-center pb-3">
+              <div class="w-1/2">
+                <p class="text-sm mr-3 text-right">
+                  ¿Tienes una tarjeta de crédito?
+                </p>
+              </div>
+              <div class="toggle w-1/2">
+                <input
+                  type="radio"
+                  name="tc"
+                  value="si"
+                  id="si-tc"
+                  checked="checked"
+                />
+                <label class="w-1/2" for="si-tc">Si</label>
+                <input type="radio" name="tc" value="no" id="no-tc" />
+                <label class="w-1/2" for="no-tc">No</label>
+              </div>
+            </div>
+            <div class="flex flex-wrap items-center pb-3">
+              <div class="w-1/2">
+                <p class="text-sm mr-3 text-right">
+                  Digita los últimos 4 números
+                </p>
+              </div>
+              <div class="w-1/2">
+                <div
+                  class="outline relative border border-gray-800 rounded-lg mb-2 focus-within:border-blue-500"
+                >
+                  <input
+                    class="block px-4 py-2 w-full text-lg appearance-none focus:outline-none bg-transparent"
+                    placeholder=" "
+                    type="text"
+                    id="digitos"
+                    name="digitos"
+                  />
+                  <svg
+                    class="w-6 h-6 text-green-500"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M5 13l4 4L19 7"
+                    ></path>
+                  </svg>
+                  <svg
+                    class="w-6 h-6 text-red-700"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M6 18L18 6M6 6l12 12"
+                    ></path>
+                  </svg>
+                  <label
+                    class="absolute left-1 top-0 bg-white px-4 py-2 transition duration-300 origin-0"
+                    for="digitos"
+                    >4 digitos</label
+                  >
+                </div>
+              </div>
+            </div>
+            <div class="flex flex-wrap items-center pb-3">
+              <div class="flex w-1/2">
+                <p class="text-sm mr-3 text-right">
+                  ¿Eres titular de un crédito hipotecario?
+                </p>
+              </div>
+              <div class="toggle w-1/2">
+                <input
+                  type="radio"
+                  name="chipotecario"
+                  value="si"
+                  id="si-ch"
+                  checked="checked"
+                />
+                <label for="si-ch">Si</label>
+                <input type="radio" name="chipotecario" value="no" id="no-ch" />
+                <label for="no-ch">No</label>
+              </div>
+            </div>
+            <div class="flex flex-wrap items-center pb-3">
+              <div class="w-1/2">
+                <p class="text-sm mr-3 text-right">
+                  ¿Has sido titular de un crédito automotriz en los últimos 24
+                  meses?
+                </p>
+              </div>
+              <div class="toggle w-1/2">
+                <input
+                  type="radio"
+                  name="ca"
+                  value="si"
+                  id="si-ca"
+                  checked="checked"
+                />
+                <label for="si-ca">Si</label>
+                <input type="radio" name="ca" value="si" id="no-ca" />
+                <label for="no-ca">No</label>
+              </div>
+            </div>
+            <button
+              type="submit"
+              class="my-2 px-10 py-2 text-sm bg-dark-grey-blue text-macaroni-and-cheese rounded-3xl font-light"
+              id="step-3-btn"
+            >
+              Siguiente
+            </button>
+            <div class="w-full text-center">
+              <div id="messageBox"></div>
+            </div>
+          </form>
+        </div>
+      </div>
+
       <!-- Ofertas -->
-      <div class="container mx-auto text-center text-light-navy-blue-two hidden" id="ofertas">
-        <h3 class="text-green-700 text-2xl pt-6 font-semibold">Felicidades</h3>
-        <h2 class="text-3xl font-semibold">Tenemos la mejor oferta para ti</h2>
+      <div
+        class="container mx-auto text-center text-light-navy-blue-two step-container hidden"
+        data-step="4"
+      >
+        <h3 class="text-green-700 text-lg lg:text-2xl pt-6 font-semibold">
+          Felicidades
+        </h3>
+        <h2 class="text-xl lg:text-3xl font-semibold">
+          Tenemos la mejor oferta para ti
+        </h2>
         <p>
           Puedes también elegir una de las ofertas que mas corresponda a tus
           necesidades
         </p>
-        <div class="flex flex-col lg:flex-row lg:w-10/12 mx-auto">
-          <div class="w-full lg:w-3/12 bg-green-800 text-white p-5 h-16">
-            Mi primer crédito
-          </div>
-          <div class="w-full lg:w-7/12">
+        <div class="w-full lg:w-8/12 mx-auto">
+          <div class="w-full">
             <div class="border border-green-800"></div>
             <div class="bg-white text-center mb-4 shadow-lg">
               <p class="pt-4 mb-">Monto del crédito</p>
@@ -991,13 +1136,13 @@
                 <small>(desde 12 hasta 72 meses)</small>
                 <div class="flex flex-wrap justify-center items-center">
                   <div
-                    class="border border-gray-900 rounded-md w-24 lg:w-32 mx-3 my-1 lg:mx-2"
+                    class="border border-gray-900 rounded-md w-32 lg:w-32 mx-3 my-1 lg:mx-2"
                   >
                     <p class="text-lg">Pago</p>
                     <span class="font-semibold text-lg">$1350</span>
                   </div>
                   <div
-                    class="border border-gray-900 rounded-md w-24 lg:w-32 mx-3 my-1 lg:mx-2"
+                    class="border border-gray-900 rounded-md w-32 lg:w-32 mx-3 my-1 lg:mx-2"
                   >
                     <p class="text-lg">Quincenas</p>
                     <select class="mt-1 font-semibold text-lg" name="periodos">
@@ -1008,7 +1153,7 @@
                     </select>
                   </div>
                   <div
-                    class="border border-gray-900 rounded-md w-24 lg:w-32 mx-3 my-1 lg:mx-2"
+                    class="border border-gray-900 rounded-md w-32 lg:w-32 mx-3 my-1 lg:mx-2"
                   >
                     <p class="text-lg">Tantos</p>
                     <select class="mt-1 font-semibold text-lg" name="periodos">
@@ -1019,7 +1164,7 @@
                     </select>
                   </div>
                   <div
-                    class="border border-gray-900 rounded-md w-24 lg:w-32 mx-3 my-1 lg:mx-2"
+                    class="border border-gray-900 rounded-md w-32 lg:w-32 mx-3 my-1 lg:mx-2"
                   >
                     <p class="text-lg">Garantía</p>
                     <select class="mt-1 font-semibold text-lg" name="periodos">
@@ -1153,167 +1298,20 @@
                 </button>
               </div>
             </div>
-            <div
-              class="bg-macaroni-and-cheese flex justify-between items-center px-6 py-3"
-            >
-              <div>
-                <img class="h-10" src="images/icono-logo.png" alt="" />
-              </div>
-              <div class="text-center">
-                <span class="text-2xl font-semibold"
-                  >Eres elegible al crédito Express</span
-                >
-                <span class="block text-xl font-light"
-                  >Obtén tu dinero de inmediato</span
-                >
-              </div>
-              <div>
-                <button class="bg-light-navy-blue-two text-white py-2 px-4">
-                  Ver oferta
-                </button>
-              </div>
-            </div>
+          </div>
+          <div class="w-full pt-4">
+            <p class="text-xs">
+              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sequi
+              modi magni explicabo, repellendus eaque quisquam voluptatibus
+              impedit ullam, ea iure optio cumque, odit dolor nesciunt. Quos
+              veritatis rem rerum pariatur! Lorem ipsum dolor sit amet
+              consectetur, adipisicing elit. Quia nemo consequuntur, esse unde
+              vero veritatis accusantium excepturi, voluptates doloremque ipsum
+              illum, dolor velit suscipit obcaecati asperiores tempora culpa a
+              cupiditate?
+            </p>
           </div>
         </div>
-
-        <div class="overflow-y-hidden pt-3">
-          <div class="table w-full lg:w-10/12 lg:mx-auto text-sm lg:text-base">
-            <div class="table-row-group mb-3">
-              <div class="table-row">
-                <div class="table-cell w-3/12 min-w-table-cell"></div>
-                <div
-                  class="table-cell bg-light-navy-blue-two text-white p-2 lg:p-5 h-8 lg:h-16 min-w-table-cell"
-                >
-                  Préstamos
-                </div>
-                <div
-                  class="table-cell bg-light-navy-blue-two text-white p-2 lg:p-5 h-8 lg:h-16 min-w-table-cell"
-                >
-                  Mensualidades
-                </div>
-                <div
-                  class="table-cell bg-light-navy-blue-two text-white p-2 lg:p-5 h-8 lg:h-16 min-w-table-cell"
-                >
-                  Plazo
-                </div>
-                <div
-                  class="table-cell bg-light-navy-blue-two text-white p-2 lg:p-5 h-8 lg:h-16 min-w-table-cell"
-                >
-                  Cat sin IVA
-                </div>
-                <div class="table-cell w-2/12 min-w-table-cell"></div>
-              </div>
-            </div>
-            <div class="table-row-group mt-2">
-              <div class="table-row">
-                <div
-                  class="table-cell w-3/12 bg-green-400 text-white p-2 lg:p-5 h-8 lg:h-16"
-                >
-                  Mi primer crédito
-                </div>
-                <div
-                  class="table-cell border border-gray-500 text-gray-700 p-2 lg:p-5 h-8 lg:h-16"
-                >
-                  $10,000
-                </div>
-                <div
-                  class="table-cell border border-gray-500 text-gray-700 p-2 lg:p-5 h-8 lg:h-16"
-                >
-                  $1650.00
-                </div>
-                <div
-                  class="table-cell border border-gray-500 text-gray-700 p-2 lg:p-5 h-8 lg:h-16"
-                >
-                  72 meses
-                </div>
-                <div
-                  class="table-cell border border-gray-500 text-gray-700 p-2 lg:p-5 h-8 lg:h-16"
-                >
-                  24%
-                </div>
-                <div
-                  class="table-cell w-2/12 bg-green-400 text-white p-2 lg:p-5 h-8 lg:h-16"
-                >
-                  Ver oferta
-                </div>
-              </div>
-            </div>
-            <div class="table-row-group">
-              <div class="table-row">
-                <div
-                  class="table-cell w-3/12 bg-green-400 text-white p-2 lg:p-5 h-8 lg:h-16"
-                >
-                  Mi primer crédito
-                </div>
-                <div
-                  class="table-cell border border-gray-500 text-gray-700 p-2 lg:p-5 h-8 lg:h-16"
-                >
-                  $10,000
-                </div>
-                <div
-                  class="table-cell border border-gray-500 text-gray-700 p-2 lg:p-5 h-8 lg:h-16"
-                >
-                  $1650.00
-                </div>
-                <div
-                  class="table-cell border border-gray-500 text-gray-700 p-2 lg:p-5 h-8 lg:h-16"
-                >
-                  72 meses
-                </div>
-                <div
-                  class="table-cell border border-gray-500 text-gray-700 p-2 lg:p-5 h-8 lg:h-16"
-                >
-                  24%
-                </div>
-                <div
-                  class="table-cell w-2/12 bg-green-400 text-white p-2 lg:p-5 h-8 lg:h-16"
-                >
-                  Ver oferta
-                </div>
-              </div>
-            </div>
-            <div class="table-row-group">
-              <div class="table-row">
-                <div
-                  class="table-cell w-3/12 bg-green-400 text-white p-2 lg:p-5 h-8 lg:h-16"
-                >
-                  Mi primer crédito
-                </div>
-                <div
-                  class="table-cell border border-gray-500 text-gray-700 p-2 lg:p-5 h-8 lg:h-16"
-                >
-                  $10,000
-                </div>
-                <div
-                  class="table-cell border border-gray-500 text-gray-700 p-2 lg:p-5 h-8 lg:h-16"
-                >
-                  $1650.00
-                </div>
-                <div
-                  class="table-cell border border-gray-500 text-gray-700 p-2 lg:p-5 h-8 lg:h-16"
-                >
-                  72 meses
-                </div>
-                <div
-                  class="table-cell border border-gray-500 text-gray-700 p-2 lg:p-5 h-8 lg:h-16"
-                >
-                  24%
-                </div>
-                <div
-                  class="table-cell w-2/12 bg-green-400 text-white p-2 lg:p-5 h-8 lg:h-16"
-                >
-                  Ver oferta
-                </div>
-              </div>
-            </div>
-          </div>
-
-      </div>
-
-      <div class="pt-4">
-        <p class="text-xs">
-          Costo del Seguro a 12 Meses por Incluye indemnización valor factura por 2 años. Reparación en Agencia y Auto Sustituto. El Seguro de Vida cotizado aplica para una edad entre 19 y 70 años. Para mayor información, llámanos sin costo al 01 (800) BANORTE, 01 (800) 226 6783. Desde Monterrey 8156 9600. Visita nuestra página: www.banorte.com Nota: La presente información es únicamente para efectos ilustrativos, no representa ningún ofrecimiento formal por parte de Grupo Financiero Banorte, las condiciones están sujetas a cambio. El CAT es para fines informativos y de comparación exclusivamente. La presente tabla de amortización incluye el costo real del seguro por los primeros 12 meses, y para fines ilustrativos, dicho costo se incluye en los restantes años del plazo del crédito. Al término de los primeros 12 meses de vigencia del crédito, se determinará el importe a financiar por renovación del seguro, de acuerdo al costo que tenga en ese momento.
-        </p>
       </div>
     </section>
     <footer id="footer" class="bg-light-navy-blue-two">
@@ -1395,6 +1393,5 @@
     <script src="vendor/rangeslider.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.2/jquery.validate.min.js"></script>
     <script src="js/form.js"></script>
-    
   </body>
 </html>
