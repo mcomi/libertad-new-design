@@ -171,7 +171,7 @@
                   </svg>
                   <label
                     class="absolute left-1 top-0 bg-white px-4 py-2 transition duration-300 origin-0"
-                    for="day"
+                    for="paterno"
                     >Apellido paterno</label
                   >
                 </div>
@@ -257,6 +257,8 @@
                     type="text"
                     id="day"
                     name="day"
+                    maxlength="2"
+                    onkeypress="return event.charCode >= 48 && event.charCode <= 57"
                   />
                   <svg
                     class="w-6 h-6 text-green-500"
@@ -288,7 +290,7 @@
                   </svg>
                   <label
                     class="absolute left-1 top-0 bg-white px-4 py-2 transition duration-300 origin-0"
-                    for="paterno"
+                    for="day"
                     >DD</label
                   >
                 </div>
@@ -303,6 +305,8 @@
                     type="text"
                     id="month"
                     name="month"
+                    maxlength="2"
+                    onkeypress="return event.charCode >= 48 && event.charCode <= 57"
                   />
                   <svg
                     class="w-6 h-6 text-green-500"
@@ -349,6 +353,8 @@
                     type="text"
                     id="year"
                     name="year"
+                    maxlength="4"
+                    onkeypress="return event.charCode >= 48 && event.charCode <= 57"
                   />
                   <svg
                     class="w-6 h-6 text-green-500"
@@ -586,9 +592,11 @@
                   <input
                     class="block px-4 py-2 w-full text-lg appearance-none focus:outline-none bg-transparent"
                     placeholder=" "
-                    type="text"
+                    type="tel"
                     id="telefono"
                     name="telefono"
+                    maxlength="10"
+                    onkeypress="return event.charCode >= 48 && event.charCode <= 57"
                   />
                   <svg
                     class="w-6 h-6 text-green-500"
@@ -987,6 +995,8 @@
                     type="text"
                     id="digitos"
                     name="digitos"
+                    maxlength="4"
+                    onkeypress="return event.charCode >= 48 && event.charCode <= 57"
                   />
                   <svg
                     class="w-6 h-6 text-green-500"
@@ -1132,7 +1142,10 @@
                     class="border border-gray-900 rounded-md w-32 lg:w-32 mx-3 my-1 lg:mx-2"
                   >
                     <p class="text-lg">Quincenas</p>
-                    <select class="mt-1 font-semibold text-lg" name="periodos">
+                    <select
+                      class="form-select no-border mt-1 font-semibold text-lg"
+                      name="periodos"
+                    >
                       <option value="12" selected>12</option>
                       <option value="24">24</option>
                       <option value="48">48</option>
@@ -1143,7 +1156,10 @@
                     class="border border-gray-900 rounded-md w-32 lg:w-32 mx-3 my-1 lg:mx-2"
                   >
                     <p class="text-lg">Tantos</p>
-                    <select class="mt-1 font-semibold text-lg" name="periodos">
+                    <select
+                      class="form-select no-border mt-1 font-semibold text-lg"
+                      name="periodos"
+                    >
                       <option value="12" selected>144</option>
                       <option value="24">24</option>
                       <option value="48">48</option>
@@ -1154,7 +1170,10 @@
                     class="border border-gray-900 rounded-md w-32 lg:w-32 mx-3 my-1 lg:mx-2"
                   >
                     <p class="text-lg">Garantía</p>
-                    <select class="mt-1 font-semibold text-lg" name="periodos">
+                    <select
+                      class="form-select no-border mt-1 font-semibold text-lg"
+                      name="periodos"
+                    >
                       <option value="12" selected>Sin aval</option>
                     </select>
                   </div>

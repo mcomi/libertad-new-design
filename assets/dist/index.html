@@ -136,6 +136,8 @@
                 class="ml-auto block w-48 border border-gray-800 px-3 py-2 text-sm placeholder-gray-900 rounded-md"
                 type="tel"
                 id="user-phone"
+                maxlength="10"
+                onkeypress="return event.charCode >= 48 && event.charCode <= 57"
                 placeholder="Número de celular"
               />
               <button
