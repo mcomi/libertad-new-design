@@ -27541,6 +27541,42 @@ input.invalid ~ svg.text-red-700 {
   outline: none;
 }
 
+.dm-uploader {
+  cursor: default;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  border: 0.25rem dashed #a5a5c7;
+  border-radius: 10px;
+}
+
+.dm-uploader.active {
+  border-radius: 0;
+  border: 0.25rem solid #337ab7;
+}
+
+.text-muted {
+  color: #868e96 !important;
+}
+
+.dm-uploader .btn {
+  position: relative;
+  overflow: hidden;
+}
+
+.dm-uploader .btn input[type="file"] {
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin: 0;
+  border: solid transparent;
+  width: 100%;
+  opacity: 0;
+  cursor: pointer;
+}
+
 @media (min-width: 640px){
   .sm\:container{
     width: 100%;
