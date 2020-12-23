@@ -27548,25 +27548,28 @@ input.invalid ~ svg.text-red-700 {
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
-  border: 0.25rem dashed #a5a5c7;
-  border-radius: 10px;
+  border: 1px solid #a5a5c7;
 }
 
-.dm-uploader.active {
+.uploader.active .dm-uploader {
   border-radius: 0;
   border: 0.25rem solid #337ab7;
+}
+
+.uploader.success .dm-uploader {
+  border: 1px solid #65b704;
 }
 
 .text-muted {
   color: #868e96 !important;
 }
 
-.dm-uploader .btn {
+.uploader .btn {
   position: relative;
   overflow: hidden;
 }
 
-.dm-uploader .btn input[type="file"] {
+.uploader input[type="file"] {
   position: absolute;
   top: 0;
   right: 0;

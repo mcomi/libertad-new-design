@@ -33,7 +33,7 @@
             <span class="block text-white text-xs lg:text-sm"
               >Atención al cliente</span
             >
-            <a type="tel:800-714-0274" class="text-piss-yellow">800-714-0274</a>
+            <a href="tel:800-714-0274" class="text-piss-yellow">800-714-0274</a>
           </div>
         </div>
       </div>
@@ -71,9 +71,9 @@
       </div>
     </section>
     <section class="min-h-screen pb-6 bg-silver">
-      <div class="container pt-4 step-container" data-step="1">
+      <div class="container mx-auto pt-4 step-container" data-step="1">
         <div
-          class="w-full mx-auto md:w-1/2 bg-white rounded-sm shadow-lg py-4 px-4 md:px-16 text-center text-light-navy-blue-two"
+          class="mx-auto md:w-1/2 bg-white rounded-sm shadow-lg py-4 px-4 md:px-16 text-center text-light-navy-blue-two"
         >
           <h3 class="my-2 text-2xl font-semibold">Datos personales</h3>
           <p class="text-xs mb-4">
@@ -386,7 +386,7 @@
                   </svg>
                   <label
                     class="absolute left-1 top-0 bg-white px-4 py-2 transition duration-300 origin-0"
-                    for="anio"
+                    for="year"
                     >AAAA</label
                   >
                 </div>
@@ -648,7 +648,7 @@
         </div>
       </div>
 
-      <div class="container pt-4 step-container hidden" data-step="2">
+      <div class="container mx-auto pt-4 step-container hidden" data-step="2">
         <div
           class="w-full mx-auto md:w-1/2 bg-white rounded-sm shadow-lg py-4 px-4 md:px-16 text-center text-light-navy-blue-two"
         >
@@ -954,7 +954,7 @@
         </div>
       </div>
 
-      <div class="container pt-4 step-container hidden" data-step="3">
+      <div class="container mx-auto pt-4 step-container hidden" data-step="3">
         <div
           class="w-full mx-auto md:w-1/2 bg-white rounded-sm shadow-lg py-4 px-4 md:px-16 text-center text-light-navy-blue-two"
         >
@@ -1048,9 +1048,9 @@
                   id="si-ch"
                   checked="checked"
                 />
-                <label for="si-ch">Si</label>
+                <label class="w-1/2" for="si-ch">Si</label>
                 <input type="radio" name="chipotecario" value="no" id="no-ch" />
-                <label for="no-ch">No</label>
+                <label class="w-1/2" for="no-ch">No</label>
               </div>
             </div>
             <div class="flex flex-wrap items-center pb-3">
@@ -1068,9 +1068,9 @@
                   id="si-ca"
                   checked="checked"
                 />
-                <label for="si-ca">Si</label>
+                <label class="w-1/2" for="si-ca">Si</label>
                 <input type="radio" name="ca" value="si" id="no-ca" />
-                <label for="no-ca">No</label>
+                <label class="w-1/2" for="no-ca">No</label>
               </div>
             </div>
             <button
@@ -1329,29 +1329,53 @@
         </div>
       </div>
 
-      <div class="container pt-4 step-container hidden" data-step="5">
+      <div class="container mx-auto pt-4 step-container hidden" data-step="5">
         <div
           class="w-full mx-auto md:w-1/2 bg-white rounded-sm shadow-lg py-4 px-4 md:px-16 text-center text-light-navy-blue-two"
         >
           <h3 class="my-2 text-2xl font-semibold">Carga de documentos</h3>
           <form id="step-4-form">
-            <div id="drop-area-front" class="dm-uploader p5 text-center">
-              <h3 class="mb-5 mt-5 text-muted">
-                Arrastra tus archivos <br />
-                ó
-                <div class="btn btn-primary mb-5">
-                  <span>Abre el explorador</span>
+            <div
+              id="drop-area-front"
+              class="uploader w-full flex justify-items-center items-center"
+            >
+              <div>
+                <svg
+                  class="w-6 h-6"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"
+                  ></path>
+                </svg>
+              </div>
+              <div
+                class="dm-uploader flex justify-start justify-items-center py-2 px-2"
+              >
+                <img src="images/ife.png" class="h-10 inline-block" alt="" />
+                <div class="pl-3 text-sm">
+                  Identificación <br />
+                  <span>INE anverso</span>
+                </div>
+              </div>
+              <div>
+                <button class="text-white py-2 px-4 bg-light-navy-blue-two">
+                  Subir
                   <input
                     type="file"
                     name="ine-front"
                     title="Abre el explorador"
                   />
-                </div>
-              </h3>
+                </button>
+              </div>
             </div>
-            <ul class="list-unstyled p-2 d-flex flex-column col" id="filesId">
-              <li class="text-muted text-center empty">No files uploaded.</li>
-            </ul>
+            <div class="w-full" id="files"></div>
           </form>
         </div>
       </div>
@@ -1361,7 +1385,7 @@
         <p
           class="py-3 text-white text-xs lg:text-sm font-light text-center px-3"
         >
-          Copyright © 2019 Libertad Servicios Financieros S.A. de C.V.S.F.P.
+          Copyright © 2021 Libertad Servicios Financieros S.A. de C.V.S.F.P.
         </p>
       </div>
     </footer>
@@ -1372,29 +1396,17 @@
 
     <script src="js/form.js"></script>
     <script type="text/html" id="files-template">
-      <li class="media">
-        <img
-          class="mr-3 mb-2 preview-img"
-          src="https://danielmg.org/assets/image/noimage.jpg?v=v10"
-          alt="Archivo pdf"
-        />
+      <div class="media">
         <div class="media-body mb-1">
-          <p class="mb-2">
-            <img src="img/upload_short.svg" alt="" />
-            <strong>%%filename%% </strong>
-            <span class="text-muted"></span>
-          </p>
           <div class="shadow w-full bg-grey-light">
             <div
-              class="progress-bar bg-blue text-xs leading-none py-1 text-center text-white"
+              class="progress-bar bg-green-500 text-xs leading-none py-1 text-center text-white"
               style="width: 45%"
-            >
-              45%
-            </div>
+            ></div>
           </div>
           <hr class="mt-1 mb-1" />
         </div>
-      </li>
+      </div>
     </script>
   </body>
 </html>

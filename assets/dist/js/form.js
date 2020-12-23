@@ -48,6 +48,12 @@ var formatter = new Intl.NumberFormat("es-MX", {
   minimumFractionDigits: 2,
 });
 
+const ingresos = document.getElementById("ingresos");
+ingresos.addEventListener("change", function () {
+  let ingreso = Number(this.value);
+  ingresos.value = formatter.format(ingreso.toFixed(2));
+});
+
 // validacion datos personales
 $(function () {
   // Initialize form validation on the registration form.
@@ -221,6 +227,18 @@ function actualizaMontoYDescuento() {
 
 $("select[name='periodos']").change(actualizaMontoYDescuento);
 
+function ui_multi_add_file(id, file) {
+  var template = $("#files-template").text();
+  template = template.replace("%%filename%%", file.name);
+
+  template = $(template);
+  template.prop("id", "uploaderFile" + id);
+  template.data("file-id", id);
+
+  $("#files").find("li.empty").fadeOut(); // remove the 'no files yet'
+  $("#files").prepend(template);
+}
+
 // Changes the status messages on our list
 function ui_multi_update_file_status(id, status, message) {
   $("#uploaderFile" + id)
@@ -281,6 +299,7 @@ $("#drop-area-front").dmUploader({
 
     console.log("New file added #" + id);
     console.log(id, file);
+    ui_multi_add_file(id, file);
     if (typeof FileReader !== "undefined") {
       var reader = new FileReader();
       var img = $("#uploaderFile" + id).find(".preview-img");
@@ -311,6 +330,7 @@ $("#drop-area-front").dmUploader({
   },
   onUploadSuccess: function (id, data) {
     // A file was successfully uploaded
+    this.addClass("success");
     console.log(
       "Server Response for file #" + id + ": " + JSON.stringify(data)
     );

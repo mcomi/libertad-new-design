@@ -28,11 +28,11 @@ btnGetCode.addEventListener("click", function () {
 });
 
 const linkLogin = document.getElementById("login-btn");
-const linkContainer = document.getElementById("login-container");
+const loginContainer = document.getElementById("login-container");
 linkLogin.addEventListener("click", function () {
-  linkContainer.classList.contains("hidden")
-    ? linkContainer.classList.remove("hidden")
-    : linkContainer.classList.add("hidden");
+  loginContainer.classList.contains("hidden")
+    ? loginContainer.classList.remove("hidden")
+    : loginContainer.classList.add("hidden");
 });
 
 var typed = new Typed("#typed", {
@@ -126,8 +126,7 @@ $(".code-input").bind("keyup", function () {
         $("#spinner-sms").removeClass("hidden");
         if (value === "1") {
           setTimeout(function () {
-            const verificacionHtml = `<div class="text-red-700">Código inválido <br />
-              <span class="btn-link text-white text-underline"> recibe otro código por SMS</span></div>`;
+            const verificacionHtml = `<div class="text-red-700">Código inválido <br />`;
             $("#sms-response").html(verificacionHtml);
             $(".code-input").addClass("border-red-700");
             $("#spinner-sms").addClass("hidden");
@@ -157,6 +156,17 @@ $(".code-input").bind("keyup", function () {
 });
 
 const celularInput = document.getElementById("phone-input");
+
+// formateo de celular
+let celCheck = new Cleave("#phone-input", {
+  phone: true,
+  phoneRegionCode: "MX",
+});
+
+let userPhone = new Cleave("#user-phone", {
+  phone: true,
+  phoneRegionCode: "MX",
+});
 
 celularInput.addEventListener("keyup", function () {
   let regex = /^\(?([0-9]{2})\)?[-. ]?([0-9]{4})[-. ]?([0-9]{4})$/;
@@ -243,6 +253,8 @@ const offerRegisterPanel = document.getElementById("register-offer");
 offerBtns.forEach((btn) => {
   btn.addEventListener("click", function (e) {
     e.preventDefault();
+    !loginContainer.classList.contains("hidden") &&
+      loginContainer.classList.add("hidden");
     offerRegisterPanel.classList.remove("hidden");
     mainText.classList.add("hidden");
     $("html, body").animate({ scrollTop: 0 }, "slow");

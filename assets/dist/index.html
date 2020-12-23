@@ -7,8 +7,8 @@
     <link rel="stylesheet" href="main.css" />
     <title>Libertad</title>
   </head>
-  <body class="font-body mt-32 lg:mt-16">
-    <header class="fixed -mt-32 lg:-mt-16 w-full z-50 bg-light-navy-blue-two">
+  <body class="font-body mt-20 lg:mt-16">
+    <header class="fixed -mt-20 lg:-mt-16 w-full z-50 bg-light-navy-blue-two">
       <div
         class="container mx-auto md:flex md:items-center md:justify-between p-3 pb-0 md:pb-3"
       >
@@ -24,7 +24,7 @@
 
         <!-- Search field -->
         <div
-          class="flex justify-center items-center mb-0 lg:mb-4 lg:pt-1 md:mb-0 md:w-1/4"
+          class="hidden md:flex justify-center items-center mb-0 lg:mb-4 lg:pt-1 md:mb-0 md:w-1/4"
         >
           <div>
             <img src="images/phone.png" class="h-8" alt="" />
@@ -106,7 +106,7 @@
               solicitud hoy mismo
             </p>
             <button
-              class="bg-light-navy-blue-two text-white text-sm px-5 py-2 rounded-xl mb-3"
+              class="bg-light-navy-blue-two text-white text-sm px-5 py-2 rounded-xl mb-3 offer-btn"
             >
               Registrarme
             </button>
@@ -136,7 +136,6 @@
                 class="ml-auto block w-48 border border-gray-800 px-3 py-2 text-sm placeholder-gray-900 rounded-md"
                 type="tel"
                 id="user-phone"
-                maxlength="10"
                 onkeypress="return event.charCode >= 48 && event.charCode <= 57"
                 placeholder="Número de celular"
               />
@@ -245,7 +244,7 @@
                     class="outline relative border border-gray-800 rounded-lg mb-2 focus-within:border-blue-500"
                   >
                     <input
-                      class="block px-4 py-2 w-full appearance-none focus:outline-none bg-transparent"
+                      class="block px-2 py-2 w-full appearance-none focus:outline-none bg-transparent"
                       placeholder=" "
                       type="text"
                       id="nombre"
@@ -280,7 +279,7 @@
                       ></path>
                     </svg>
                     <label
-                      class="absolute left-1 top-0 bg-white px-4 py-2 transition duration-300 origin-0"
+                      class="absolute left-1 top-0 bg-white px-2 py-2 transition duration-300 origin-0"
                       for="nombre"
                       >Nombre</label
                     >
@@ -293,7 +292,7 @@
                     class="outline relative border border-gray-800 rounded-lg mb-2 focus-within:border-blue-500"
                   >
                     <input
-                      class="block px-4 py-2 w-full appearance-none focus:outline-none bg-transparent"
+                      class="block px-2 py-2 w-full appearance-none focus:outline-none bg-transparent"
                       placeholder=" "
                       type="text"
                       id="paterno"
@@ -328,7 +327,7 @@
                       ></path>
                     </svg>
                     <label
-                      class="absolute left-1 top-0 bg-white px-4 py-2 transition duration-300 origin-0"
+                      class="absolute left-1 top-0 bg-white px-2 py-2 transition duration-300 origin-0"
                       for="paterno"
                       >Apellido paterno</label
                     >
@@ -339,7 +338,7 @@
                     class="outline relative border border-gray-800 rounded-lg mb-2 focus-within:border-blue-500"
                   >
                     <input
-                      class="block px-4 py-2 w-full appearance-none focus:outline-none bg-transparent"
+                      class="block px-2 py-2 w-full appearance-none focus:outline-none bg-transparent"
                       placeholder=" "
                       type="text"
                       id="materno"
@@ -374,7 +373,7 @@
                       ></path>
                     </svg>
                     <label
-                      class="absolute left-1 top-0 bg-white px-4 py-2 transition duration-300 origin-0"
+                      class="absolute left-1 top-0 bg-white px-2 py-2 transition duration-300 origin-0"
                       for="materno"
                       >Apellido materno</label
                     >
@@ -387,7 +386,7 @@
                     class="outline relative border border-gray-800 rounded-lg mb-2 focus-within:border-blue-500"
                   >
                     <input
-                      class="block px-4 py-2 w-full appearance-none focus:outline-none bg-transparent"
+                      class="block px-2 py-2 w-full appearance-none focus:outline-none bg-transparent"
                       placeholder=" "
                       type="email"
                       name="email"
@@ -422,7 +421,7 @@
                       ></path>
                     </svg>
                     <label
-                      class="absolute left-1 top-0 bg-white px-4 py-2 transition duration-300 origin-0"
+                      class="absolute left-1 top-0 bg-white px-2 py-2 transition duration-300 origin-0"
                       for="email"
                       >Correo electrónico</label
                     >
@@ -449,14 +448,14 @@
                     class="outline relative border border-gray-800 rounded-lg mb-2 focus-within:border-blue-500"
                   >
                     <input
-                      class="block px-4 py-2 w-full appearance-none focus:outline-none bg-transparent"
+                      class="block px-2 py-2 w-full appearance-none focus:outline-none bg-transparent"
                       placeholder=" "
                       type="tel"
                       name="phone-input"
                       id="phone-input"
                     />
                     <label
-                      class="absolute left-1 top-0 bg-white px-4 py-2 transition duration-300 origin-0"
+                      class="absolute left-1 top-0 bg-white px-2 py-2 transition duration-300 origin-0"
                       for="phone-input"
                       >Celular / Whatsapp</label
                     >
@@ -708,8 +707,8 @@
                   >
                     <img
                       alt="Placeholder"
-                      class="block rounded-full"
-                      src="https://picsum.photos/32/32/?random"
+                      class="block rounded-full h-16"
+                      src="images/testimonial1.jpg"
                     />
                     <p class="ml-2 text-sm">Sarah. V</p>
                     <div class="flex pt-2 pb-6">
@@ -799,8 +798,8 @@
                   >
                     <img
                       alt="Placeholder"
-                      class="block rounded-full"
-                      src="https://picsum.photos/32/32/?random"
+                      class="block rounded-full h-16"
+                      src="images/testimonial2.jpg"
                     />
                     <p class="ml-2 text-sm">Jaime Perez</p>
                     <div class="flex pt-2 pb-6">
@@ -890,8 +889,8 @@
                   >
                     <img
                       alt="Placeholder"
-                      class="block rounded-full"
-                      src="https://picsum.photos/32/32/?random"
+                      class="block rounded-full h-16"
+                      src="images/testimonial3.jpg"
                     />
                     <p class="ml-2 text-sm">Luis</p>
                     <div class="flex pt-2 pb-6">
@@ -982,8 +981,8 @@
                   >
                     <img
                       alt="Placeholder"
-                      class="block rounded-full"
-                      src="https://picsum.photos/32/32/?random"
+                      class="block rounded-full h-16"
+                      src="images/testimonial4.jpg"
                     />
                     <p class="ml-2 text-sm">Javier</p>
                     <div class="flex pt-2 pb-6">
@@ -1481,7 +1480,7 @@
         <p
           class="py-3 text-white text-xs lg:text-sm font-light text-center px-3"
         >
-          Copyright © 2019 Libertad Servicios Financieros S.A. de C.V.S.F.P.
+          Copyright © 2021 Libertad Servicios Financieros S.A. de C.V.S.F.P.
         </p>
       </div>
     </footer>
@@ -1491,6 +1490,8 @@
     <script src="vendor/jquery.waypoints.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.11"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.2/jquery.validate.min.js"></script>
+    <script src="vendor/cleave.min.js"></script>
+    <script src="vendor/cleave-phone.mx.js"></script>
     <script src="js/app.js"></script>
     <script>
       var mySwiper = new Swiper(".swiper-container", {
