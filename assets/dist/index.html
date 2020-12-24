@@ -8,7 +8,9 @@
     <title>Libertad</title>
   </head>
   <body class="font-body mt-20 lg:mt-16">
-    <header class="fixed -mt-20 lg:-mt-16 w-full z-50 bg-light-navy-blue-two">
+    <header
+      class="fixed -mt-20 lg:-mt-16 w-full z-50 bg-light-navy-blue-two shadow-2xl"
+    >
       <div
         class="container mx-auto md:flex md:items-center md:justify-between p-3 pb-0 md:pb-3"
       >
@@ -92,11 +94,11 @@
 
     <section class="flex flex-col items-center relative">
       <div
-        class="z-40 absolute mt-2 lg:mt-5 inset-0 bg-gray-light h-screen lg:h-56 text-light-navy-blue-two hidden"
+        class="z-40 absolute mt-2 lg:mt-5 inset-0 bg-gray-light h-screen lg:h-56 text-dark-grey-blue hidden"
         id="login-container"
       >
         <div
-          class="container mx-auto flex flex-col lg:flex-row items-center justify-between lg:justify-end px-5 pt-3 divide-y-2 lg:divide-y-0 lg:divide-x-2 divide-gray-600"
+          class="container w-10/12 mx-auto flex flex-col lg:flex-row items-center justify-between lg:justify-end px-5 pt-3 divide-y-2 lg:divide-y-0 lg:divide-x-2 divide-gray-600"
         >
           <div class="text-right p-2 lg:pr-10">
             <h2 class="font-bold text-base">Nuevos usuarios</h2>
@@ -120,7 +122,7 @@
               </h2>
               <p class="text-xs pb-3">consultala aquí</p>
               <input
-                class="ml-auto block w-40 border border-gray-800 px-3 py-2 text-sm placeholder-gray-900 rounded-md"
+                class="ml-auto block w-40 border border-forms px-3 py-2 text-sm placeholder-gray-900 rounded-md"
                 type="text"
                 placeholder="Número de folio"
               />
@@ -133,7 +135,7 @@
               <h2 class="font-bold text-base">Usuarios registrados</h2>
               <p class="pb-3">Ingresa tu número celular</p>
               <input
-                class="ml-auto block w-48 border border-gray-800 px-3 py-2 text-sm placeholder-gray-900 rounded-md"
+                class="ml-auto block w-48 border border-forms px-3 py-2 text-sm placeholder-gray-900 rounded-md"
                 type="tel"
                 id="user-phone"
                 onkeypress="return event.charCode >= 48 && event.charCode <= 57"
@@ -152,31 +154,31 @@
               <div class="flex justify-center">
                 <input
                   type="tel"
-                  class="code-input border border-gray-800 rounded-lg w-10 h-10 text-center m-1"
+                  class="code-input border border-forms rounded-lg w-10 h-10 text-center m-1"
                   maxlength="1"
                   onkeypress="return event.charCode >= 48 && event.charCode <= 57"
                 />
                 <input
                   type="tel"
-                  class="code-input border border-gray-800 rounded-lg w-10 h-10 text-center m-1"
+                  class="code-input border border-forms rounded-lg w-10 h-10 text-center m-1"
                   maxlength="1"
                   onkeypress="return event.charCode >= 48 && event.charCode <= 57"
                 />
                 <input
                   type="tel"
-                  class="code-input border border-gray-800 rounded-lg w-10 h-10 text-center m-1"
+                  class="code-input border border-forms rounded-lg w-10 h-10 text-center m-1"
                   maxlength="1"
                   onkeypress="return event.charCode >= 48 && event.charCode <= 57"
                 />
                 <input
                   type="tel"
-                  class="code-input border border-gray-800 rounded-lg w-10 h-10 text-center m-1"
+                  class="code-input border border-forms rounded-lg w-10 h-10 text-center m-1"
                   maxlength="1"
                   onkeypress="return event.charCode >= 48 && event.charCode <= 57"
                 />
                 <input
                   type="tel"
-                  class="code-input border border-gray-800 rounded-lg w-10 h-10 text-center m-1"
+                  class="code-input border border-forms rounded-lg w-10 h-10 text-center m-1"
                   maxlength="1"
                   onkeypress="return event.charCode >= 48 && event.charCode <= 57"
                 />
@@ -195,7 +197,7 @@
                 id="spinner-sms-user"
               >
                 <svg
-                  class="w-6 h-6 animate-spin text-green-500"
+                  class="w-6 h-6 animate-spin text-green-form"
                   fill="none"
                   stroke="currentColor"
                   viewBox="0 0 24 24"
@@ -208,7 +210,7 @@
                     d="M5.636 18.364a9 9 0 010-12.728m12.728 0a9 9 0 010 12.728m-9.9-2.829a5 5 0 010-7.07m7.072 0a5 5 0 010 7.07M13 12a1 1 0 11-2 0 1 1 0 012 0z"
                   ></path>
                 </svg>
-                <span class="text-green-500 ml-2">Validando</span>
+                <span class="text-green-form ml-2">Validando</span>
               </div>
               <div class="text-center">
                 <span id="sms-response-user"></span>
@@ -233,15 +235,19 @@
             </div>
           </div>
           <div
-            class="relative bg-white bg-opacity-75 z-30 p-4 text-center shadow-lg min-h-card-offer"
+            class="relative bg-white z-30 p-4 text-center shadow-lg min-h-card-offer"
           >
-            <h5 class="text-lg font-semibold mb-1">Registrate ya</h5>
-            <p class="mb-3">para ver nuestras ofertas exclusivas</p>
+            <h5 class="text-dark-grey-blue text-lg font-semibold mb-1">
+              Registrate ya
+            </h5>
+            <p class="text-dark-grey-blue mb-3">
+              para ver nuestras ofertas exclusivas
+            </p>
             <form id="step-1-register" class="mx-6">
               <div class="flex flex-wrap">
                 <div class="w-full">
                   <div
-                    class="outline relative border border-gray-800 rounded-lg mb-2 focus-within:border-blue-500"
+                    class="outline relative border border-forms rounded-lg mb-2 focus-within:border-blue-500"
                   >
                     <input
                       class="block px-2 py-2 w-full appearance-none focus:outline-none bg-transparent"
@@ -251,7 +257,7 @@
                       name="nombre"
                     />
                     <svg
-                      class="w-6 h-6 text-green-500"
+                      class="w-6 h-6 text-green-form"
                       fill="none"
                       stroke="currentColor"
                       viewBox="0 0 24 24"
@@ -279,7 +285,7 @@
                       ></path>
                     </svg>
                     <label
-                      class="absolute left-1 top-0 bg-white px-2 py-2 transition duration-300 origin-0"
+                      class="absolute left-1 top-0 bg-white px-2 py-2 transition duration-300 origin-0 text-forms"
                       for="nombre"
                       >Nombre</label
                     >
@@ -289,7 +295,7 @@
               <div class="flex flex-wrap -mx-2 md:space-y-0">
                 <div class="w-full px-2 md:w-1/2">
                   <div
-                    class="outline relative border border-gray-800 rounded-lg mb-2 focus-within:border-blue-500"
+                    class="outline relative border border-forms rounded-lg mb-2 focus-within:border-blue-500"
                   >
                     <input
                       class="block px-2 py-2 w-full appearance-none focus:outline-none bg-transparent"
@@ -299,7 +305,7 @@
                       name="paterno"
                     />
                     <svg
-                      class="w-6 h-6 text-green-500"
+                      class="w-6 h-6 text-green-form"
                       fill="none"
                       stroke="currentColor"
                       viewBox="0 0 24 24"
@@ -327,7 +333,7 @@
                       ></path>
                     </svg>
                     <label
-                      class="absolute left-1 top-0 bg-white px-2 py-2 transition duration-300 origin-0"
+                      class="absolute left-1 top-0 bg-white px-2 py-2 transition duration-300 origin-0 text-forms"
                       for="paterno"
                       >Apellido paterno</label
                     >
@@ -335,7 +341,7 @@
                 </div>
                 <div class="w-full px-2 md:w-1/2">
                   <div
-                    class="outline relative border border-gray-800 rounded-lg mb-2 focus-within:border-blue-500"
+                    class="outline relative border border-forms rounded-lg mb-2 focus-within:border-blue-500"
                   >
                     <input
                       class="block px-2 py-2 w-full appearance-none focus:outline-none bg-transparent"
@@ -345,7 +351,7 @@
                       name="materno"
                     />
                     <svg
-                      class="w-6 h-6 text-green-500"
+                      class="w-6 h-6 text-green-form"
                       fill="none"
                       stroke="currentColor"
                       viewBox="0 0 24 24"
@@ -373,7 +379,7 @@
                       ></path>
                     </svg>
                     <label
-                      class="absolute left-1 top-0 bg-white px-2 py-2 transition duration-300 origin-0"
+                      class="absolute left-1 top-0 bg-white px-2 py-2 transition duration-300 origin-0 text-forms"
                       for="materno"
                       >Apellido materno</label
                     >
@@ -383,7 +389,7 @@
               <div class="flex flex-wrap">
                 <div class="w-full">
                   <div
-                    class="outline relative border border-gray-800 rounded-lg mb-2 focus-within:border-blue-500"
+                    class="outline relative border border-forms rounded-lg mb-2 focus-within:border-blue-500"
                   >
                     <input
                       class="block px-2 py-2 w-full appearance-none focus:outline-none bg-transparent"
@@ -393,7 +399,7 @@
                       id="email"
                     />
                     <svg
-                      class="w-6 h-6 text-green-500"
+                      class="w-6 h-6 text-green-form"
                       fill="none"
                       stroke="currentColor"
                       viewBox="0 0 24 24"
@@ -421,7 +427,7 @@
                       ></path>
                     </svg>
                     <label
-                      class="absolute left-1 top-0 bg-white px-2 py-2 transition duration-300 origin-0"
+                      class="absolute left-1 top-0 bg-white px-2 py-2 transition duration-300 origin-0 text-forms"
                       for="email"
                       >Correo electrónico</label
                     >
@@ -445,7 +451,7 @@
                   <img src="images/celular.png" class="h-8 mt-2 mr-2" />
 
                   <div
-                    class="outline relative border border-gray-800 rounded-lg mb-2 focus-within:border-blue-500"
+                    class="outline relative border border-forms rounded-lg mb-2 focus-within:border-blue-500"
                   >
                     <input
                       class="block px-2 py-2 w-full appearance-none focus:outline-none bg-transparent"
@@ -455,7 +461,7 @@
                       id="phone-input"
                     />
                     <label
-                      class="absolute left-1 top-0 bg-white px-2 py-2 transition duration-300 origin-0"
+                      class="absolute left-1 top-0 bg-white px-2 py-2 transition duration-300 origin-0 text-forms"
                       for="phone-input"
                       >Celular / Whatsapp</label
                     >
@@ -466,7 +472,7 @@
                   id="spinner-register"
                 >
                   <svg
-                    class="w-6 h-6 animate-spin text-green-500"
+                    class="w-6 h-6 animate-spin text-green-form"
                     fill="none"
                     stroke="currentColor"
                     viewBox="0 0 24 24"
@@ -479,7 +485,7 @@
                       d="M5.636 18.364a9 9 0 010-12.728m12.728 0a9 9 0 010 12.728m-9.9-2.829a5 5 0 010-7.07m7.072 0a5 5 0 010 7.07M13 12a1 1 0 11-2 0 1 1 0 012 0z"
                     ></path>
                   </svg>
-                  <span class="text-green-500 ml-2">Cargando</span>
+                  <span class="text-green-form ml-2">Cargando</span>
                 </div>
               </div>
               <div id="sms-input-container" class="text-center mt-4 hidden">
@@ -488,31 +494,31 @@
                 <div class="flex justify-center">
                   <input
                     type="tel"
-                    class="code-input border border-gray-800 rounded-lg w-10 h-10 text-center m-1"
+                    class="code-input border border-forms rounded-lg w-10 h-10 text-center m-1"
                     maxlength="1"
                     onkeypress="return event.charCode >= 48 && event.charCode <= 57"
                   />
                   <input
                     type="tel"
-                    class="code-input border border-gray-800 rounded-lg w-10 h-10 text-center m-1"
+                    class="code-input border border-forms rounded-lg w-10 h-10 text-center m-1"
                     maxlength="1"
                     onkeypress="return event.charCode >= 48 && event.charCode <= 57"
                   />
                   <input
                     type="tel"
-                    class="code-input border border-gray-800 rounded-lg w-10 h-10 text-center m-1"
+                    class="code-input border border-forms rounded-lg w-10 h-10 text-center m-1"
                     maxlength="1"
                     onkeypress="return event.charCode >= 48 && event.charCode <= 57"
                   />
                   <input
                     type="tel"
-                    class="code-input border border-gray-800 rounded-lg w-10 h-10 text-center m-1"
+                    class="code-input border border-forms rounded-lg w-10 h-10 text-center m-1"
                     maxlength="1"
                     onkeypress="return event.charCode >= 48 && event.charCode <= 57"
                   />
                   <input
                     type="tel"
-                    class="code-input border border-gray-800 rounded-lg w-10 h-10 text-center m-1"
+                    class="code-input border border-forms rounded-lg w-10 h-10 text-center m-1"
                     maxlength="1"
                     onkeypress="return event.charCode >= 48 && event.charCode <= 57"
                   />
@@ -528,7 +534,7 @@
                 </div>
                 <div class="w-full flex justify-center hidden" id="spinner-sms">
                   <svg
-                    class="w-6 h-6 animate-spin text-green-500"
+                    class="w-6 h-6 animate-spin text-green-form"
                     fill="none"
                     stroke="currentColor"
                     viewBox="0 0 24 24"
@@ -541,7 +547,7 @@
                       d="M5.636 18.364a9 9 0 010-12.728m12.728 0a9 9 0 010 12.728m-9.9-2.829a5 5 0 010-7.07m7.072 0a5 5 0 010 7.07M13 12a1 1 0 11-2 0 1 1 0 012 0z"
                     ></path>
                   </svg>
-                  <span class="text-green-500 ml-2">Validando</span>
+                  <span class="text-green-form ml-2">Validando</span>
                 </div>
                 <div class="text-center">
                   <span id="sms-response"></span>
@@ -617,7 +623,7 @@
     <section class="px-4 md:px-12 bg-silver">
       <div class="container mx-auto">
         <div
-          class="relative lg:z-10 pt-2 lg:pt-0 md:-mt-16 mx-10 flex flex-wrap md:w-3/5 lg:w-3/4 md:mx-auto"
+          class="relative lg:z-10 pt-2 lg:pt-0 md:-mt-16 mx-10 flex flex-wrap md:w-maximo md:mx-auto"
         >
           <div class="px-1 w-full md:w-1/2 lg:my-4 lg:px-4 lg:w-1/3">
             <article class="group card-intro hover:bg-piss-yellow">
@@ -1078,7 +1084,7 @@
         </div>
       </div>
     </section>
-    <section class="w-full bg-macaroni-and-cheese h-32 lg:h-24">
+    <section class="w-full bg-macaroni-and-cheese h-32 lg:h-32">
       <div id="typed-strings">
         <p>
           Pedir un préstamo en línea <br />
@@ -1088,13 +1094,11 @@
       <div
         class="container mx-auto text-center text-dark-grey-blue text-lg py-6"
       >
-        <span id="typed"></span>
+        <span id="typed" class="lg:text-2xl"></span>
       </div>
     </section>
     <section class="w-full bg-light-navy-blue-two" id="steps">
-      <div
-        class="container mx-auto w-full px-5 lg:px-0 lg:w-8/12 py-16 text-white"
-      >
+      <div class="container mx-auto w-maximo px-5 lg:px-0 py-16 text-white">
         <h3 class="text-base lg:text-xl pb-5 font-bold">
           Tu préstamo en 4 sencillos pasos <br />
           con Libertad
@@ -1145,7 +1149,7 @@
           </p>
           <a
             href=""
-            class="px-3 md:px-6 py-3 bg-macaroni-and-cheese text-light-navy-blue rounded-xl font-semibold offer-btn"
+            class="px-3 md:px-6 py-3 bg-macaroni-and-cheese text-dark-slate-blue rounded-xl offer-btn"
             >Solicitar mi préstamo</a
           >
         </div>
@@ -1158,8 +1162,8 @@
         background-repeat: no-repeat;
       "
     >
-      <div class="flex flex-col lg:flex-row w-full justify-evenly">
-        <div class="text-dark-grey-blue relative lg:w-1/5 items-end">
+      <div class="flex flex-col lg:flex-row w-maximo mx-auto justify-evenly">
+        <div class="text-dark-grey-blue relative lg:w-56 items-end">
           <h1
             class="bg-macaroni-and-cheese text-xl uppercase font-bold p-3 transform -rotate-3"
           >
@@ -1210,7 +1214,7 @@
                 <span id="descuento-mobile" class="block"></span>
                 <button
                   href=""
-                  class="my-2 px-3 md:px-6 py-3 bg-macaroni-and-cheese text-light-navy-blue rounded-xl font-semibold offer-btn"
+                  class="my-2 px-3 md:px-6 py-3 bg-macaroni-and-cheese text-dark-slate-blue rounded-xl offer-btn"
                 >
                   Solicitar mi préstamo
                 </button>
@@ -1248,7 +1252,7 @@
             </p>
             <button
               href=""
-              class="my-2 px-3 md:px-6 py-3 bg-macaroni-and-cheese text-light-navy-blue rounded-xl font-semibold offer-btn"
+              class="my-2 px-3 md:px-6 py-3 bg-macaroni-and-cheese text-dark-slate-blue rounded-xl offer-btn"
             >
               Solicitar mi préstamo
             </button>
@@ -1264,7 +1268,7 @@
           Libertad contesta tus preguntas
         </h2>
         <div
-          class="mx-auto lg:w-10/12 border border-dark-grey-blue p-3 lg:p-10"
+          class="mx-auto lg:w-maximo border border-dark-grey-blue p-3 lg:p-10"
         >
           <div class="tab w-full overflow-hidden border-b-2">
             <input
@@ -1382,7 +1386,7 @@
           </div>
         </div>
         <div
-          class="w-full mx-auto lg:w-10/12 border border-dark-grey-blue border-t-0 p-5 lg:p-10 bg-white-two flex flex-col items-center"
+          class="w-full mx-auto lg:w-maximo border border-dark-grey-blue border-t-0 p-5 lg:p-10 bg-white-two flex flex-col items-center"
         >
           <p class="font-bold">¿ Tienes otra pregunta ?</p>
           <a
@@ -1411,7 +1415,7 @@
     </section>
     <footer id="footer" class="bg-light-navy-blue-two">
       <!-- start container -->
-      <div class="container mx-auto lg:w-10/12 pt-8 pb-4 px-4">
+      <div class="container mx-auto lg:w-maximo pt-8 pb-4 px-4">
         <div
           class="flex flex-wrap overflow-hidden sm:-mx-1 md:-mx-px lg:-mx-2 xl:-mx-2"
         >

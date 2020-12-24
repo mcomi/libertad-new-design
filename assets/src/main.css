@@ -168,10 +168,16 @@ input[type="tel"]:focus-within ~ label {
   @apply text-blue-500;
 }
 
+input[type="text"].valid,
+input[type="email"].valid,
+input[type="tel"].valid {
+  @apply text-green-form;
+}
+
 input[type="text"].valid ~ label,
 input[type="email"].valid ~ label,
 input[type="tel"].valid ~ label {
-  @apply text-green-500;
+  @apply text-green-form;
 }
 
 input[type="text"].invalid ~ label,
@@ -196,7 +202,7 @@ input ~ svg {
   opacity: 0;
 }
 
-input.valid ~ svg.text-green-500 {
+input.valid ~ svg.text-green-form {
   opacity: 1;
 }
 

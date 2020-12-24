@@ -1,3 +1,4 @@
+// prettier-ignore
 module.exports = {
   purge: ["./**/*.html", "./assets/src/**/*.js"],
   theme: {
@@ -9,11 +10,13 @@ module.exports = {
         "macaroni-and-cheese": "#f1ca30",
         "white-two": "#f0f0f0",
         "black-two": "#1e1e1e",
+        "forms": "#333333",
+        "green-form": "#009045",
         "dark-grey-blue": "#2c315f",
         "light-navy-blue": "#325699",
         "peacock-blue": "#005398",
         "macaroni-and-cheese-two": "#f2ca30",
-        marigold: "#fbb902",
+        "marigold": "#fbb902",
         "dark-grey-blue-two": "#2b315f",
         "dark-slate-blue": "#223c6b",
         "pinkish-grey": "#d1d1d1",
@@ -26,7 +29,7 @@ module.exports = {
         "black-three": "#313131",
         "light-navy-blue-four": "#2f5495",
         "piss-yellow": "#d2b41a",
-        silver: "#dfe2e3",
+        "silver": "#dfe2e3",
         "grey-section": "#e9e9e9",
         "gray-light": "#f5f7f8",
       },
@@ -40,6 +43,7 @@ module.exports = {
       },
       width: {
         "abs-card": "450px",
+        "maximo": "888px",
       },
       minHeight: {
         "card-offer": "300px",

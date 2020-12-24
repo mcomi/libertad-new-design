@@ -142,7 +142,7 @@ $(".code-input").bind("keyup", function () {
             }
             const toastHtml = `Código válido, espere ...`;
             $("#sms-response").html(toastHtml);
-            $(".code-input").addClass("border-green-500");
+            $(".code-input").addClass("border-green-form");
             setTimeout(function () {
               window.location.href =
                 window.location.origin + "/formulario.html?oferta=" + true;
@@ -186,9 +186,6 @@ $(function () {
   // Initialize form validation on the registration form.
   // It has the name attribute "registration"
   $("#step-1-register").validate({
-    groups: {
-      requeridosGroup: "nombre materno paterno email",
-    },
     // Specify validation rules
     rules: {
       // The key name on the left side is the name attribute
@@ -223,9 +220,10 @@ $(function () {
     errorClass: "invalid",
     errorLabelContainer: "#messageBox",
     success: function (label, element) {
-      $(element).parent().addClass("border-green-500");
+      $(element).parent().addClass("border-green-form");
     },
     errorPlacement: function (error, element) {
+      console.log(error);
       $(element).parent().addClass("border-red-700");
     },
 
