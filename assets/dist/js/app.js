@@ -260,6 +260,11 @@ offerBtns.forEach((btn) => {
   });
 });
 
+const btnCloseRegister = document.getElementById("close-register");
+btnCloseRegister.addEventListener("click", function () {
+  offerRegisterPanel.classList.add("hidden");
+  mainText.classList.remove("hidden");
+});
 var stepOne = new Waypoint({
   element: document.getElementById("steps"),
   handler: function (direction) {

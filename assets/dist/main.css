@@ -1720,6 +1720,10 @@ video {
   border-color: rgba(241, 202, 48, var(--divide-opacity));
 }
 
+.divide-yellow-hover > :not(template) ~ :not(template){
+  border-color: ffad00;
+}
+
 .divide-white-two > :not(template) ~ :not(template){
   --divide-opacity: 1;
   border-color: #f0f0f0;
@@ -2569,6 +2573,10 @@ video {
   background-color: rgba(241, 202, 48, var(--bg-opacity));
 }
 
+.bg-yellow-hover{
+  background-color: ffad00;
+}
+
 .bg-white-two{
   --bg-opacity: 1;
   background-color: #f0f0f0;
@@ -3295,6 +3303,10 @@ video {
   --bg-opacity: 1;
   background-color: #f1ca30;
   background-color: rgba(241, 202, 48, var(--bg-opacity));
+}
+
+.hover\:bg-yellow-hover:hover{
+  background-color: ffad00;
 }
 
 .hover\:bg-white-two:hover{
@@ -4025,6 +4037,10 @@ video {
   background-color: rgba(241, 202, 48, var(--bg-opacity));
 }
 
+.focus\:bg-yellow-hover:focus{
+  background-color: ffad00;
+}
+
 .focus\:bg-white-two:focus{
   --bg-opacity: 1;
   background-color: #f0f0f0;
@@ -4695,6 +4711,11 @@ video {
   --gradient-color-stops: var(--gradient-from-color), var(--gradient-to-color, rgba(241, 202, 48, 0));
 }
 
+.from-yellow-hover{
+  --gradient-from-color: ffad00;
+  --gradient-color-stops: var(--gradient-from-color), var(--gradient-to-color, rgba(255, 255, 255, 0));
+}
+
 .from-white-two{
   --gradient-from-color: #f0f0f0;
   --gradient-color-stops: var(--gradient-from-color), var(--gradient-to-color, rgba(240, 240, 240, 0));
@@ -5305,6 +5326,11 @@ video {
   --gradient-color-stops: var(--gradient-from-color), var(--gradient-via-color), var(--gradient-to-color, rgba(241, 202, 48, 0));
 }
 
+.via-yellow-hover{
+  --gradient-via-color: ffad00;
+  --gradient-color-stops: var(--gradient-from-color), var(--gradient-via-color), var(--gradient-to-color, rgba(255, 255, 255, 0));
+}
+
 .via-white-two{
   --gradient-via-color: #f0f0f0;
   --gradient-color-stops: var(--gradient-from-color), var(--gradient-via-color), var(--gradient-to-color, rgba(240, 240, 240, 0));
@@ -5815,6 +5841,10 @@ video {
 
 .to-macaroni-and-cheese{
   --gradient-to-color: #f1ca30;
+}
+
+.to-yellow-hover{
+  --gradient-to-color: ffad00;
 }
 
 .to-white-two{
@@ -6401,6 +6431,11 @@ video {
 .hover\:from-macaroni-and-cheese:hover{
   --gradient-from-color: #f1ca30;
   --gradient-color-stops: var(--gradient-from-color), var(--gradient-to-color, rgba(241, 202, 48, 0));
+}
+
+.hover\:from-yellow-hover:hover{
+  --gradient-from-color: ffad00;
+  --gradient-color-stops: var(--gradient-from-color), var(--gradient-to-color, rgba(255, 255, 255, 0));
 }
 
 .hover\:from-white-two:hover{
@@ -7013,6 +7048,11 @@ video {
   --gradient-color-stops: var(--gradient-from-color), var(--gradient-via-color), var(--gradient-to-color, rgba(241, 202, 48, 0));
 }
 
+.hover\:via-yellow-hover:hover{
+  --gradient-via-color: ffad00;
+  --gradient-color-stops: var(--gradient-from-color), var(--gradient-via-color), var(--gradient-to-color, rgba(255, 255, 255, 0));
+}
+
 .hover\:via-white-two:hover{
   --gradient-via-color: #f0f0f0;
   --gradient-color-stops: var(--gradient-from-color), var(--gradient-via-color), var(--gradient-to-color, rgba(240, 240, 240, 0));
@@ -7523,6 +7563,10 @@ video {
 
 .hover\:to-macaroni-and-cheese:hover{
   --gradient-to-color: #f1ca30;
+}
+
+.hover\:to-yellow-hover:hover{
+  --gradient-to-color: ffad00;
 }
 
 .hover\:to-white-two:hover{
@@ -8109,6 +8153,11 @@ video {
 .focus\:from-macaroni-and-cheese:focus{
   --gradient-from-color: #f1ca30;
   --gradient-color-stops: var(--gradient-from-color), var(--gradient-to-color, rgba(241, 202, 48, 0));
+}
+
+.focus\:from-yellow-hover:focus{
+  --gradient-from-color: ffad00;
+  --gradient-color-stops: var(--gradient-from-color), var(--gradient-to-color, rgba(255, 255, 255, 0));
 }
 
 .focus\:from-white-two:focus{
@@ -8721,6 +8770,11 @@ video {
   --gradient-color-stops: var(--gradient-from-color), var(--gradient-via-color), var(--gradient-to-color, rgba(241, 202, 48, 0));
 }
 
+.focus\:via-yellow-hover:focus{
+  --gradient-via-color: ffad00;
+  --gradient-color-stops: var(--gradient-from-color), var(--gradient-via-color), var(--gradient-to-color, rgba(255, 255, 255, 0));
+}
+
 .focus\:via-white-two:focus{
   --gradient-via-color: #f0f0f0;
   --gradient-color-stops: var(--gradient-from-color), var(--gradient-via-color), var(--gradient-to-color, rgba(240, 240, 240, 0));
@@ -9231,6 +9285,10 @@ video {
 
 .focus\:to-macaroni-and-cheese:focus{
   --gradient-to-color: #f1ca30;
+}
+
+.focus\:to-yellow-hover:focus{
+  --gradient-to-color: ffad00;
 }
 
 .focus\:to-white-two:focus{
@@ -10053,6 +10111,10 @@ video {
   border-color: rgba(241, 202, 48, var(--border-opacity));
 }
 
+.border-yellow-hover{
+  border-color: ffad00;
+}
+
 .border-white-two{
   --border-opacity: 1;
   border-color: #f0f0f0;
@@ -10779,6 +10841,10 @@ video {
   --border-opacity: 1;
   border-color: #f1ca30;
   border-color: rgba(241, 202, 48, var(--border-opacity));
+}
+
+.hover\:border-yellow-hover:hover{
+  border-color: ffad00;
 }
 
 .hover\:border-white-two:hover{
@@ -11509,6 +11575,10 @@ video {
   border-color: rgba(241, 202, 48, var(--border-opacity));
 }
 
+.focus\:border-yellow-hover:focus{
+  border-color: ffad00;
+}
+
 .focus\:border-white-two:focus{
   --border-opacity: 1;
   border-color: #f0f0f0;
@@ -12235,6 +12305,10 @@ video {
   --border-opacity: 1;
   border-color: #f1ca30;
   border-color: rgba(241, 202, 48, var(--border-opacity));
+}
+
+.focus-within\:border-yellow-hover:focus-within{
+  border-color: ffad00;
 }
 
 .focus-within\:border-white-two:focus-within{
@@ -17540,6 +17614,18 @@ video {
   color: rgba(241, 202, 48, var(--placeholder-opacity));
 }
 
+.placeholder-yellow-hover::-moz-placeholder{
+  color: ffad00;
+}
+
+.placeholder-yellow-hover:-ms-input-placeholder{
+  color: ffad00;
+}
+
+.placeholder-yellow-hover::placeholder{
+  color: ffad00;
+}
+
 .placeholder-white-two::-moz-placeholder{
   --placeholder-opacity: 1;
   color: #f0f0f0;
@@ -19724,6 +19810,18 @@ video {
   color: rgba(241, 202, 48, var(--placeholder-opacity));
 }
 
+.focus\:placeholder-yellow-hover:focus::-moz-placeholder{
+  color: ffad00;
+}
+
+.focus\:placeholder-yellow-hover:focus:-ms-input-placeholder{
+  color: ffad00;
+}
+
+.focus\:placeholder-yellow-hover:focus::placeholder{
+  color: ffad00;
+}
+
 .focus\:placeholder-white-two:focus::-moz-placeholder{
   --placeholder-opacity: 1;
   color: #f0f0f0;
@@ -21234,6 +21332,10 @@ video {
   color: rgba(241, 202, 48, var(--text-opacity));
 }
 
+.text-yellow-hover{
+  color: ffad00;
+}
+
 .text-white-two{
   --text-opacity: 1;
   color: #f0f0f0;
@@ -21960,6 +22062,10 @@ video {
   --text-opacity: 1;
   color: #f1ca30;
   color: rgba(241, 202, 48, var(--text-opacity));
+}
+
+.hover\:text-yellow-hover:hover{
+  color: ffad00;
 }
 
 .hover\:text-white-two:hover{
@@ -22690,6 +22796,10 @@ video {
   color: rgba(241, 202, 48, var(--text-opacity));
 }
 
+.focus\:text-yellow-hover:focus{
+  color: ffad00;
+}
+
 .focus\:text-white-two:focus{
   --text-opacity: 1;
   color: #f0f0f0;
@@ -23416,6 +23526,10 @@ video {
   --text-opacity: 1;
   color: #f1ca30;
   color: rgba(241, 202, 48, var(--text-opacity));
+}
+
+.group:hover .group-hover\:text-yellow-hover{
+  color: ffad00;
 }
 
 .group:hover .group-hover\:text-white-two{
@@ -29025,6 +29139,10 @@ input.invalid ~ svg.text-red-700 {
     border-color: rgba(241, 202, 48, var(--divide-opacity));
   }
 
+  .sm\:divide-yellow-hover > :not(template) ~ :not(template){
+    border-color: ffad00;
+  }
+
   .sm\:divide-white-two > :not(template) ~ :not(template){
     --divide-opacity: 1;
     border-color: #f0f0f0;
@@ -29874,6 +29992,10 @@ input.invalid ~ svg.text-red-700 {
     background-color: rgba(241, 202, 48, var(--bg-opacity));
   }
 
+  .sm\:bg-yellow-hover{
+    background-color: ffad00;
+  }
+
   .sm\:bg-white-two{
     --bg-opacity: 1;
     background-color: #f0f0f0;
@@ -30600,6 +30722,10 @@ input.invalid ~ svg.text-red-700 {
     --bg-opacity: 1;
     background-color: #f1ca30;
     background-color: rgba(241, 202, 48, var(--bg-opacity));
+  }
+
+  .sm\:hover\:bg-yellow-hover:hover{
+    background-color: ffad00;
   }
 
   .sm\:hover\:bg-white-two:hover{
@@ -31330,6 +31456,10 @@ input.invalid ~ svg.text-red-700 {
     background-color: rgba(241, 202, 48, var(--bg-opacity));
   }
 
+  .sm\:focus\:bg-yellow-hover:focus{
+    background-color: ffad00;
+  }
+
   .sm\:focus\:bg-white-two:focus{
     --bg-opacity: 1;
     background-color: #f0f0f0;
@@ -32000,6 +32130,11 @@ input.invalid ~ svg.text-red-700 {
     --gradient-color-stops: var(--gradient-from-color), var(--gradient-to-color, rgba(241, 202, 48, 0));
   }
 
+  .sm\:from-yellow-hover{
+    --gradient-from-color: ffad00;
+    --gradient-color-stops: var(--gradient-from-color), var(--gradient-to-color, rgba(255, 255, 255, 0));
+  }
+
   .sm\:from-white-two{
     --gradient-from-color: #f0f0f0;
     --gradient-color-stops: var(--gradient-from-color), var(--gradient-to-color, rgba(240, 240, 240, 0));
@@ -32610,6 +32745,11 @@ input.invalid ~ svg.text-red-700 {
     --gradient-color-stops: var(--gradient-from-color), var(--gradient-via-color), var(--gradient-to-color, rgba(241, 202, 48, 0));
   }
 
+  .sm\:via-yellow-hover{
+    --gradient-via-color: ffad00;
+    --gradient-color-stops: var(--gradient-from-color), var(--gradient-via-color), var(--gradient-to-color, rgba(255, 255, 255, 0));
+  }
+
   .sm\:via-white-two{
     --gradient-via-color: #f0f0f0;
     --gradient-color-stops: var(--gradient-from-color), var(--gradient-via-color), var(--gradient-to-color, rgba(240, 240, 240, 0));
@@ -33120,6 +33260,10 @@ input.invalid ~ svg.text-red-700 {
 
   .sm\:to-macaroni-and-cheese{
     --gradient-to-color: #f1ca30;
+  }
+
+  .sm\:to-yellow-hover{
+    --gradient-to-color: ffad00;
   }
 
   .sm\:to-white-two{
@@ -33706,6 +33850,11 @@ input.invalid ~ svg.text-red-700 {
   .sm\:hover\:from-macaroni-and-cheese:hover{
     --gradient-from-color: #f1ca30;
     --gradient-color-stops: var(--gradient-from-color), var(--gradient-to-color, rgba(241, 202, 48, 0));
+  }
+
+  .sm\:hover\:from-yellow-hover:hover{
+    --gradient-from-color: ffad00;
+    --gradient-color-stops: var(--gradient-from-color), var(--gradient-to-color, rgba(255, 255, 255, 0));
   }
 
   .sm\:hover\:from-white-two:hover{
@@ -34318,6 +34467,11 @@ input.invalid ~ svg.text-red-700 {
     --gradient-color-stops: var(--gradient-from-color), var(--gradient-via-color), var(--gradient-to-color, rgba(241, 202, 48, 0));
   }
 
+  .sm\:hover\:via-yellow-hover:hover{
+    --gradient-via-color: ffad00;
+    --gradient-color-stops: var(--gradient-from-color), var(--gradient-via-color), var(--gradient-to-color, rgba(255, 255, 255, 0));
+  }
+
   .sm\:hover\:via-white-two:hover{
     --gradient-via-color: #f0f0f0;
     --gradient-color-stops: var(--gradient-from-color), var(--gradient-via-color), var(--gradient-to-color, rgba(240, 240, 240, 0));
@@ -34828,6 +34982,10 @@ input.invalid ~ svg.text-red-700 {
 
   .sm\:hover\:to-macaroni-and-cheese:hover{
     --gradient-to-color: #f1ca30;
+  }
+
+  .sm\:hover\:to-yellow-hover:hover{
+    --gradient-to-color: ffad00;
   }
 
   .sm\:hover\:to-white-two:hover{
@@ -35414,6 +35572,11 @@ input.invalid ~ svg.text-red-700 {
   .sm\:focus\:from-macaroni-and-cheese:focus{
     --gradient-from-color: #f1ca30;
     --gradient-color-stops: var(--gradient-from-color), var(--gradient-to-color, rgba(241, 202, 48, 0));
+  }
+
+  .sm\:focus\:from-yellow-hover:focus{
+    --gradient-from-color: ffad00;
+    --gradient-color-stops: var(--gradient-from-color), var(--gradient-to-color, rgba(255, 255, 255, 0));
   }
 
   .sm\:focus\:from-white-two:focus{
@@ -36026,6 +36189,11 @@ input.invalid ~ svg.text-red-700 {
     --gradient-color-stops: var(--gradient-from-color), var(--gradient-via-color), var(--gradient-to-color, rgba(241, 202, 48, 0));
   }
 
+  .sm\:focus\:via-yellow-hover:focus{
+    --gradient-via-color: ffad00;
+    --gradient-color-stops: var(--gradient-from-color), var(--gradient-via-color), var(--gradient-to-color, rgba(255, 255, 255, 0));
+  }
+
   .sm\:focus\:via-white-two:focus{
     --gradient-via-color: #f0f0f0;
     --gradient-color-stops: var(--gradient-from-color), var(--gradient-via-color), var(--gradient-to-color, rgba(240, 240, 240, 0));
@@ -36536,6 +36704,10 @@ input.invalid ~ svg.text-red-700 {
 
   .sm\:focus\:to-macaroni-and-cheese:focus{
     --gradient-to-color: #f1ca30;
+  }
+
+  .sm\:focus\:to-yellow-hover:focus{
+    --gradient-to-color: ffad00;
   }
 
   .sm\:focus\:to-white-two:focus{
@@ -37358,6 +37530,10 @@ input.invalid ~ svg.text-red-700 {
     border-color: rgba(241, 202, 48, var(--border-opacity));
   }
 
+  .sm\:border-yellow-hover{
+    border-color: ffad00;
+  }
+
   .sm\:border-white-two{
     --border-opacity: 1;
     border-color: #f0f0f0;
@@ -38084,6 +38260,10 @@ input.invalid ~ svg.text-red-700 {
     --border-opacity: 1;
     border-color: #f1ca30;
     border-color: rgba(241, 202, 48, var(--border-opacity));
+  }
+
+  .sm\:hover\:border-yellow-hover:hover{
+    border-color: ffad00;
   }
 
   .sm\:hover\:border-white-two:hover{
@@ -38814,6 +38994,10 @@ input.invalid ~ svg.text-red-700 {
     border-color: rgba(241, 202, 48, var(--border-opacity));
   }
 
+  .sm\:focus\:border-yellow-hover:focus{
+    border-color: ffad00;
+  }
+
   .sm\:focus\:border-white-two:focus{
     --border-opacity: 1;
     border-color: #f0f0f0;
@@ -39540,6 +39724,10 @@ input.invalid ~ svg.text-red-700 {
     --border-opacity: 1;
     border-color: #f1ca30;
     border-color: rgba(241, 202, 48, var(--border-opacity));
+  }
+
+  .sm\:focus-within\:border-yellow-hover:focus-within{
+    border-color: ffad00;
   }
 
   .sm\:focus-within\:border-white-two:focus-within{
@@ -44845,6 +45033,18 @@ input.invalid ~ svg.text-red-700 {
     color: rgba(241, 202, 48, var(--placeholder-opacity));
   }
 
+  .sm\:placeholder-yellow-hover::-moz-placeholder{
+    color: ffad00;
+  }
+
+  .sm\:placeholder-yellow-hover:-ms-input-placeholder{
+    color: ffad00;
+  }
+
+  .sm\:placeholder-yellow-hover::placeholder{
+    color: ffad00;
+  }
+
   .sm\:placeholder-white-two::-moz-placeholder{
     --placeholder-opacity: 1;
     color: #f0f0f0;
@@ -47029,6 +47229,18 @@ input.invalid ~ svg.text-red-700 {
     color: rgba(241, 202, 48, var(--placeholder-opacity));
   }
 
+  .sm\:focus\:placeholder-yellow-hover:focus::-moz-placeholder{
+    color: ffad00;
+  }
+
+  .sm\:focus\:placeholder-yellow-hover:focus:-ms-input-placeholder{
+    color: ffad00;
+  }
+
+  .sm\:focus\:placeholder-yellow-hover:focus::placeholder{
+    color: ffad00;
+  }
+
   .sm\:focus\:placeholder-white-two:focus::-moz-placeholder{
     --placeholder-opacity: 1;
     color: #f0f0f0;
@@ -48539,6 +48751,10 @@ input.invalid ~ svg.text-red-700 {
     color: rgba(241, 202, 48, var(--text-opacity));
   }
 
+  .sm\:text-yellow-hover{
+    color: ffad00;
+  }
+
   .sm\:text-white-two{
     --text-opacity: 1;
     color: #f0f0f0;
@@ -49265,6 +49481,10 @@ input.invalid ~ svg.text-red-700 {
     --text-opacity: 1;
     color: #f1ca30;
     color: rgba(241, 202, 48, var(--text-opacity));
+  }
+
+  .sm\:hover\:text-yellow-hover:hover{
+    color: ffad00;
   }
 
   .sm\:hover\:text-white-two:hover{
@@ -49995,6 +50215,10 @@ input.invalid ~ svg.text-red-700 {
     color: rgba(241, 202, 48, var(--text-opacity));
   }
 
+  .sm\:focus\:text-yellow-hover:focus{
+    color: ffad00;
+  }
+
   .sm\:focus\:text-white-two:focus{
     --text-opacity: 1;
     color: #f0f0f0;
@@ -50721,6 +50945,10 @@ input.invalid ~ svg.text-red-700 {
     --text-opacity: 1;
     color: #f1ca30;
     color: rgba(241, 202, 48, var(--text-opacity));
+  }
+
+  .group:hover .sm\:group-hover\:text-yellow-hover{
+    color: ffad00;
   }
 
   .group:hover .sm\:group-hover\:text-white-two{
@@ -54171,6 +54399,10 @@ input.invalid ~ svg.text-red-700 {
     border-color: rgba(241, 202, 48, var(--divide-opacity));
   }
 
+  .md\:divide-yellow-hover > :not(template) ~ :not(template){
+    border-color: ffad00;
+  }
+
   .md\:divide-white-two > :not(template) ~ :not(template){
     --divide-opacity: 1;
     border-color: #f0f0f0;
@@ -55020,6 +55252,10 @@ input.invalid ~ svg.text-red-700 {
     background-color: rgba(241, 202, 48, var(--bg-opacity));
   }
 
+  .md\:bg-yellow-hover{
+    background-color: ffad00;
+  }
+
   .md\:bg-white-two{
     --bg-opacity: 1;
     background-color: #f0f0f0;
@@ -55746,6 +55982,10 @@ input.invalid ~ svg.text-red-700 {
     --bg-opacity: 1;
     background-color: #f1ca30;
     background-color: rgba(241, 202, 48, var(--bg-opacity));
+  }
+
+  .md\:hover\:bg-yellow-hover:hover{
+    background-color: ffad00;
   }
 
   .md\:hover\:bg-white-two:hover{
@@ -56476,6 +56716,10 @@ input.invalid ~ svg.text-red-700 {
     background-color: rgba(241, 202, 48, var(--bg-opacity));
   }
 
+  .md\:focus\:bg-yellow-hover:focus{
+    background-color: ffad00;
+  }
+
   .md\:focus\:bg-white-two:focus{
     --bg-opacity: 1;
     background-color: #f0f0f0;
@@ -57146,6 +57390,11 @@ input.invalid ~ svg.text-red-700 {
     --gradient-color-stops: var(--gradient-from-color), var(--gradient-to-color, rgba(241, 202, 48, 0));
   }
 
+  .md\:from-yellow-hover{
+    --gradient-from-color: ffad00;
+    --gradient-color-stops: var(--gradient-from-color), var(--gradient-to-color, rgba(255, 255, 255, 0));
+  }
+
   .md\:from-white-two{
     --gradient-from-color: #f0f0f0;
     --gradient-color-stops: var(--gradient-from-color), var(--gradient-to-color, rgba(240, 240, 240, 0));
@@ -57756,6 +58005,11 @@ input.invalid ~ svg.text-red-700 {
     --gradient-color-stops: var(--gradient-from-color), var(--gradient-via-color), var(--gradient-to-color, rgba(241, 202, 48, 0));
   }
 
+  .md\:via-yellow-hover{
+    --gradient-via-color: ffad00;
+    --gradient-color-stops: var(--gradient-from-color), var(--gradient-via-color), var(--gradient-to-color, rgba(255, 255, 255, 0));
+  }
+
   .md\:via-white-two{
     --gradient-via-color: #f0f0f0;
     --gradient-color-stops: var(--gradient-from-color), var(--gradient-via-color), var(--gradient-to-color, rgba(240, 240, 240, 0));
@@ -58266,6 +58520,10 @@ input.invalid ~ svg.text-red-700 {
 
   .md\:to-macaroni-and-cheese{
     --gradient-to-color: #f1ca30;
+  }
+
+  .md\:to-yellow-hover{
+    --gradient-to-color: ffad00;
   }
 
   .md\:to-white-two{
@@ -58852,6 +59110,11 @@ input.invalid ~ svg.text-red-700 {
   .md\:hover\:from-macaroni-and-cheese:hover{
     --gradient-from-color: #f1ca30;
     --gradient-color-stops: var(--gradient-from-color), var(--gradient-to-color, rgba(241, 202, 48, 0));
+  }
+
+  .md\:hover\:from-yellow-hover:hover{
+    --gradient-from-color: ffad00;
+    --gradient-color-stops: var(--gradient-from-color), var(--gradient-to-color, rgba(255, 255, 255, 0));
   }
 
   .md\:hover\:from-white-two:hover{
@@ -59464,6 +59727,11 @@ input.invalid ~ svg.text-red-700 {
     --gradient-color-stops: var(--gradient-from-color), var(--gradient-via-color), var(--gradient-to-color, rgba(241, 202, 48, 0));
   }
 
+  .md\:hover\:via-yellow-hover:hover{
+    --gradient-via-color: ffad00;
+    --gradient-color-stops: var(--gradient-from-color), var(--gradient-via-color), var(--gradient-to-color, rgba(255, 255, 255, 0));
+  }
+
   .md\:hover\:via-white-two:hover{
     --gradient-via-color: #f0f0f0;
     --gradient-color-stops: var(--gradient-from-color), var(--gradient-via-color), var(--gradient-to-color, rgba(240, 240, 240, 0));
@@ -59974,6 +60242,10 @@ input.invalid ~ svg.text-red-700 {
 
   .md\:hover\:to-macaroni-and-cheese:hover{
     --gradient-to-color: #f1ca30;
+  }
+
+  .md\:hover\:to-yellow-hover:hover{
+    --gradient-to-color: ffad00;
   }
 
   .md\:hover\:to-white-two:hover{
@@ -60560,6 +60832,11 @@ input.invalid ~ svg.text-red-700 {
   .md\:focus\:from-macaroni-and-cheese:focus{
     --gradient-from-color: #f1ca30;
     --gradient-color-stops: var(--gradient-from-color), var(--gradient-to-color, rgba(241, 202, 48, 0));
+  }
+
+  .md\:focus\:from-yellow-hover:focus{
+    --gradient-from-color: ffad00;
+    --gradient-color-stops: var(--gradient-from-color), var(--gradient-to-color, rgba(255, 255, 255, 0));
   }
 
   .md\:focus\:from-white-two:focus{
@@ -61172,6 +61449,11 @@ input.invalid ~ svg.text-red-700 {
     --gradient-color-stops: var(--gradient-from-color), var(--gradient-via-color), var(--gradient-to-color, rgba(241, 202, 48, 0));
   }
 
+  .md\:focus\:via-yellow-hover:focus{
+    --gradient-via-color: ffad00;
+    --gradient-color-stops: var(--gradient-from-color), var(--gradient-via-color), var(--gradient-to-color, rgba(255, 255, 255, 0));
+  }
+
   .md\:focus\:via-white-two:focus{
     --gradient-via-color: #f0f0f0;
     --gradient-color-stops: var(--gradient-from-color), var(--gradient-via-color), var(--gradient-to-color, rgba(240, 240, 240, 0));
@@ -61682,6 +61964,10 @@ input.invalid ~ svg.text-red-700 {
 
   .md\:focus\:to-macaroni-and-cheese:focus{
     --gradient-to-color: #f1ca30;
+  }
+
+  .md\:focus\:to-yellow-hover:focus{
+    --gradient-to-color: ffad00;
   }
 
   .md\:focus\:to-white-two:focus{
@@ -62504,6 +62790,10 @@ input.invalid ~ svg.text-red-700 {
     border-color: rgba(241, 202, 48, var(--border-opacity));
   }
 
+  .md\:border-yellow-hover{
+    border-color: ffad00;
+  }
+
   .md\:border-white-two{
     --border-opacity: 1;
     border-color: #f0f0f0;
@@ -63230,6 +63520,10 @@ input.invalid ~ svg.text-red-700 {
     --border-opacity: 1;
     border-color: #f1ca30;
     border-color: rgba(241, 202, 48, var(--border-opacity));
+  }
+
+  .md\:hover\:border-yellow-hover:hover{
+    border-color: ffad00;
   }
 
   .md\:hover\:border-white-two:hover{
@@ -63960,6 +64254,10 @@ input.invalid ~ svg.text-red-700 {
     border-color: rgba(241, 202, 48, var(--border-opacity));
   }
 
+  .md\:focus\:border-yellow-hover:focus{
+    border-color: ffad00;
+  }
+
   .md\:focus\:border-white-two:focus{
     --border-opacity: 1;
     border-color: #f0f0f0;
@@ -64686,6 +64984,10 @@ input.invalid ~ svg.text-red-700 {
     --border-opacity: 1;
     border-color: #f1ca30;
     border-color: rgba(241, 202, 48, var(--border-opacity));
+  }
+
+  .md\:focus-within\:border-yellow-hover:focus-within{
+    border-color: ffad00;
   }
 
   .md\:focus-within\:border-white-two:focus-within{
@@ -69991,6 +70293,18 @@ input.invalid ~ svg.text-red-700 {
     color: rgba(241, 202, 48, var(--placeholder-opacity));
   }
 
+  .md\:placeholder-yellow-hover::-moz-placeholder{
+    color: ffad00;
+  }
+
+  .md\:placeholder-yellow-hover:-ms-input-placeholder{
+    color: ffad00;
+  }
+
+  .md\:placeholder-yellow-hover::placeholder{
+    color: ffad00;
+  }
+
   .md\:placeholder-white-two::-moz-placeholder{
     --placeholder-opacity: 1;
     color: #f0f0f0;
@@ -72175,6 +72489,18 @@ input.invalid ~ svg.text-red-700 {
     color: rgba(241, 202, 48, var(--placeholder-opacity));
   }
 
+  .md\:focus\:placeholder-yellow-hover:focus::-moz-placeholder{
+    color: ffad00;
+  }
+
+  .md\:focus\:placeholder-yellow-hover:focus:-ms-input-placeholder{
+    color: ffad00;
+  }
+
+  .md\:focus\:placeholder-yellow-hover:focus::placeholder{
+    color: ffad00;
+  }
+
   .md\:focus\:placeholder-white-two:focus::-moz-placeholder{
     --placeholder-opacity: 1;
     color: #f0f0f0;
@@ -73685,6 +74011,10 @@ input.invalid ~ svg.text-red-700 {
     color: rgba(241, 202, 48, var(--text-opacity));
   }
 
+  .md\:text-yellow-hover{
+    color: ffad00;
+  }
+
   .md\:text-white-two{
     --text-opacity: 1;
     color: #f0f0f0;
@@ -74411,6 +74741,10 @@ input.invalid ~ svg.text-red-700 {
     --text-opacity: 1;
     color: #f1ca30;
     color: rgba(241, 202, 48, var(--text-opacity));
+  }
+
+  .md\:hover\:text-yellow-hover:hover{
+    color: ffad00;
   }
 
   .md\:hover\:text-white-two:hover{
@@ -75141,6 +75475,10 @@ input.invalid ~ svg.text-red-700 {
     color: rgba(241, 202, 48, var(--text-opacity));
   }
 
+  .md\:focus\:text-yellow-hover:focus{
+    color: ffad00;
+  }
+
   .md\:focus\:text-white-two:focus{
     --text-opacity: 1;
     color: #f0f0f0;
@@ -75867,6 +76205,10 @@ input.invalid ~ svg.text-red-700 {
     --text-opacity: 1;
     color: #f1ca30;
     color: rgba(241, 202, 48, var(--text-opacity));
+  }
+
+  .group:hover .md\:group-hover\:text-yellow-hover{
+    color: ffad00;
   }
 
   .group:hover .md\:group-hover\:text-white-two{
@@ -79317,6 +79659,10 @@ input.invalid ~ svg.text-red-700 {
     border-color: rgba(241, 202, 48, var(--divide-opacity));
   }
 
+  .lg\:divide-yellow-hover > :not(template) ~ :not(template){
+    border-color: ffad00;
+  }
+
   .lg\:divide-white-two > :not(template) ~ :not(template){
     --divide-opacity: 1;
     border-color: #f0f0f0;
@@ -80166,6 +80512,10 @@ input.invalid ~ svg.text-red-700 {
     background-color: rgba(241, 202, 48, var(--bg-opacity));
   }
 
+  .lg\:bg-yellow-hover{
+    background-color: ffad00;
+  }
+
   .lg\:bg-white-two{
     --bg-opacity: 1;
     background-color: #f0f0f0;
@@ -80892,6 +81242,10 @@ input.invalid ~ svg.text-red-700 {
     --bg-opacity: 1;
     background-color: #f1ca30;
     background-color: rgba(241, 202, 48, var(--bg-opacity));
+  }
+
+  .lg\:hover\:bg-yellow-hover:hover{
+    background-color: ffad00;
   }
 
   .lg\:hover\:bg-white-two:hover{
@@ -81622,6 +81976,10 @@ input.invalid ~ svg.text-red-700 {
     background-color: rgba(241, 202, 48, var(--bg-opacity));
   }
 
+  .lg\:focus\:bg-yellow-hover:focus{
+    background-color: ffad00;
+  }
+
   .lg\:focus\:bg-white-two:focus{
     --bg-opacity: 1;
     background-color: #f0f0f0;
@@ -82292,6 +82650,11 @@ input.invalid ~ svg.text-red-700 {
     --gradient-color-stops: var(--gradient-from-color), var(--gradient-to-color, rgba(241, 202, 48, 0));
   }
 
+  .lg\:from-yellow-hover{
+    --gradient-from-color: ffad00;
+    --gradient-color-stops: var(--gradient-from-color), var(--gradient-to-color, rgba(255, 255, 255, 0));
+  }
+
   .lg\:from-white-two{
     --gradient-from-color: #f0f0f0;
     --gradient-color-stops: var(--gradient-from-color), var(--gradient-to-color, rgba(240, 240, 240, 0));
@@ -82902,6 +83265,11 @@ input.invalid ~ svg.text-red-700 {
     --gradient-color-stops: var(--gradient-from-color), var(--gradient-via-color), var(--gradient-to-color, rgba(241, 202, 48, 0));
   }
 
+  .lg\:via-yellow-hover{
+    --gradient-via-color: ffad00;
+    --gradient-color-stops: var(--gradient-from-color), var(--gradient-via-color), var(--gradient-to-color, rgba(255, 255, 255, 0));
+  }
+
   .lg\:via-white-two{
     --gradient-via-color: #f0f0f0;
     --gradient-color-stops: var(--gradient-from-color), var(--gradient-via-color), var(--gradient-to-color, rgba(240, 240, 240, 0));
@@ -83412,6 +83780,10 @@ input.invalid ~ svg.text-red-700 {
 
   .lg\:to-macaroni-and-cheese{
     --gradient-to-color: #f1ca30;
+  }
+
+  .lg\:to-yellow-hover{
+    --gradient-to-color: ffad00;
   }
 
   .lg\:to-white-two{
@@ -83998,6 +84370,11 @@ input.invalid ~ svg.text-red-700 {
   .lg\:hover\:from-macaroni-and-cheese:hover{
     --gradient-from-color: #f1ca30;
     --gradient-color-stops: var(--gradient-from-color), var(--gradient-to-color, rgba(241, 202, 48, 0));
+  }
+
+  .lg\:hover\:from-yellow-hover:hover{
+    --gradient-from-color: ffad00;
+    --gradient-color-stops: var(--gradient-from-color), var(--gradient-to-color, rgba(255, 255, 255, 0));
   }
 
   .lg\:hover\:from-white-two:hover{
@@ -84610,6 +84987,11 @@ input.invalid ~ svg.text-red-700 {
     --gradient-color-stops: var(--gradient-from-color), var(--gradient-via-color), var(--gradient-to-color, rgba(241, 202, 48, 0));
   }
 
+  .lg\:hover\:via-yellow-hover:hover{
+    --gradient-via-color: ffad00;
+    --gradient-color-stops: var(--gradient-from-color), var(--gradient-via-color), var(--gradient-to-color, rgba(255, 255, 255, 0));
+  }
+
   .lg\:hover\:via-white-two:hover{
     --gradient-via-color: #f0f0f0;
     --gradient-color-stops: var(--gradient-from-color), var(--gradient-via-color), var(--gradient-to-color, rgba(240, 240, 240, 0));
@@ -85120,6 +85502,10 @@ input.invalid ~ svg.text-red-700 {
 
   .lg\:hover\:to-macaroni-and-cheese:hover{
     --gradient-to-color: #f1ca30;
+  }
+
+  .lg\:hover\:to-yellow-hover:hover{
+    --gradient-to-color: ffad00;
   }
 
   .lg\:hover\:to-white-two:hover{
@@ -85706,6 +86092,11 @@ input.invalid ~ svg.text-red-700 {
   .lg\:focus\:from-macaroni-and-cheese:focus{
     --gradient-from-color: #f1ca30;
     --gradient-color-stops: var(--gradient-from-color), var(--gradient-to-color, rgba(241, 202, 48, 0));
+  }
+
+  .lg\:focus\:from-yellow-hover:focus{
+    --gradient-from-color: ffad00;
+    --gradient-color-stops: var(--gradient-from-color), var(--gradient-to-color, rgba(255, 255, 255, 0));
   }
 
   .lg\:focus\:from-white-two:focus{
@@ -86318,6 +86709,11 @@ input.invalid ~ svg.text-red-700 {
     --gradient-color-stops: var(--gradient-from-color), var(--gradient-via-color), var(--gradient-to-color, rgba(241, 202, 48, 0));
   }
 
+  .lg\:focus\:via-yellow-hover:focus{
+    --gradient-via-color: ffad00;
+    --gradient-color-stops: var(--gradient-from-color), var(--gradient-via-color), var(--gradient-to-color, rgba(255, 255, 255, 0));
+  }
+
   .lg\:focus\:via-white-two:focus{
     --gradient-via-color: #f0f0f0;
     --gradient-color-stops: var(--gradient-from-color), var(--gradient-via-color), var(--gradient-to-color, rgba(240, 240, 240, 0));
@@ -86828,6 +87224,10 @@ input.invalid ~ svg.text-red-700 {
 
   .lg\:focus\:to-macaroni-and-cheese:focus{
     --gradient-to-color: #f1ca30;
+  }
+
+  .lg\:focus\:to-yellow-hover:focus{
+    --gradient-to-color: ffad00;
   }
 
   .lg\:focus\:to-white-two:focus{
@@ -87650,6 +88050,10 @@ input.invalid ~ svg.text-red-700 {
     border-color: rgba(241, 202, 48, var(--border-opacity));
   }
 
+  .lg\:border-yellow-hover{
+    border-color: ffad00;
+  }
+
   .lg\:border-white-two{
     --border-opacity: 1;
     border-color: #f0f0f0;
@@ -88376,6 +88780,10 @@ input.invalid ~ svg.text-red-700 {
     --border-opacity: 1;
     border-color: #f1ca30;
     border-color: rgba(241, 202, 48, var(--border-opacity));
+  }
+
+  .lg\:hover\:border-yellow-hover:hover{
+    border-color: ffad00;
   }
 
   .lg\:hover\:border-white-two:hover{
@@ -89106,6 +89514,10 @@ input.invalid ~ svg.text-red-700 {
     border-color: rgba(241, 202, 48, var(--border-opacity));
   }
 
+  .lg\:focus\:border-yellow-hover:focus{
+    border-color: ffad00;
+  }
+
   .lg\:focus\:border-white-two:focus{
     --border-opacity: 1;
     border-color: #f0f0f0;
@@ -89832,6 +90244,10 @@ input.invalid ~ svg.text-red-700 {
     --border-opacity: 1;
     border-color: #f1ca30;
     border-color: rgba(241, 202, 48, var(--border-opacity));
+  }
+
+  .lg\:focus-within\:border-yellow-hover:focus-within{
+    border-color: ffad00;
   }
 
   .lg\:focus-within\:border-white-two:focus-within{
@@ -95137,6 +95553,18 @@ input.invalid ~ svg.text-red-700 {
     color: rgba(241, 202, 48, var(--placeholder-opacity));
   }
 
+  .lg\:placeholder-yellow-hover::-moz-placeholder{
+    color: ffad00;
+  }
+
+  .lg\:placeholder-yellow-hover:-ms-input-placeholder{
+    color: ffad00;
+  }
+
+  .lg\:placeholder-yellow-hover::placeholder{
+    color: ffad00;
+  }
+
   .lg\:placeholder-white-two::-moz-placeholder{
     --placeholder-opacity: 1;
     color: #f0f0f0;
@@ -97321,6 +97749,18 @@ input.invalid ~ svg.text-red-700 {
     color: rgba(241, 202, 48, var(--placeholder-opacity));
   }
 
+  .lg\:focus\:placeholder-yellow-hover:focus::-moz-placeholder{
+    color: ffad00;
+  }
+
+  .lg\:focus\:placeholder-yellow-hover:focus:-ms-input-placeholder{
+    color: ffad00;
+  }
+
+  .lg\:focus\:placeholder-yellow-hover:focus::placeholder{
+    color: ffad00;
+  }
+
   .lg\:focus\:placeholder-white-two:focus::-moz-placeholder{
     --placeholder-opacity: 1;
     color: #f0f0f0;
@@ -98831,6 +99271,10 @@ input.invalid ~ svg.text-red-700 {
     color: rgba(241, 202, 48, var(--text-opacity));
   }
 
+  .lg\:text-yellow-hover{
+    color: ffad00;
+  }
+
   .lg\:text-white-two{
     --text-opacity: 1;
     color: #f0f0f0;
@@ -99557,6 +100001,10 @@ input.invalid ~ svg.text-red-700 {
     --text-opacity: 1;
     color: #f1ca30;
     color: rgba(241, 202, 48, var(--text-opacity));
+  }
+
+  .lg\:hover\:text-yellow-hover:hover{
+    color: ffad00;
   }
 
   .lg\:hover\:text-white-two:hover{
@@ -100287,6 +100735,10 @@ input.invalid ~ svg.text-red-700 {
     color: rgba(241, 202, 48, var(--text-opacity));
   }
 
+  .lg\:focus\:text-yellow-hover:focus{
+    color: ffad00;
+  }
+
   .lg\:focus\:text-white-two:focus{
     --text-opacity: 1;
     color: #f0f0f0;
@@ -101013,6 +101465,10 @@ input.invalid ~ svg.text-red-700 {
     --text-opacity: 1;
     color: #f1ca30;
     color: rgba(241, 202, 48, var(--text-opacity));
+  }
+
+  .group:hover .lg\:group-hover\:text-yellow-hover{
+    color: ffad00;
   }
 
   .group:hover .lg\:group-hover\:text-white-two{
@@ -104463,6 +104919,10 @@ input.invalid ~ svg.text-red-700 {
     border-color: rgba(241, 202, 48, var(--divide-opacity));
   }
 
+  .xl\:divide-yellow-hover > :not(template) ~ :not(template){
+    border-color: ffad00;
+  }
+
   .xl\:divide-white-two > :not(template) ~ :not(template){
     --divide-opacity: 1;
     border-color: #f0f0f0;
@@ -105312,6 +105772,10 @@ input.invalid ~ svg.text-red-700 {
     background-color: rgba(241, 202, 48, var(--bg-opacity));
   }
 
+  .xl\:bg-yellow-hover{
+    background-color: ffad00;
+  }
+
   .xl\:bg-white-two{
     --bg-opacity: 1;
     background-color: #f0f0f0;
@@ -106038,6 +106502,10 @@ input.invalid ~ svg.text-red-700 {
     --bg-opacity: 1;
     background-color: #f1ca30;
     background-color: rgba(241, 202, 48, var(--bg-opacity));
+  }
+
+  .xl\:hover\:bg-yellow-hover:hover{
+    background-color: ffad00;
   }
 
   .xl\:hover\:bg-white-two:hover{
@@ -106768,6 +107236,10 @@ input.invalid ~ svg.text-red-700 {
     background-color: rgba(241, 202, 48, var(--bg-opacity));
   }
 
+  .xl\:focus\:bg-yellow-hover:focus{
+    background-color: ffad00;
+  }
+
   .xl\:focus\:bg-white-two:focus{
     --bg-opacity: 1;
     background-color: #f0f0f0;
@@ -107438,6 +107910,11 @@ input.invalid ~ svg.text-red-700 {
     --gradient-color-stops: var(--gradient-from-color), var(--gradient-to-color, rgba(241, 202, 48, 0));
   }
 
+  .xl\:from-yellow-hover{
+    --gradient-from-color: ffad00;
+    --gradient-color-stops: var(--gradient-from-color), var(--gradient-to-color, rgba(255, 255, 255, 0));
+  }
+
   .xl\:from-white-two{
     --gradient-from-color: #f0f0f0;
     --gradient-color-stops: var(--gradient-from-color), var(--gradient-to-color, rgba(240, 240, 240, 0));
@@ -108048,6 +108525,11 @@ input.invalid ~ svg.text-red-700 {
     --gradient-color-stops: var(--gradient-from-color), var(--gradient-via-color), var(--gradient-to-color, rgba(241, 202, 48, 0));
   }
 
+  .xl\:via-yellow-hover{
+    --gradient-via-color: ffad00;
+    --gradient-color-stops: var(--gradient-from-color), var(--gradient-via-color), var(--gradient-to-color, rgba(255, 255, 255, 0));
+  }
+
   .xl\:via-white-two{
     --gradient-via-color: #f0f0f0;
     --gradient-color-stops: var(--gradient-from-color), var(--gradient-via-color), var(--gradient-to-color, rgba(240, 240, 240, 0));
@@ -108558,6 +109040,10 @@ input.invalid ~ svg.text-red-700 {
 
   .xl\:to-macaroni-and-cheese{
     --gradient-to-color: #f1ca30;
+  }
+
+  .xl\:to-yellow-hover{
+    --gradient-to-color: ffad00;
   }
 
   .xl\:to-white-two{
@@ -109144,6 +109630,11 @@ input.invalid ~ svg.text-red-700 {
   .xl\:hover\:from-macaroni-and-cheese:hover{
     --gradient-from-color: #f1ca30;
     --gradient-color-stops: var(--gradient-from-color), var(--gradient-to-color, rgba(241, 202, 48, 0));
+  }
+
+  .xl\:hover\:from-yellow-hover:hover{
+    --gradient-from-color: ffad00;
+    --gradient-color-stops: var(--gradient-from-color), var(--gradient-to-color, rgba(255, 255, 255, 0));
   }
 
   .xl\:hover\:from-white-two:hover{
@@ -109756,6 +110247,11 @@ input.invalid ~ svg.text-red-700 {
     --gradient-color-stops: var(--gradient-from-color), var(--gradient-via-color), var(--gradient-to-color, rgba(241, 202, 48, 0));
   }
 
+  .xl\:hover\:via-yellow-hover:hover{
+    --gradient-via-color: ffad00;
+    --gradient-color-stops: var(--gradient-from-color), var(--gradient-via-color), var(--gradient-to-color, rgba(255, 255, 255, 0));
+  }
+
   .xl\:hover\:via-white-two:hover{
     --gradient-via-color: #f0f0f0;
     --gradient-color-stops: var(--gradient-from-color), var(--gradient-via-color), var(--gradient-to-color, rgba(240, 240, 240, 0));
@@ -110266,6 +110762,10 @@ input.invalid ~ svg.text-red-700 {
 
   .xl\:hover\:to-macaroni-and-cheese:hover{
     --gradient-to-color: #f1ca30;
+  }
+
+  .xl\:hover\:to-yellow-hover:hover{
+    --gradient-to-color: ffad00;
   }
 
   .xl\:hover\:to-white-two:hover{
@@ -110852,6 +111352,11 @@ input.invalid ~ svg.text-red-700 {
   .xl\:focus\:from-macaroni-and-cheese:focus{
     --gradient-from-color: #f1ca30;
     --gradient-color-stops: var(--gradient-from-color), var(--gradient-to-color, rgba(241, 202, 48, 0));
+  }
+
+  .xl\:focus\:from-yellow-hover:focus{
+    --gradient-from-color: ffad00;
+    --gradient-color-stops: var(--gradient-from-color), var(--gradient-to-color, rgba(255, 255, 255, 0));
   }
 
   .xl\:focus\:from-white-two:focus{
@@ -111464,6 +111969,11 @@ input.invalid ~ svg.text-red-700 {
     --gradient-color-stops: var(--gradient-from-color), var(--gradient-via-color), var(--gradient-to-color, rgba(241, 202, 48, 0));
   }
 
+  .xl\:focus\:via-yellow-hover:focus{
+    --gradient-via-color: ffad00;
+    --gradient-color-stops: var(--gradient-from-color), var(--gradient-via-color), var(--gradient-to-color, rgba(255, 255, 255, 0));
+  }
+
   .xl\:focus\:via-white-two:focus{
     --gradient-via-color: #f0f0f0;
     --gradient-color-stops: var(--gradient-from-color), var(--gradient-via-color), var(--gradient-to-color, rgba(240, 240, 240, 0));
@@ -111974,6 +112484,10 @@ input.invalid ~ svg.text-red-700 {
 
   .xl\:focus\:to-macaroni-and-cheese:focus{
     --gradient-to-color: #f1ca30;
+  }
+
+  .xl\:focus\:to-yellow-hover:focus{
+    --gradient-to-color: ffad00;
   }
 
   .xl\:focus\:to-white-two:focus{
@@ -112796,6 +113310,10 @@ input.invalid ~ svg.text-red-700 {
     border-color: rgba(241, 202, 48, var(--border-opacity));
   }
 
+  .xl\:border-yellow-hover{
+    border-color: ffad00;
+  }
+
   .xl\:border-white-two{
     --border-opacity: 1;
     border-color: #f0f0f0;
@@ -113522,6 +114040,10 @@ input.invalid ~ svg.text-red-700 {
     --border-opacity: 1;
     border-color: #f1ca30;
     border-color: rgba(241, 202, 48, var(--border-opacity));
+  }
+
+  .xl\:hover\:border-yellow-hover:hover{
+    border-color: ffad00;
   }
 
   .xl\:hover\:border-white-two:hover{
@@ -114252,6 +114774,10 @@ input.invalid ~ svg.text-red-700 {
     border-color: rgba(241, 202, 48, var(--border-opacity));
   }
 
+  .xl\:focus\:border-yellow-hover:focus{
+    border-color: ffad00;
+  }
+
   .xl\:focus\:border-white-two:focus{
     --border-opacity: 1;
     border-color: #f0f0f0;
@@ -114978,6 +115504,10 @@ input.invalid ~ svg.text-red-700 {
     --border-opacity: 1;
     border-color: #f1ca30;
     border-color: rgba(241, 202, 48, var(--border-opacity));
+  }
+
+  .xl\:focus-within\:border-yellow-hover:focus-within{
+    border-color: ffad00;
   }
 
   .xl\:focus-within\:border-white-two:focus-within{
@@ -120283,6 +120813,18 @@ input.invalid ~ svg.text-red-700 {
     color: rgba(241, 202, 48, var(--placeholder-opacity));
   }
 
+  .xl\:placeholder-yellow-hover::-moz-placeholder{
+    color: ffad00;
+  }
+
+  .xl\:placeholder-yellow-hover:-ms-input-placeholder{
+    color: ffad00;
+  }
+
+  .xl\:placeholder-yellow-hover::placeholder{
+    color: ffad00;
+  }
+
   .xl\:placeholder-white-two::-moz-placeholder{
     --placeholder-opacity: 1;
     color: #f0f0f0;
@@ -122467,6 +123009,18 @@ input.invalid ~ svg.text-red-700 {
     color: rgba(241, 202, 48, var(--placeholder-opacity));
   }
 
+  .xl\:focus\:placeholder-yellow-hover:focus::-moz-placeholder{
+    color: ffad00;
+  }
+
+  .xl\:focus\:placeholder-yellow-hover:focus:-ms-input-placeholder{
+    color: ffad00;
+  }
+
+  .xl\:focus\:placeholder-yellow-hover:focus::placeholder{
+    color: ffad00;
+  }
+
   .xl\:focus\:placeholder-white-two:focus::-moz-placeholder{
     --placeholder-opacity: 1;
     color: #f0f0f0;
@@ -123977,6 +124531,10 @@ input.invalid ~ svg.text-red-700 {
     color: rgba(241, 202, 48, var(--text-opacity));
   }
 
+  .xl\:text-yellow-hover{
+    color: ffad00;
+  }
+
   .xl\:text-white-two{
     --text-opacity: 1;
     color: #f0f0f0;
@@ -124703,6 +125261,10 @@ input.invalid ~ svg.text-red-700 {
     --text-opacity: 1;
     color: #f1ca30;
     color: rgba(241, 202, 48, var(--text-opacity));
+  }
+
+  .xl\:hover\:text-yellow-hover:hover{
+    color: ffad00;
   }
 
   .xl\:hover\:text-white-two:hover{
@@ -125433,6 +125995,10 @@ input.invalid ~ svg.text-red-700 {
     color: rgba(241, 202, 48, var(--text-opacity));
   }
 
+  .xl\:focus\:text-yellow-hover:focus{
+    color: ffad00;
+  }
+
   .xl\:focus\:text-white-two:focus{
     --text-opacity: 1;
     color: #f0f0f0;
@@ -126159,6 +126725,10 @@ input.invalid ~ svg.text-red-700 {
     --text-opacity: 1;
     color: #f1ca30;
     color: rgba(241, 202, 48, var(--text-opacity));
+  }
+
+  .group:hover .xl\:group-hover\:text-yellow-hover{
+    color: ffad00;
   }
 
   .group:hover .xl\:group-hover\:text-white-two{
