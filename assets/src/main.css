@@ -358,3 +358,10 @@ input.invalid ~ svg.text-red-700 {
 .done .back-link {
   display: block;
 }
+
+.icon-offers {
+  position: absolute;
+  top: 60%;
+  left: 50%;
+  transform: translate(-50%, -35%);
+}

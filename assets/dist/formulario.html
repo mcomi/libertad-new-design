@@ -39,7 +39,7 @@
       </div>
     </header>
 
-    <section class="bg-white">
+    <section class="bg-white" id="steps-bar">
       <div class="container mx-auto w-10/12">
         <div class="flex justify-between py-4">
           <div
@@ -81,23 +81,7 @@
                 d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"
               ></path>
             </svg>
-            <span class="text-sm">
-              <svg
-                class="w-6 h-6 inline-block md:hidden"
-                fill="none"
-                stroke="currentColor"
-                viewBox="0 0 24 24"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="2"
-                  d="M11 15l-3-3m0 0l3-3m-3 3h8M3 12a9 9 0 1118 0 9 9 0 01-18 0z"
-                ></path>
-              </svg>
-              Empleo</span
-            >
+            <span class="text-sm"> Empleo</span>
             <div class="back-link text-xs underline cursor-pointer hidden">
               modificar
             </div>
@@ -138,9 +122,27 @@
       </div>
     </section>
 
+    <section class="bg-green-bar w-full h-12 relative hidden" id="offer-bar">
+      <svg
+        class="w-16 h-16 bg-white rounded-full text-green-bar icon-offers"
+        fill="none"
+        stroke="currentColor"
+        viewBox="0 0 24 24"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          stroke-width="3"
+          d="M5 13l4 4L19 7"
+        ></path>
+      </svg>
+    </section>
+
     <section class="min-h-screen pt-2 pb-6 bg-silver">
       <div
         class="bg-light-navy-blue-two container mx-auto p-3 w-full lg:w-1/2 mb-1"
+        id="folio-container"
       >
         <div
           class="flex flex-col gap-2 lg:flex-row justify-between items-center"
@@ -1222,7 +1224,7 @@
         class="container mx-auto text-center text-light-navy-blue-two step-container hidden"
         data-step="4"
       >
-        <h3 class="text-green-700 text-lg lg:text-2xl pt-6 font-semibold">
+        <h3 class="text-green-bar text-lg lg:text-2xl pt-6 font-semibold">
           Felicidades
         </h3>
         <h2 class="text-xl lg:text-3xl font-semibold">

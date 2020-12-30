@@ -20,11 +20,21 @@ const nextStep = () => {
   activeStepContainer.addClass("hidden");
   const step = activeStepContainer.data("step");
   const nextStep = step + 1;
-  const selector = `div[data-step='${nextStep}']`;
-  $(selector).removeClass("hidden");
   menuItem.removeClass("active");
   menuItem.addClass("done");
   menuItem.next().addClass("active");
+  if (Number(nextStep) === 4) {
+    $(".menu-form").removeClass("done");
+    $("#steps-bar").addClass("hidden");
+    $("#offer-bar").removeClass("hidden");
+    $("#folio-container").addClass("hidden");
+  } else if (Number(nextStep) === 5) {
+    $("#steps-bar").removeClass("hidden");
+    $("#offer-bar").addClass("hidden");
+    $("#folio-container").removeClass("hidden");
+  }
+  const selector = `div[data-step='${nextStep}']`;
+  $(selector).removeClass("hidden");
 };
 
 const backLinks = $(".back-link");
