@@ -23,8 +23,17 @@ const nextStep = () => {
   const selector = `div[data-step='${nextStep}']`;
   $(selector).removeClass("hidden");
   menuItem.removeClass("active");
+  menuItem.addClass("done");
   menuItem.next().addClass("active");
 };
+
+const backLinks = $(".back-link");
+backLinks.each(function () {
+  $(this).on("click", function () {
+    $(this).parent().removeClass("done");
+    prevStep();
+  });
+});
 
 const prevStep = () => {
   const menuItem = $(".menu-form.active");

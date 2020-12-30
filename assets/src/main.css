@@ -4,6 +4,29 @@
 @tailwind components;
 @tailwind utilities;
 
+.icon-intro {
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.intro-step-1 {
+  background-image: url("images/smartphone.png");
+}
+.intro-step-2 {
+  background-image: url("images/clock@3x.png");
+}
+.intro-step-3 {
+  background-image: url("images/good.png");
+}
+.card-intro:hover .intro-step-1 {
+  background-image: url("images/smartphone-blue.png");
+}
+.card-intro:hover .intro-step-2 {
+  background-image: url("images/clock@3x-blue.png");
+}
+.card-intro:hover .intro-step-3 {
+  background-image: url("images/good-blue.png");
+}
 .snap-x {
   scroll-snap-type: x mandatory;
 
@@ -326,4 +349,12 @@ input.invalid ~ svg.text-red-700 {
   width: 100%;
   opacity: 0;
   cursor: pointer;
+}
+
+.done svg {
+  display: inline-block;
+}
+
+.done .back-link {
+  display: block;
 }

@@ -8,7 +8,7 @@ module.exports = {
         "reddish-orange": "#f26522",
         "light-navy-blue-two": "#305395",
         "macaroni-and-cheese": "#f1ca30",
-        "yellow-hover": "ffad00",
+        "yellow-hover": "#ffad00",
         "white-two": "#f0f0f0",
         "black-two": "#1e1e1e",
         "forms": "#333333",

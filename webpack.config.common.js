@@ -24,6 +24,10 @@ module.exports = {
   module: {
     rules: [
       {
+        test: /\.(png|jpg|jpeg|gif|ico|svg)$/,
+        use: ["file-loader"],
+      },
+      {
         test: require.resolve("jquery"),
         loader: "expose-loader",
         options: {
