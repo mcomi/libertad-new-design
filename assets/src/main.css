@@ -319,7 +319,8 @@ input.invalid ~ svg.text-red-700 {
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
-  border: 1px solid #a5a5c7;
+  border: 0.5px dashed #b5b5b5;
+  background-color: #f6f6f6;
 }
 
 .uploader.active .dm-uploader {
@@ -329,6 +330,12 @@ input.invalid ~ svg.text-red-700 {
 
 .uploader.success .dm-uploader {
   border: 1px solid #65b704;
+  color: #4c4c4c !important;
+}
+
+.uploader.error .dm-uploader {
+  border: 1px solid #c53030;
+  color: #4c4c4c !important;
 }
 
 .text-muted {
@@ -364,4 +371,40 @@ input.invalid ~ svg.text-red-700 {
   top: 60%;
   left: 50%;
   transform: translate(-50%, -35%);
+}
+
+.tooltip:hover span {
+  opacity: 1;
+  transform: translate(-50%, 0);
+}
+.tooltip span {
+  position: absolute;
+  left: 50%;
+  bottom: 100%;
+  opacity: 0;
+  margin-bottom: 1em;
+  padding: 1em;
+  background-color: #000;
+  font-size: 0.6em;
+  line-height: 1.6;
+  text-align: left;
+  word-break: break-all;
+  transform: translate(-50%, 1em);
+  transition: all 0.15s ease-in-out;
+  max-width: 12rem;
+}
+.tooltip span::before {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  width: 0;
+  height: 0;
+  border: 0.5em solid transparent;
+  border-top-color: #000;
+  transform: translate(-50%, 0);
+}
+
+.text-exs {
+  font-size: 0.5rem;
 }

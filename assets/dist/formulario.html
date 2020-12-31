@@ -8,7 +8,7 @@
     <title>Libertad</title>
   </head>
   <body class="font-body">
-    <header class="bg-light-navy-blue-two">
+    <header class="bg-light-navy-blue-four">
       <div
         class="container mx-auto md:flex md:items-center md:justify-between p-3 pb-0 md:pb-3"
       >
@@ -43,7 +43,7 @@
       <div class="container mx-auto w-10/12">
         <div class="flex justify-between py-4">
           <div
-            class="hidden md:block w-full mx-2 border-light-navy-blue-two menu-form active"
+            class="hidden md:block w-full mx-2 border-light-navy-blue-four menu-form active"
           >
             <svg
               class="w-4 h-4 stroke-current text-green-form hidden"
@@ -65,7 +65,7 @@
             </div>
           </div>
           <div
-            class="hidden md:block w-full mx-2 border-light-navy-blue-two menu-form"
+            class="hidden md:block w-full mx-2 border-light-navy-blue-four menu-form"
           >
             <svg
               class="w-4 h-4 stroke-current text-green-form hidden"
@@ -87,7 +87,7 @@
             </div>
           </div>
           <div
-            class="hidden md:block w-full mx-2 border-light-navy-blue-two menu-form"
+            class="hidden md:block w-full mx-2 border-light-navy-blue-four menu-form"
           >
             <svg
               class="w-4 h-4 stroke-current text-green-form hidden"
@@ -109,12 +109,12 @@
             </div>
           </div>
           <div
-            class="hidden md:block w-full mx-2 border-light-navy-blue-two menu-form"
+            class="hidden md:block w-full mx-2 border-light-navy-blue-four menu-form"
           >
             <span class="text-sm">Ofertas</span>
           </div>
           <div
-            class="hidden md:block w-full mx-2 border-light-navy-blue-two menu-form"
+            class="hidden md:block w-full mx-2 border-light-navy-blue-four menu-form"
           >
             <span class="text-sm">Documentos</span>
           </div>
@@ -139,9 +139,21 @@
       </svg>
     </section>
 
+    <section
+      class="bg-yellow-final text-center py-2 w-full relative hidden"
+      id="final-bar"
+    >
+      <h3 class="text-white text-3xl font-semibold leading-none">
+        Felicidades
+      </h3>
+      <p class="text-black text-xl font-semibold">
+        Tu solicitud ha sido aprobada
+      </p>
+    </section>
+
     <section class="min-h-screen pt-2 pb-6 bg-silver">
       <div
-        class="bg-light-navy-blue-two container mx-auto p-3 w-full lg:w-1/2 mb-1"
+        class="bg-light-navy-blue-four container mx-auto p-3 w-full lg:w-1/2 mb-1"
         id="folio-container"
       >
         <div
@@ -205,7 +217,7 @@
       </div>
       <div class="container mx-auto pt-2 step-container" data-step="1">
         <div
-          class="mx-auto md:w-1/2 bg-white rounded-sm shadow-lg py-4 px-4 md:px-16 text-center text-light-navy-blue-two"
+          class="mx-auto md:w-1/2 bg-white rounded-sm shadow-lg py-4 px-4 md:px-16 text-center text-light-navy-blue-four"
         >
           <h3 class="my-2 text-2xl font-semibold">Datos personales</h3>
           <p class="text-xs mb-4">
@@ -254,7 +266,7 @@
                     ></path>
                   </svg>
                   <label
-                    class="absolute left-1 top-0 bg-white px-4 py-2 transition duration-300 origin-0"
+                    class="absolute left-1 top-0 bg-white px-4 py-2 transition duration-300 origin-0 text-black-three"
                     for="nombre"
                     >Nombre</label
                   >
@@ -302,7 +314,7 @@
                     ></path>
                   </svg>
                   <label
-                    class="absolute left-1 top-0 bg-white px-4 py-2 transition duration-300 origin-0"
+                    class="absolute left-1 top-0 bg-white px-4 py-2 transition duration-300 origin-0 text-black-three"
                     for="paterno"
                     >Apellido paterno</label
                   >
@@ -348,7 +360,7 @@
                     ></path>
                   </svg>
                   <label
-                    class="absolute left-1 top-0 bg-white px-4 py-2 transition duration-300 origin-0"
+                    class="absolute left-1 top-0 bg-white px-4 py-2 transition duration-300 origin-0 text-black-three"
                     for="materno"
                     >Apellido materno</label
                   >
@@ -357,7 +369,7 @@
             </div>
             <div class="flex items-center my-3">
               <div class="w-1/4">
-                <p>Género:</p>
+                <p class="text-black-three">Género:</p>
               </div>
               <label class="w-1/4 block">
                 <input
@@ -366,7 +378,7 @@
                   name="genero"
                   value="h"
                 />
-                <span class="text-sm"> Hombre </span>
+                <span class="text-sm text-black-three"> Hombre </span>
               </label>
               <label class="w-1/4 block">
                 <input
@@ -375,7 +387,7 @@
                   name="genero"
                   value="m"
                 />
-                <span class="text-sm"> Mujer </span>
+                <span class="text-sm text-black-three"> Mujer </span>
               </label>
             </div>
             <div class="flex flex-wrap -mx-2 md:space-y-0">
@@ -421,7 +433,7 @@
                     ></path>
                   </svg>
                   <label
-                    class="absolute left-1 top-0 bg-white px-4 py-2 transition duration-300 origin-0"
+                    class="absolute left-1 top-0 bg-white px-4 py-2 transition duration-300 origin-0 text-black-three"
                     for="day"
                     >DD</label
                   >
@@ -469,7 +481,7 @@
                     ></path>
                   </svg>
                   <label
-                    class="absolute left-1 top-0 bg-white px-4 py-2 transition duration-300 origin-0"
+                    class="absolute left-1 top-0 bg-white px-4 py-2 transition duration-300 origin-0 text-black-three"
                     for="month"
                     >MM</label
                   >
@@ -517,7 +529,7 @@
                     ></path>
                   </svg>
                   <label
-                    class="absolute left-1 top-0 bg-white px-4 py-2 transition duration-300 origin-0"
+                    class="absolute left-1 top-0 bg-white px-4 py-2 transition duration-300 origin-0 text-black-three"
                     for="year"
                     >AAAA</label
                   >
@@ -565,7 +577,7 @@
                     ></path>
                   </svg>
                   <label
-                    class="absolute left-1 top-0 bg-white px-4 py-2 transition duration-300 origin-0"
+                    class="absolute left-1 top-0 bg-white px-4 py-2 transition duration-300 origin-0 text-black-three"
                     for="nacionalidad"
                     >Nacionalidad</label
                   >
@@ -613,7 +625,7 @@
                     ></path>
                   </svg>
                   <label
-                    class="absolute left-1 top-0 bg-white px-4 py-2 transition duration-300 origin-0"
+                    class="absolute left-1 top-0 bg-white px-4 py-2 transition duration-300 origin-0 text-black-three"
                     for="estado"
                     >Estado de nacimiento</label
                   >
@@ -661,7 +673,7 @@
                     ></path>
                   </svg>
                   <label
-                    class="absolute left-1 top-0 bg-white px-4 py-2 transition duration-300 origin-0"
+                    class="absolute left-1 top-0 bg-white px-4 py-2 transition duration-300 origin-0 text-black-three"
                     for="ciudad"
                     >Ciudad</label
                   >
@@ -709,7 +721,7 @@
                     ></path>
                   </svg>
                   <label
-                    class="absolute left-1 top-0 bg-white px-4 py-2 transition duration-300 origin-0"
+                    class="absolute left-1 top-0 bg-white px-4 py-2 transition duration-300 origin-0 text-black-three"
                     for="email"
                     >Correo electrónico</label
                   >
@@ -759,7 +771,7 @@
                     ></path>
                   </svg>
                   <label
-                    class="absolute left-1 top-0 bg-white px-4 py-2 transition duration-300 origin-0"
+                    class="absolute left-1 top-0 bg-white px-4 py-2 transition duration-300 origin-0 text-black-three"
                     for="telefono"
                     >Celular/Whatsapp</label
                   >
@@ -768,7 +780,7 @@
             </div>
             <button
               type="submit"
-              class="my-2 px-10 py-2 text-sm bg-dark-grey-blue text-macaroni-and-cheese rounded-3xl font-light"
+              class="my-2 px-10 py-2 text-sm bg-light-navy-blue-four text-white block w-full font-light"
               id="step-register-btn"
             >
               Siguiente
@@ -782,7 +794,7 @@
 
       <div class="container mx-auto pt-4 step-container hidden" data-step="2">
         <div
-          class="w-full mx-auto md:w-1/2 bg-white rounded-sm shadow-lg py-4 px-4 md:px-16 text-center text-light-navy-blue-two"
+          class="w-full mx-auto md:w-1/2 bg-white rounded-sm shadow-lg py-4 px-4 md:px-16 text-center text-light-navy-blue-four"
         >
           <h3 class="my-2 text-2xl font-semibold">Datos sobre Empleo</h3>
           <form id="step-2-form">
@@ -827,7 +839,7 @@
                     ></path>
                   </svg>
                   <label
-                    class="absolute left-1 top-0 bg-white px-4 py-2 transition duration-300 origin-0"
+                    class="absolute left-1 top-0 bg-white px-4 py-2 transition duration-300 origin-0 text-black-three"
                     for="ocupacion"
                     >Ocupación</label
                   >
@@ -875,7 +887,7 @@
                     ></path>
                   </svg>
                   <label
-                    class="absolute left-1 top-0 bg-white px-4 py-2 transition duration-300 origin-0"
+                    class="absolute left-1 top-0 bg-white px-4 py-2 transition duration-300 origin-0 text-black-three"
                     for="dependientes"
                     >Dependientes económicos</label
                   >
@@ -921,7 +933,7 @@
                     ></path>
                   </svg>
                   <label
-                    class="absolute left-1 top-0 bg-white px-4 py-2 transition duration-300 origin-0"
+                    class="absolute left-1 top-0 bg-white px-4 py-2 transition duration-300 origin-0 text-black-three"
                     for="regimen"
                     >Regimen fiscal</label
                   >
@@ -969,7 +981,7 @@
                     ></path>
                   </svg>
                   <label
-                    class="absolute left-1 top-0 bg-white px-4 py-2 transition duration-300 origin-0"
+                    class="absolute left-1 top-0 bg-white px-4 py-2 transition duration-300 origin-0 text-black-three"
                     for="actividad"
                     >Actividad específica</label
                   >
@@ -1017,7 +1029,7 @@
                     ></path>
                   </svg>
                   <label
-                    class="absolute left-1 top-0 bg-white px-4 py-2 transition duration-300 origin-0"
+                    class="absolute left-1 top-0 bg-white px-4 py-2 transition duration-300 origin-0 text-black-three"
                     for="tiempo"
                     >Tiempo en empleo</label
                   >
@@ -1065,7 +1077,7 @@
                     ></path>
                   </svg>
                   <label
-                    class="absolute left-1 top-0 bg-white px-4 py-2 transition duration-300 origin-0"
+                    class="absolute left-1 top-0 bg-white px-4 py-2 transition duration-300 origin-0 text-black-three"
                     for="ingresos"
                     >Ingresos mensuales</label
                   >
@@ -1074,7 +1086,7 @@
             </div>
             <button
               type="submit"
-              class="my-2 px-10 py-2 text-sm bg-dark-grey-blue text-macaroni-and-cheese rounded-3xl font-light"
+              class="my-2 px-10 py-2 text-sm bg-light-navy-blue-four text-white block w-full font-light"
               id="step-2-btn"
             >
               Siguiente
@@ -1088,7 +1100,7 @@
 
       <div class="container mx-auto pt-4 step-container hidden" data-step="3">
         <div
-          class="w-full mx-auto md:w-1/2 bg-white rounded-sm shadow-lg py-4 px-4 md:px-16 text-center text-light-navy-blue-two"
+          class="w-full mx-auto md:w-1/2 bg-white rounded-sm shadow-lg py-4 px-4 md:px-16 text-center text-light-navy-blue-four"
         >
           <h3 class="my-2 text-2xl font-semibold">Historial Crediticio</h3>
           <form id="step-3-form">
@@ -1159,7 +1171,7 @@
                     ></path>
                   </svg>
                   <label
-                    class="absolute left-1 top-0 bg-white px-4 py-2 transition duration-300 origin-0"
+                    class="absolute left-1 top-0 bg-white px-4 py-2 transition duration-300 origin-0 text-black-three"
                     for="digitos"
                     >4 digitos</label
                   >
@@ -1207,7 +1219,7 @@
             </div>
             <button
               type="submit"
-              class="my-2 px-10 py-2 text-sm bg-dark-grey-blue text-macaroni-and-cheese rounded-3xl font-light"
+              class="my-2 px-10 py-2 text-sm bg-light-navy-blue-four text-white block w-full font-light"
               id="step-3-btn"
             >
               Siguiente
@@ -1221,7 +1233,7 @@
 
       <!-- Ofertas -->
       <div
-        class="container mx-auto text-center text-light-navy-blue-two step-container hidden"
+        class="container mx-auto text-center text-light-navy-blue-four step-container hidden"
         data-step="4"
       >
         <h3 class="text-green-bar text-lg lg:text-2xl pt-6 font-semibold">
@@ -1440,6 +1452,7 @@
                 </div>
                 <button
                   class="w-full py-2 block bg-green-700 text-white uppercase"
+                  id="btn-select-offer"
                 >
                   solicitar mi crédito
                 </button>
@@ -1461,10 +1474,16 @@
                 >Obtén tu dinero de inmediato</span
               >
             </div>
-            <div>
+            <div class="relative">
               <button
-                class="bg-dark-grey-blue-two rounded-md text-white py-2 px-4"
+                class="bg-dark-grey-blue-two rounded-md text-white py-2 px-4 tooltip"
               >
+                <span class="w-48 break-all"
+                  >Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Quibusdam, id, sed at totam quos ullam asperiores, similique
+                  unde sint quas voluptatem! Iusto aliquid veritatis eaque
+                  quibusdam rerum aspernatur facere optio.</span
+                >
                 <svg
                   class="w-5 h-5 inline-block"
                   fill="none"
@@ -1501,17 +1520,17 @@
 
       <div class="container mx-auto pt-4 step-container hidden" data-step="5">
         <div
-          class="w-full mx-auto md:w-1/2 bg-white rounded-sm shadow-lg py-4 px-4 md:px-16 text-center text-light-navy-blue-two"
+          class="w-full mx-auto md:w-1/2 bg-white rounded-sm shadow-lg py-4 px-4 md:px-16 text-center text-light-navy-blue-four"
         >
           <h3 class="my-2 text-2xl font-semibold">Carga de documentos</h3>
           <form id="step-4-form">
             <div
               id="drop-area-front"
-              class="uploader w-full flex justify-items-center items-center"
+              class="uploader text-gray-upload w-full flex justify-items-center items-center"
             >
-              <div>
+              <div class="w-1/12">
                 <svg
-                  class="w-6 h-6"
+                  class="icon-good-upload hidden w-6 h-6 text-white rounded-full bg-green-bar"
                   fill="none"
                   stroke="currentColor"
                   viewBox="0 0 24 24"
@@ -1521,21 +1540,47 @@
                     stroke-linecap="round"
                     stroke-linejoin="round"
                     stroke-width="2"
-                    d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"
+                    d="M5 13l4 4L19 7"
+                  ></path>
+                </svg>
+                <svg
+                  class="icon-error-upload hidden w-6 h-6 text-white bg-red-700 rounded-full"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M6 18L18 6M6 6l12 12"
                   ></path>
                 </svg>
               </div>
-              <div
-                class="dm-uploader flex justify-start justify-items-center py-2 pl-2 pr-40"
-              >
-                <img src="images/ife.png" class="h-10 inline-block" alt="" />
-                <div class="pl-3 text-sm">
-                  Identificación <br />
-                  <span>INE anverso</span>
+              <div class="w-9/12">
+                <div
+                  class="dm-uploader flex justify-start justify-items-center py-2 pl-2 w-full"
+                >
+                  <img src="images/ife.png" class="h-10 inline-block" alt="" />
+                  <div class="pl-3 text-sm font-semibold">
+                    Identificación <br />
+                    <span class="font-normal">INE anverso</span>
+                  </div>
+                </div>
+                <div class="w-full" id="file-ine-front"></div>
+                <div class="w-full error-text hidden text-red-700 text-exs">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde
+                  ducimus quaerat distinctio quo illum aliquid magnam
+                  asperiores, adipisci veniam sint repellendus incidunt non
+                  voluptatem? Animi quisquam reiciendis recusandae quia omnis!
                 </div>
               </div>
-              <div class="ml-3">
-                <button class="text-white py-2 px-4 bg-light-navy-blue-two">
+              <div class="button-upload ml-3 w-2/12">
+                <button
+                  type="button"
+                  class="btn text-white py-2 px-4 bg-light-navy-blue-four"
+                >
                   Subir
                   <input
                     type="file"
@@ -1543,14 +1588,418 @@
                     title="Abre el explorador"
                   />
                 </button>
+                <div class="icon-trash hidden">
+                  <svg
+                    class="w-6 h-6"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16"
+                    ></path>
+                  </svg>
+                </div>
               </div>
             </div>
-            <div class="w-full" id="files"></div>
+            <div
+              id="drop-area-reverse"
+              class="uploader text-gray-upload w-full flex justify-items-center items-center mt-4"
+            >
+              <div class="w-1/12">
+                <svg
+                  class="icon-good-upload hidden w-6 h-6 text-white rounded-full bg-green-bar"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M5 13l4 4L19 7"
+                  ></path>
+                </svg>
+                <svg
+                  class="icon-error-upload hidden w-6 h-6 text-white bg-red-700 rounded-full"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M6 18L18 6M6 6l12 12"
+                  ></path>
+                </svg>
+              </div>
+              <div class="w-9/12">
+                <div
+                  class="dm-uploader flex justify-start justify-items-center py-2 pl-2 w-full"
+                >
+                  <img
+                    src="images/ife-reverso.png"
+                    class="h-10 inline-block"
+                    alt=""
+                  />
+                  <div class="pl-3 text-sm font-semibold">
+                    Identificación <br />
+                    <span class="font-normal">INE reverso</span>
+                  </div>
+                </div>
+                <div class="w-full" id="file-ine-reverse"></div>
+                <div class="w-full error-text hidden text-red-700 text-exs">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde
+                  ducimus quaerat distinctio quo illum aliquid magnam
+                  asperiores, adipisci veniam sint repellendus incidunt non
+                  voluptatem? Animi quisquam reiciendis recusandae quia omnis!
+                </div>
+              </div>
+              <div class="button-upload ml-3 w-2/12">
+                <button
+                  type="button"
+                  class="btn text-white py-2 px-4 bg-light-navy-blue-four"
+                >
+                  Subir
+                  <input
+                    type="file"
+                    name="ine-reverso"
+                    title="Abre el explorador"
+                  />
+                </button>
+                <div class="icon-trash hidden">
+                  <svg
+                    class="w-6 h-6"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16"
+                    ></path>
+                  </svg>
+                </div>
+              </div>
+            </div>
+            <div
+              id="drop-area-carta"
+              class="uploader text-gray-upload w-full flex justify-items-center items-center mt-4"
+            >
+              <div class="w-1/12">
+                <svg
+                  class="icon-good-upload hidden w-6 h-6 text-white rounded-full bg-green-bar"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M5 13l4 4L19 7"
+                  ></path>
+                </svg>
+                <svg
+                  class="icon-error-upload hidden w-6 h-6 text-white bg-red-700 rounded-full"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M6 18L18 6M6 6l12 12"
+                  ></path>
+                </svg>
+              </div>
+              <div class="w-9/12">
+                <div
+                  class="dm-uploader flex justify-start justify-items-center py-2 pl-2 w-full"
+                >
+                  <img
+                    src="images/carta-laboral.png"
+                    class="h-10 inline-block"
+                    alt=""
+                  />
+                  <div class="pl-3 text-sm font-semibold">
+                    Carta laboral <br />
+                    <span class="font-normal">no asalariado</span>
+                  </div>
+                </div>
+                <div class="w-full" id="file-carta-laboral"></div>
+                <div class="w-full error-text hidden text-red-700 text-exs">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde
+                  ducimus quaerat distinctio quo illum aliquid magnam
+                  asperiores, adipisci veniam sint repellendus incidunt non
+                  voluptatem? Animi quisquam reiciendis recusandae quia omnis!
+                </div>
+              </div>
+              <div class="button-upload ml-3 w-2/12">
+                <button
+                  type="button"
+                  class="btn text-white py-2 px-4 bg-light-navy-blue-four"
+                >
+                  Subir
+                  <input
+                    type="file"
+                    name="carta-laboral"
+                    title="Abre el explorador"
+                  />
+                </button>
+                <div class="icon-trash hidden">
+                  <svg
+                    class="w-6 h-6"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16"
+                    ></path>
+                  </svg>
+                </div>
+              </div>
+            </div>
+            <div
+              id="drop-area-comprobante"
+              class="uploader text-gray-upload w-full flex justify-items-center items-center mt-4"
+            >
+              <div class="w-1/12">
+                <svg
+                  class="icon-good-upload hidden w-6 h-6 text-white rounded-full bg-green-bar"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M5 13l4 4L19 7"
+                  ></path>
+                </svg>
+                <svg
+                  class="icon-error-upload hidden w-6 h-6 text-white bg-red-700 rounded-full"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M6 18L18 6M6 6l12 12"
+                  ></path>
+                </svg>
+              </div>
+              <div class="w-9/12">
+                <div
+                  class="dm-uploader flex justify-start justify-items-center py-2 pl-2 w-full"
+                >
+                  <img
+                    src="images/comprobante-domicilio.png"
+                    class="h-10 inline-block"
+                    alt=""
+                  />
+                  <div class="pl-3 text-sm font-semibold">
+                    Comprobante de domicilio
+                  </div>
+                </div>
+                <div class="w-full" id="file-comprobante-domicilio"></div>
+                <div class="w-full error-text hidden text-red-700 text-exs">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde
+                  ducimus quaerat distinctio quo illum aliquid magnam
+                  asperiores, adipisci veniam sint repellendus incidunt non
+                  voluptatem? Animi quisquam reiciendis recusandae quia omnis!
+                </div>
+              </div>
+              <div class="button-upload ml-3 w-2/12">
+                <button
+                  type="button"
+                  class="btn text-white py-2 px-4 bg-light-navy-blue-four"
+                >
+                  Subir
+                  <input
+                    type="file"
+                    name="comprobante"
+                    title="Abre el explorador"
+                  />
+                </button>
+                <div class="icon-trash hidden">
+                  <svg
+                    class="w-6 h-6"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16"
+                    ></path>
+                  </svg>
+                </div>
+              </div>
+            </div>
           </form>
+          <button
+            class="bg-gray-600 block w-full text-white mt-4"
+            disabled
+            id="btn-docs"
+          >
+            Siguiente
+          </button>
+        </div>
+      </div>
+
+      <div class="container mx-auto py-4 step-container hidden" data-step="6">
+        <div class="container mx-auto w-8/12">
+          <div class="text-center">
+            <h3 class="text-light-navy-blue-four uppercase text-3xl">
+              Quedate en casa
+            </h3>
+            <p class="text-light-navy-blue-two uppercase text-xl">
+              Nos comunicaremos contigo para manejar todo de forma remota
+            </p>
+            <p class="text-sm">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta
+              placeat rerum unde quasi voluptatem neque illum deserunt, omnis
+              ducimus cum eos! Dolorem illo sequi unde? Optio sapiente fuga
+              veritatis perferendis.
+            </p>
+          </div>
+        </div>
+        <div class="container mx-auto mt-4 w-8/12 flex">
+          <div class="bg-light-navy-blue-two w-1/3 p-6">
+            <p class="uppercase text-yellow-final">conserva tu folio</p>
+            <p class="text-white py-3 text-xs font-light">
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur
+              deleniti laudantium cumque, et voluptate magnam architecto maiores
+              excepturi quod expedita officia quis officiis reiciendis quo
+              ratione quasi quam blanditiis aut?
+            </p>
+            <div class="border border-white text-white text-lg font-light p-2">
+              <span class="font-semibold uppercase">Folio:</span> ASK323KOJ
+            </div>
+            <div class="text-left">
+              <div class="mt-1 text-xs font-light text-white cursor-pointer">
+                <svg
+                  class="w-4 h-4 inline-block"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M8 7v8a2 2 0 002 2h6M8 7V5a2 2 0 012-2h4.586a1 1 0 01.707.293l4.414 4.414a1 1 0 01.293.707V15a2 2 0 01-2 2h-2M8 7H6a2 2 0 00-2 2v10a2 2 0 002 2h8a2 2 0 002-2v-2"
+                  ></path>
+                </svg>
+                Copiar folio a portapapeles
+              </div>
+              <div class="mt-1 text-xs font-light text-white cursor-pointer">
+                <svg
+                  class="w-4 h-4 inline-block"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8"
+                  ></path>
+                </svg>
+                Enviar a mail
+              </div>
+              <div class="mt-1 text-xs font-light text-white cursor-pointer">
+                <svg
+                  class="w-4 h-4 inline-block"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z"
+                  ></path>
+                </svg>
+                Enviar a mi celular
+              </div>
+            </div>
+          </div>
+          <div class="bg-blue-credit-detail w-1/3 p-6">
+            <p
+              class="uppercase text-yellow-final border-b-2 border-white leading-8"
+            >
+              mi crédito
+            </p>
+            <ul class="list-disc py-8 pl-6">
+              <li class="text-2xl text-white font-semibold pb-4">
+                Mi primer crédito
+              </li>
+              <li class="text-3xl text-white font-semibold leading-0">
+                $55,000.00
+                <span class="block text-sm font-light leading-0 -mt-2"
+                  >crédito</span
+                >
+              </li>
+            </ul>
+          </div>
+          <div class="bg-blue-credit-detail w-1/3 p-6">
+            <p
+              class="uppercase text-yellow-final border-b-2 border-white leading-8"
+            >
+              información de pago
+            </p>
+            <ul class="list-disc py-8 pl-6">
+              <li class="text-2xl text-white font-semibold pb-2">
+                12
+                <span class="block text-sm font-light leading-0 -mt-2"
+                  >meses</span
+                >
+              </li>
+              <li class="text-3xl text-white font-semibold leading-0">
+                $5,348.91
+                <span class="block text-sm font-light leading-0 -mt-2"
+                  >/mensualidad - CAT 21%</span
+                >
+              </li>
+            </ul>
+          </div>
         </div>
       </div>
     </section>
-    <footer id="footer" class="bg-light-navy-blue-two">
+    <footer id="footer" class="bg-light-navy-blue-four">
       <div class="py-2 md:flex md:items-center md:justify-center bg-black">
         <p
           class="py-3 text-white text-xs lg:text-sm font-light text-center px-3"
@@ -1570,7 +2019,7 @@
         <div class="media-body mb-1">
           <div class="shadow w-full bg-grey-light">
             <div
-              class="progress-bar bg-green-500 text-xs leading-none py-1 text-center text-white"
+              class="progress-bar bg-green-bar leading-none text-exs font-light text-center text-white"
               style="width: 45%"
             ></div>
           </div>

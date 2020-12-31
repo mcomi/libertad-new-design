@@ -34,6 +34,9 @@ module.exports = {
         "grey-section": "#e9e9e9",
         "gray-light": "#f5f7f8",
         "green-bar": "#70b844",
+        "gray-upload": "#cdcccc",
+        "yellow-final": "#f9bd00",
+        "blue-credit-detail": "#172849",
       },
       fontFamily: {
         body: ["Work Sans"],

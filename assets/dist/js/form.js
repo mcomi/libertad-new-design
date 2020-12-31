@@ -45,6 +45,11 @@ backLinks.each(function () {
   });
 });
 
+const btnSelectOffer = document.getElementById("btn-select-offer");
+btnSelectOffer.addEventListener("click", function () {
+  nextStep();
+});
+
 const prevStep = () => {
   const menuItem = $(".menu-form.active");
   const activeStepContainer = $(".step-container").not(".hidden");
@@ -246,7 +251,7 @@ function actualizaMontoYDescuento() {
 
 $("select[name='periodos']").change(actualizaMontoYDescuento);
 
-function ui_multi_add_file(id, file) {
+function ui_multi_add_file_ine_front(id, file) {
   var template = $("#files-template").text();
   template = template.replace("%%filename%%", file.name);
 
@@ -254,8 +259,40 @@ function ui_multi_add_file(id, file) {
   template.prop("id", "uploaderFile" + id);
   template.data("file-id", id);
 
-  $("#files").find("li.empty").fadeOut(); // remove the 'no files yet'
-  $("#files").prepend(template);
+  $("#file-ine-front").prepend(template);
+}
+
+function ui_multi_add_file_ine_reverse(id, file) {
+  var template = $("#files-template").text();
+  template = template.replace("%%filename%%", file.name);
+
+  template = $(template);
+  template.prop("id", "uploaderFile" + id);
+  template.data("file-id", id);
+
+  $("#file-ine-reverse").prepend(template);
+}
+
+function ui_multi_add_file_carta_laboral(id, file) {
+  var template = $("#files-template").text();
+  template = template.replace("%%filename%%", file.name);
+
+  template = $(template);
+  template.prop("id", "uploaderFile" + id);
+  template.data("file-id", id);
+
+  $("#file-carta-laboral").prepend(template);
+}
+
+function ui_multi_add_file_comprobante_domicilio(id, file) {
+  var template = $("#files-template").text();
+  template = template.replace("%%filename%%", file.name);
+
+  template = $(template);
+  template.prop("id", "uploaderFile" + id);
+  template.data("file-id", id);
+
+  $("#file-comprobante-domicilio").prepend(template);
 }
 
 // Changes the status messages on our list
@@ -292,7 +329,7 @@ function ui_multi_update_file_progress(id, percent, color, active) {
   }
 }
 
-// carga de ine
+// carga de ine frente
 $("#drop-area-front").dmUploader({
   //
   url: "https://httpstat.us/200", // url publica para recibir un status 'ok' y ver funcionar la animacion
@@ -318,7 +355,7 @@ $("#drop-area-front").dmUploader({
 
     console.log("New file added #" + id);
     console.log(id, file);
-    ui_multi_add_file(id, file);
+    ui_multi_add_file_ine_front(id, file);
     if (typeof FileReader !== "undefined") {
       var reader = new FileReader();
       var img = $("#uploaderFile" + id).find(".preview-img");
@@ -350,6 +387,101 @@ $("#drop-area-front").dmUploader({
   onUploadSuccess: function (id, data) {
     // A file was successfully uploaded
     this.addClass("success");
+    this.find(".icon-good-upload").removeClass("hidden");
+    this.find(".button-upload").find("button").addClass("hidden");
+    this.find(".button-upload").find(".icon-trash").removeClass("hidden");
+    console.log(
+      "Server Response for file #" + id + ": " + JSON.stringify(data)
+    );
+    console.log("Upload of file #" + id + " COMPLETED", "success");
+    ui_multi_update_file_status(
+      id,
+      "success",
+      '<button class="red btn-link delete-file-btn">Eliminar documento</button><button class="red btn-link modal-tag-btn"> <img src="img/tag-icon.svg" alt=""> Categorizar documento</button>'
+    );
+    activateBtnDocsUpload();
+    ui_multi_update_file_progress(id, 100, "success", false);
+  },
+  onUploadError: function (id, xhr, status, message) {
+    ui_multi_update_file_status(id, "danger", message);
+    ui_multi_update_file_progress(id, 0, "danger", false);
+  },
+  onFallbackMode: function () {
+    // When the browser doesn't support this plugin :(
+    console.log(
+      "Plugin cant be used here, running Fallback callback",
+      "danger"
+    );
+  },
+  onFileSizeError: function (file) {
+    console.log(
+      "File '" + file.name + "' cannot be added: size excess limit",
+      "danger"
+    );
+  },
+});
+
+// carga de ine reverso
+$("#drop-area-reverse").dmUploader({
+  //
+  url: "https://httpstat.us/200", // url publica para recibir un status 'ok' y ver funcionar la animacion
+  maxFileSize: 3000000, // 3 Megs
+  onDragEnter: function () {
+    // Happens when dragging something over the DnD area
+    this.addClass("active");
+  },
+  onDragLeave: function () {
+    // Happens when dragging something OUT of the DnD area
+    this.removeClass("active");
+  },
+  onInit: function () {
+    // Plugin is ready to use
+    console.log("Carga inicializada");
+  },
+  onComplete: function () {
+    // All files in the queue are processed (success or error)
+    console.log("All pending tranfers finished");
+  },
+  onNewFile: function (id, file) {
+    // When a new file is added using the file selector or the DnD area
+
+    console.log("New file added #" + id);
+    console.log(id, file);
+    ui_multi_add_file_ine_reverse(id, file);
+    if (typeof FileReader !== "undefined") {
+      var reader = new FileReader();
+      var img = $("#uploaderFile" + id).find(".preview-img");
+
+      reader.onload = function (e) {
+        img.attr("src", e.target.result);
+      };
+      reader.readAsDataURL(file);
+    }
+  },
+  onBeforeUpload: function (id) {
+    // about tho start uploading a file
+    ui_multi_update_file_status(
+      id,
+      "uploading",
+      '<img src="img/ico-close.svg" alt="">'
+    );
+    ui_multi_update_file_progress(id, 0, "", true);
+  },
+  onUploadCanceled: function (id) {
+    // Happens when a file is directly canceled by the user.
+    ui_multi_update_file_status(id, "warning", "Canceled by User");
+    ui_multi_update_file_progress(id, 0, "warning", false);
+  },
+  onUploadProgress: function (id, percent) {
+    // Updating file progress
+    ui_multi_update_file_progress(id, percent);
+  },
+  onUploadSuccess: function (id, data) {
+    // A file was successfully uploaded
+    this.addClass("success");
+    this.find(".icon-good-upload").removeClass("hidden");
+    this.find(".button-upload").find("button").addClass("hidden");
+    this.find(".button-upload").find(".icon-trash").removeClass("hidden");
     console.log(
       "Server Response for file #" + id + ": " + JSON.stringify(data)
     );
@@ -378,4 +510,203 @@ $("#drop-area-front").dmUploader({
       "danger"
     );
   },
+});
+
+// carga de carta laboral
+$("#drop-area-carta").dmUploader({
+  //
+  url: "https://httpstat.us/200", // url publica para recibir un status 'ok' y ver funcionar la animacion
+  maxFileSize: 3000000, // 3 Megs
+  onDragEnter: function () {
+    // Happens when dragging something over the DnD area
+    this.addClass("active");
+  },
+  onDragLeave: function () {
+    // Happens when dragging something OUT of the DnD area
+    this.removeClass("active");
+  },
+  onInit: function () {
+    // Plugin is ready to use
+    console.log("Carga inicializada");
+  },
+  onComplete: function () {
+    // All files in the queue are processed (success or error)
+    console.log("All pending tranfers finished");
+  },
+  onNewFile: function (id, file) {
+    // When a new file is added using the file selector or the DnD area
+
+    console.log("New file added #" + id);
+    console.log(id, file);
+    ui_multi_add_file_carta_laboral(id, file);
+    if (typeof FileReader !== "undefined") {
+      var reader = new FileReader();
+      var img = $("#uploaderFile" + id).find(".preview-img");
+
+      reader.onload = function (e) {
+        img.attr("src", e.target.result);
+      };
+      reader.readAsDataURL(file);
+    }
+  },
+  onBeforeUpload: function (id) {
+    // about tho start uploading a file
+    ui_multi_update_file_status(
+      id,
+      "uploading",
+      '<img src="img/ico-close.svg" alt="">'
+    );
+    ui_multi_update_file_progress(id, 0, "", true);
+  },
+  onUploadCanceled: function (id) {
+    // Happens when a file is directly canceled by the user.
+    ui_multi_update_file_status(id, "warning", "Canceled by User");
+    ui_multi_update_file_progress(id, 0, "warning", false);
+  },
+  onUploadProgress: function (id, percent) {
+    // Updating file progress
+    ui_multi_update_file_progress(id, percent);
+  },
+  onUploadSuccess: function (id, data) {
+    // A file was successfully uploaded
+    this.addClass("success");
+    this.find(".icon-good-upload").removeClass("hidden");
+    this.find(".button-upload").find("button").addClass("hidden");
+    this.find(".button-upload").find(".icon-trash").removeClass("hidden");
+    console.log(
+      "Server Response for file #" + id + ": " + JSON.stringify(data)
+    );
+    console.log("Upload of file #" + id + " COMPLETED", "success");
+    ui_multi_update_file_status(
+      id,
+      "success",
+      '<button class="red btn-link delete-file-btn">Eliminar documento</button><button class="red btn-link modal-tag-btn"> <img src="img/tag-icon.svg" alt=""> Categorizar documento</button>'
+    );
+    ui_multi_update_file_progress(id, 100, "success", false);
+  },
+  onUploadError: function (id, xhr, status, message) {
+    ui_multi_update_file_status(id, "danger", message);
+    ui_multi_update_file_progress(id, 0, "danger", false);
+  },
+  onFallbackMode: function () {
+    // When the browser doesn't support this plugin :(
+    console.log(
+      "Plugin cant be used here, running Fallback callback",
+      "danger"
+    );
+  },
+  onFileSizeError: function (file) {
+    console.log(
+      "File '" + file.name + "' cannot be added: size excess limit",
+      "danger"
+    );
+  },
+});
+
+// carga de comprobante domicilio
+$("#drop-area-comprobante").dmUploader({
+  //
+  url: "https://httpstat.us/500", // url publica para recibir un status 'ok' y ver funcionar la animacion
+  maxFileSize: 3000000, // 3 Megs
+  onDragEnter: function () {
+    // Happens when dragging something over the DnD area
+    this.addClass("active");
+  },
+  onDragLeave: function () {
+    // Happens when dragging something OUT of the DnD area
+    this.removeClass("active");
+  },
+  onInit: function () {
+    // Plugin is ready to use
+    console.log("Carga inicializada");
+  },
+  onComplete: function () {
+    // All files in the queue are processed (success or error)
+    console.log("All pending tranfers finished");
+  },
+  onNewFile: function (id, file) {
+    // When a new file is added using the file selector or the DnD area
+
+    console.log("New file added #" + id);
+    console.log(id, file);
+    ui_multi_add_file_comprobante_domicilio(id, file);
+    if (typeof FileReader !== "undefined") {
+      var reader = new FileReader();
+      var img = $("#uploaderFile" + id).find(".preview-img");
+
+      reader.onload = function (e) {
+        img.attr("src", e.target.result);
+      };
+      reader.readAsDataURL(file);
+    }
+  },
+  onBeforeUpload: function (id) {
+    // about tho start uploading a file
+    ui_multi_update_file_status(
+      id,
+      "uploading",
+      '<img src="img/ico-close.svg" alt="">'
+    );
+    ui_multi_update_file_progress(id, 0, "", true);
+  },
+  onUploadCanceled: function (id) {
+    // Happens when a file is directly canceled by the user.
+    ui_multi_update_file_status(id, "warning", "Canceled by User");
+    ui_multi_update_file_progress(id, 0, "warning", false);
+  },
+  onUploadProgress: function (id, percent) {
+    // Updating file progress
+    ui_multi_update_file_progress(id, percent);
+  },
+  onUploadSuccess: function (id, data) {
+    // A file was successfully uploaded
+    this.addClass("success");
+    this.find(".icon-good-upload").removeClass("hidden");
+    this.find(".button-upload").find("button").addClass("hidden");
+    this.find(".button-upload").find(".icon-trash").removeClass("hidden");
+    console.log(
+      "Server Response for file #" + id + ": " + JSON.stringify(data)
+    );
+    console.log("Upload of file #" + id + " COMPLETED", "success");
+    ui_multi_update_file_status(
+      id,
+      "success",
+      '<button class="red btn-link delete-file-btn">Eliminar documento</button><button class="red btn-link modal-tag-btn"> <img src="img/tag-icon.svg" alt=""> Categorizar documento</button>'
+    );
+    ui_multi_update_file_progress(id, 100, "success", false);
+  },
+  onUploadError: function (id, xhr, status, message) {
+    ui_multi_update_file_status(id, "danger", message);
+    ui_multi_update_file_progress(id, 0, "danger", false);
+    this.addClass("error");
+    this.find(".icon-error-upload").removeClass("hidden");
+    this.find(".error-text").removeClass("hidden");
+  },
+  onFallbackMode: function () {
+    // When the browser doesn't support this plugin :(
+    console.log(
+      "Plugin cant be used here, running Fallback callback",
+      "danger"
+    );
+  },
+  onFileSizeError: function (file) {
+    console.log(
+      "File '" + file.name + "' cannot be added: size excess limit",
+      "danger"
+    );
+  },
+});
+
+const btnFinishDocsUploads = document.getElementById("btn-docs");
+
+function activateBtnDocsUpload() {
+  btnFinishDocsUploads.classList.add("bg-light-navy-blue-four");
+  btnFinishDocsUploads.disabled = false;
+}
+
+btnFinishDocsUploads.addEventListener("click", function () {
+  nextStep();
+  document.getElementById("final-bar").classList.remove("hidden");
+  document.getElementById("steps-bar").classList.add("hidden");
+  document.getElementById("folio-container").classList.add("hidden");
 });
