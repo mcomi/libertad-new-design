@@ -155,6 +155,47 @@ $(".code-input").bind("keyup", function () {
   }
 });
 
+// evento para que pase en automatico los numeros del codigo sms
+var indexCodeInput = 0;
+$(".code-input-folio").bind("keyup", function () {
+  var value = $(this).val();
+  var regex = /^\d+$/;
+  if (regex.test(value)) {
+    if (indexCodeInput < 8) {
+      $(this).next().focus();
+      if (indexCodeInput === 7) {
+        $("#spinner-sms").removeClass("hidden");
+        if (value === "1") {
+          setTimeout(function () {
+            const verificacionHtml = `<div class="text-red-700">Folio inválido <br />`;
+            $("#sms-response").html(verificacionHtml);
+            $(".code-input-folio").addClass("border-red-700");
+            $("#spinner-sms").addClass("hidden");
+            $(".code-input-folio").val("");
+            indexCodeInput = 0;
+            document.querySelectorAll(".code-input-folio")[0].focus();
+          }, 1500);
+        } else {
+          setTimeout(function () {
+            if ($(".code-input-folio").hasClass("border-red-700")) {
+              $(".code-input-folio").removeClass("border-red-700");
+              $("#sms-response").find("div").removeClass("text-danger");
+            }
+            const toastHtml = `Folio válido, espere ...`;
+            $("#sms-response").html(toastHtml);
+            $(".code-input-folio").addClass("border-green-form");
+            setTimeout(function () {
+              window.location.href =
+                window.location.origin + "/formulario.html?oferta=" + true;
+            }, 2500);
+          }, 1500);
+        }
+      }
+    }
+    indexCodeInput++;
+  }
+});
+
 const celularInput = document.getElementById("phone-input");
 
 // formateo de celular
