@@ -152,6 +152,48 @@
       </p>
     </section>
 
+    <div class="p-3 bg-white h-auto hidden" id="pdf-container">
+      <ul class="flex w-full justify-center">
+        <li class="mx-4 cursor-pointer" id="close-viewer-btn">
+          <svg
+            class="w-6 h-6 mr-2"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M6 18L18 6M6 6l12 12"
+            ></path>
+          </svg>
+          <a>Cerrar</a>
+        </li>
+        <li class="mx-4 cursor-pointer" id="sign-pdf-btn">
+          <svg
+            class="w-6 h-6 mr-2"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M15.232 5.232l3.536 3.536m-2.036-5.036a2.5 2.5 0 113.536 3.536L6.5 21.036H3v-3.572L16.732 3.732z"
+            ></path>
+          </svg>
+          <a>Firmar</a>
+        </li>
+      </ul>
+      <div class="w-full relative h-screen">
+        <div id="pdf-contract" class="pdf-viewer z-10"></div>
+      </div>
+    </div>
+
     <section class="min-h-screen pt-2 pb-6 bg-silver">
       <div
         class="bg-light-navy-blue-four container mx-auto p-3 w-full lg:w-1/2 mb-1"
@@ -1865,6 +1907,7 @@
               </div>
             </div>
             <div class="container">
+              <span id="open-viewer-btn">Ver contrato</span>
               <div class="row">
                 <div class="col-lg-6 col-12 mx-auto p-0">
                   <div role="toolbar" id="toolbar" class="toolbar">
@@ -1872,7 +1915,7 @@
                       <button data-pager="prev">prev</button>
                       <button data-pager="next">next</button>
                     </div>
-                    <div id="page-mode">
+                    <div id="page-mode" class="hidden">
                       <label
                         >Page Mode <input type="number" value="1" min="1"
                       /></label>
@@ -2087,8 +2130,9 @@
     <script src="https://unpkg.com/downloadjs@1.4.7"></script>
     <script src="https://unpkg.com/pdfjs-dist@2.0.489/build/pdf.min.js"></script>
     <script src="https://szimek.github.io/signature_pad/js/signature_pad.umd.js"></script>
-    <script src="js/form.js"></script>
+    <script src="https://unpkg.com/pdfobject@2.2.4/pdfobject.min.js"></script>
     <script src="js/firma.js"></script>
+    <script src="js/form.js"></script>
     <script type="text/html" id="files-template">
       <div class="media">
         <div class="media-body mb-1">

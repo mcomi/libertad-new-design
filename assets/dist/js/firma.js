@@ -99,7 +99,7 @@
   }
 
   let signatureId;
-  function showModal(id) {
+  window.showModal = function (id) {
     signatureId = id;
     const modal = document.getElementById("myModal");
     const span = document.getElementsByClassName("close")[0];
@@ -108,7 +108,7 @@
       modal.style.display = "none";
     };
     resizeCanvas();
-  }
+  };
 
   function closeModal() {
     const modal = document.getElementById("myModal");

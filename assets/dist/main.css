@@ -28868,6 +28868,13 @@ input.invalid ~ svg.text-red-700 {
   padding: 1rem;
 }
 
+.pdf-viewer {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 100%;
+}
+
 /* Portrait and Landscape */
 
 @media only screen and (min-device-width: 320px) and (max-device-width: 480px) and (-webkit-min-device-pixel-ratio: 2) {

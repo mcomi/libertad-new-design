@@ -711,3 +711,27 @@ btnFinishDocsUploads.addEventListener("click", function () {
   document.getElementById("steps-bar").classList.add("hidden");
   document.getElementById("folio-container").classList.add("hidden");
 });
+
+const pdfContainer = document.getElementById("pdf-container");
+const btnOpenViewer = document.getElementById("open-viewer-btn");
+function openPDF() {
+  PDFObject.embed("PRELLENADO.pdf", "#pdf-contract");
+}
+
+function closePDF() {
+  pdfContainer.classList.add("hidden");
+  document.getElementById("pdf-contract").innerHTML = "";
+}
+btnOpenViewer.addEventListener("click", function () {
+  pdfContainer.classList.remove("hidden");
+  openPDF();
+});
+
+const btnCloseViewer = document.getElementById("close-viewer-btn");
+btnCloseViewer.addEventListener("click", closePDF);
+
+const btnSignPDF = document.getElementById("sign-pdf-btn");
+btnSignPDF.addEventListener("click", function () {
+  closePDF();
+  showModal();
+});
