@@ -32,6 +32,7 @@ const nextStep = () => {
     $("#steps-bar").removeClass("hidden");
     $("#offer-bar").addClass("hidden");
     $("#folio-container").removeClass("hidden");
+    initPDFViewer("PRELLENADO.pdf");
   }
   const selector = `div[data-step='${nextStep}']`;
   $(selector).removeClass("hidden");
