@@ -278,55 +278,16 @@
     if (signaturePad.isEmpty()) {
       alert("Please provide a signature first.");
     } else {
-      // saco mi objeto firma del span al que dieron click
-      let indexSignature = arrayFirmasCanvas.findIndex(
-        (item) => Number(item.id) === Number(signatureId)
-      );
       //const dataURL = signaturePad.toDataURL("image/svg+xml");
       savedSignature = signaturePad.toDataURL("image/png");
-      console.log(savedSignature);
-      savedSignatureResized = signaturePad.toDataURL("image/png", {
-        height:
-          arrayFirmasCanvas[indexSignature].coordenaday2 -
-          arrayFirmasCanvas[indexSignature].coordenada_y2,
-      }); // cambiando el tamaño
-      console.log(savedSignatureResized);
-      const signatureLayer = document.querySelector("#viewport").firstChild;
-      const signatureDiv = document.createElement("div");
-      signatureDiv.classList.add("signature");
-      signatureDiv.style.left =
-        arrayFirmasCanvas[indexSignature].coordenada_x1 + "px";
-      signatureDiv.style.bottom =
-        arrayFirmasCanvas[indexSignature].coordenada_y1 + "px";
-      signatureLayer.appendChild(signatureDiv);
-      const image = document.createElement("img");
-      const style = `width:auto !important; height:${
-        arrayFirmasCanvas[indexSignature].coordenaday2 -
-        arrayFirmasCanvas[indexSignature].coordenada_y2
-      }px !important `;
-      image.setAttribute("style", style);
-
-      image.setAttribute("src", savedSignatureResized);
-      signatureDiv.appendChild(image);
-      // agrego propiedades a mi arreglo de firmas de canvas
-      arrayFirmasCanvas[indexSignature].firmado = true;
-      arrayFirmasCanvas[indexSignature].firma = signatureDiv.outerHTML;
-
-      // agrego propiedades para mi arreglo de firmas para PDF
-      arrayFirmasPDF[indexSignature].firmado = true;
-      arrayFirmasPDF[indexSignature].firmaParaPDF = savedSignature;
-      console.log(arrayFirmasPDF[indexSignature]);
-      render();
       closeModal();
-      btnDownloadHTML = `<button class="btn-btn-primary" id="btn-download">Descarga contrato<button>`;
-      document.getElementById(
-        "download-btn-section"
-      ).innerHTML = btnDownloadHTML;
-      document
-        .getElementById("btn-download")
-        .addEventListener("click", function () {
-          modifyPdfWithSignatureAndDownload();
-        });
+      const btnDownloadPdf = document.getElementById("download-pdf-btn");
+      btnDownloadPdf.classList.remove("hidden");
+      btnDownloadPdf.addEventListener("click", function () {
+        modifyPdfWithSignatureAndDownload();
+      });
+      const btnOpenViewer = document.getElementById("open-viewer-btn");
+      btnOpenViewer.classList.add("hidden");
     }
   });
 
@@ -338,7 +299,7 @@
     //   alert("Faltan firmaas");
     //   return;
     // }
-    const url = "PRELLENADO.pdf";
+    const url = "Solicitud-de-Credito.pdf";
     const existingPdfBytes = await fetch(url).then((res) => res.arrayBuffer());
     const pdfDoc = await PDFLib.PDFDocument.load(existingPdfBytes);
     const pages = pdfDoc.getPages();
@@ -347,15 +308,10 @@
       // const { width, height } = page.getSize();
       let countSignatures = 0;
       for (let j = 0; j < arrayFirmasPDF.length; j++) {
-        if (
-          index + 1 === Number(arrayFirmasPDF[j].numeroPagina) &&
-          arrayFirmasPDF[j].firmado
-        ) {
+        if (index + 1 === Number(arrayFirmasPDF[j].numeroPagina)) {
           countSignatures++;
-          // Embed the PNG image bytes and PNG image bytes
-          const pngImage = await pdfDoc.embedPng(
-            arrayFirmasPDF[j].firmaParaPDF
-          );
+          // Embed the PNG image bytes and PNG image bytes, ahora solo es una firma, no la guarde en el arreglo
+          const pngImage = await pdfDoc.embedPng(savedSignature);
           // Draw the PNG image on the page
           const x = Number(arrayFirmasPDF[j].coordenada_x1);
           const y = Number(arrayFirmasPDF[j].coordenada_y2);

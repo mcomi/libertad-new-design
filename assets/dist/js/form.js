@@ -32,7 +32,8 @@ const nextStep = () => {
     $("#steps-bar").removeClass("hidden");
     $("#offer-bar").addClass("hidden");
     $("#folio-container").removeClass("hidden");
-    initPDFViewer("PRELLENADO.pdf");
+    // Si se quiere usar el pdf en canvas para mostrar lugares de firmas
+    // initPDFViewer("PRELLENADO.pdf");
   }
   const selector = `div[data-step='${nextStep}']`;
   $(selector).removeClass("hidden");
@@ -715,14 +716,15 @@ btnFinishDocsUploads.addEventListener("click", function () {
 const pdfContainer = document.getElementById("pdf-container");
 const btnOpenViewer = document.getElementById("open-viewer-btn");
 function openPDF() {
-  PDFObject.embed("PRELLENADO.pdf", "#pdf-contract");
+  PDFObject.embed("Solicitud-de-Credito.pdf", "#pdf-contract");
 }
 
 function closePDF() {
   pdfContainer.classList.add("hidden");
   document.getElementById("pdf-contract").innerHTML = "";
 }
-btnOpenViewer.addEventListener("click", function () {
+btnOpenViewer.addEventListener("click", function (e) {
+  e.preventDefault();
   pdfContainer.classList.remove("hidden");
   openPDF();
 });
